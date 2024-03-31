@@ -11,47 +11,38 @@ import (
 	"github.com/kljensen/snowball"
 )
 
-func readWordsFromFile(filename string, bufferSize int, numLines int) <-chan []string {
-	wordCh := make(chan []string)
+func readWordsFromFile(filename string) (map[string]bool, error) {
+	wordMap := make(map[string]bool)
 
-	go func() {
-		defer close(wordCh)
+	file, err := os.Open(filename)
+	if err != nil {
+		return nil, err
+	}
+	defer file.Close()
 
-		file, err := os.Open(filename)
-		if err != nil {
-			panic(err)
+	scanner := bufio.NewScanner(file)
+	for scanner.Scan() {
+		words := strings.Fields(scanner.Text())
+		for _, word := range words {
+			wordMap[word] = true
 		}
-		defer file.Close()
+	}
 
-		scanner := bufio.NewScanner(file)
-		scanner.Buffer(make([]byte, bufferSize), numLines*bufferSize)
+	if err := scanner.Err(); err != nil {
+		return nil, err
+	}
 
-		var lines []string
-		for scanner.Scan() {
-			lines = append(lines, scanner.Text())
-			if len(lines) == numLines {
-				wordCh <- lines
-				lines = nil
-			}
-		}
-
-		if len(lines) > 0 {
-			wordCh <- lines // Отправляем оставшиеся слова в канал перед закрытием
-		}
-
-		if err := scanner.Err(); err != nil {
-			panic(err)
-		}
-	}()
-
-	return wordCh
+	return wordMap, nil
 }
 
 func main() {
 	sentence := flag.String("s", "", "sentence to normalize")
 	flag.Parse()
 
-	wordCh := readWordsFromFile("unused_english_words.txt", 1024, 4)
+	wordMap, err := readWordsFromFile("unused_english_words.txt")
+	if err != nil {
+		panic(err)
+	}
 
 	firstSlice := make([]string, 0)
 	for _, i := range strings.Fields(*sentence) {
@@ -59,34 +50,23 @@ func main() {
 	}
 	// fmt.Println(strings.Join(firstSlice, " "))
 
-	for lines := range wordCh {
-		for _, unusedWord := range lines {
-			for i := 0; i < len(firstSlice); i++ {
-				if unusedWord == firstSlice[i] {
-					// fmt.Println(unusedWord, firstSlice, i, len(firstSlice))
-					if i == 0 && len(firstSlice) > 1 {
-						firstSlice = firstSlice[i+1:]
-					} else if i == 0 && len(firstSlice) <= 1 {
-						firstSlice = make([]string, 0)
-					} else if i == len(firstSlice)-1 {
-						firstSlice = firstSlice[:i]
-					} else {
-						firstSlice = append(firstSlice[:i], firstSlice[i+1:]...)
-					}
-					i--
-					// fmt.Println(unusedWord, firstSlice, i, len(firstSlice))
-					// fmt.Println()
-
-					// stemmed, err := snowball.Stem(word, "english", true)
-					// if err == nil {
-					// 	fmt.Print(stemmed, " ggg ")
-					// }
-					// normalizedWords = append(normalizedWords, english.Stem(word, true))
+	for unusedWord, _ := range wordMap {
+		for i := 0; i < len(firstSlice); i++ {
+			if unusedWord == firstSlice[i] {
+				// fmt.Println(unusedWord, firstSlice, i, len(firstSlice))
+				if i == 0 && len(firstSlice) > 1 {
+					firstSlice = firstSlice[i+1:]
+				} else if i == 0 && len(firstSlice) <= 1 {
+					firstSlice = make([]string, 0)
+				} else if i == len(firstSlice)-1 {
+					firstSlice = firstSlice[:i]
+				} else {
+					firstSlice = append(firstSlice[:i], firstSlice[i+1:]...)
 				}
+				i--
 			}
 		}
 	}
-	// fmt.Println(strings.Join(firstSlice, " "))
 	secondSlice := make([]string, 0)
 	for _, i := range firstSlice {
 		stemmed, err := snowball.Stem(i, "english", true)
