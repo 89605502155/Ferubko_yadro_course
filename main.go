@@ -36,7 +36,8 @@ func readWordsFromFile(filename string) (map[string]bool, error) {
 }
 
 func main() {
-	sentence := flag.String("s", "", "sentence to normalize")
+	var sentence string
+	flag.StringVar(&sentence, "s", "", "sentence to normalize")
 	flag.Parse()
 
 	wordMap, err := readWordsFromFile("unused_english_words.txt")
@@ -45,7 +46,7 @@ func main() {
 	}
 
 	myWordsMap := map[string]bool{}
-	for _, i := range strings.Fields(*sentence) {
+	for _, i := range strings.Fields(sentence) {
 
 		w := strings.ToLower(i)
 
