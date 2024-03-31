@@ -44,51 +44,21 @@ func main() {
 		panic(err)
 	}
 
-	firstSlice := make([]string, 0)
+	myWordsMap := map[string]bool{}
 	for _, i := range strings.Fields(*sentence) {
-		firstSlice = append(firstSlice, strings.ToLower(i))
-	}
-	// fmt.Println(strings.Join(firstSlice, " "))
 
-	for unusedWord, _ := range wordMap {
-		for i := 0; i < len(firstSlice); i++ {
-			if unusedWord == firstSlice[i] {
-				// fmt.Println(unusedWord, firstSlice, i, len(firstSlice))
-				if i == 0 && len(firstSlice) > 1 {
-					firstSlice = firstSlice[i+1:]
-				} else if i == 0 && len(firstSlice) <= 1 {
-					firstSlice = make([]string, 0)
-				} else if i == len(firstSlice)-1 {
-					firstSlice = firstSlice[:i]
-				} else {
-					firstSlice = append(firstSlice[:i], firstSlice[i+1:]...)
-				}
-				i--
-			}
+		w := strings.ToLower(i)
+
+		if wordMap[w] {
+			continue
 		}
-	}
-	secondSlice := make([]string, 0)
-	for _, i := range firstSlice {
-		stemmed, err := snowball.Stem(i, "english", true)
+		stemmed, err := snowball.Stem(w, "english", true)
 		if err == nil {
-			// fmt.Println(stemmed, " ")
-			secondSlice = append(secondSlice, stemmed)
+			myWordsMap[stemmed] = true
 		}
 	}
-	// fmt.Println(strings.Join(secondSlice, " "))
-	if len(secondSlice) > 1 {
-		for i := 0; i < len(secondSlice)-1; i++ {
-			for j := i + 1; j < len(secondSlice); j++ {
-				if secondSlice[i] == secondSlice[j] {
-					if j == len(secondSlice)-1 {
-						secondSlice = secondSlice[:j]
-					} else if j < len(secondSlice)-1 {
-						secondSlice = append(secondSlice[:j], secondSlice[j+1:]...)
-						j--
-					}
-				}
-			}
-		}
+	for i, _ := range myWordsMap {
+		fmt.Printf("%s ", i)
 	}
-	fmt.Println(strings.Join(secondSlice, " "))
+	fmt.Println()
 }
