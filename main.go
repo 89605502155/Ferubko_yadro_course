@@ -35,6 +35,16 @@ func readWordsFromFile(filename string) (map[string]bool, error) {
 	return wordMap, nil
 }
 
+func deleteComa(s string) string {
+	res := make([]rune, 0)
+	for _, el := range s {
+		if el >= rune('A') && el <= rune('z') {
+			res = append(res, el)
+		}
+	}
+	return string(res)
+}
+
 func main() {
 	var sentence string
 	flag.StringVar(&sentence, "s", "", "sentence to normalize")
@@ -49,6 +59,7 @@ func main() {
 	for _, i := range strings.Fields(sentence) {
 
 		w := strings.ToLower(i)
+		w = deleteComa(w)
 		if wordMap[w] {
 			continue
 		}
