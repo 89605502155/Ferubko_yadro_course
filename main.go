@@ -49,7 +49,6 @@ func main() {
 	for _, i := range strings.Fields(sentence) {
 
 		w := strings.ToLower(i)
-
 		if wordMap[w] {
 			continue
 		}
