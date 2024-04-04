@@ -1,11 +1,15 @@
 package xkcd
 
-import "fmt"
-
-func My() {
-	fmt.Println("hh")
+type ClientInterface interface {
+	GetLatestComicNumber() (int, error)
+	GetComic(int) (*Comic, error)
+}
+type Client struct {
+	ClientInterface
 }
 
-func little() {
-	fmt.Println("jjj")
+func NewClient(cl string) *Client {
+	return &Client{
+		ClientInterface: NewHttpClient(cl),
+	}
 }

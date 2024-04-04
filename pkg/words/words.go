@@ -2,7 +2,6 @@ package words
 
 import (
 	"bufio"
-	"flag"
 	"os"
 	"strings"
 
@@ -43,10 +42,7 @@ func deleteComa(s string) string {
 	return string(res)
 }
 
-func Normalization() {
-	var sentence string
-	flag.StringVar(&sentence, "s", "", "sentence to normalize")
-	flag.Parse()
+func Normalization(sentence string) {
 
 	wordMap, err := readWordsFromFile("unused_english_words.txt")
 	if err != nil {

@@ -1,2 +1,2 @@
 source_url: "https://xkcd.com"
-db_file: "example_database.json"
+db_file: "database.json"
