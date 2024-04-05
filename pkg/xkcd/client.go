@@ -1,15 +1,17 @@
 package xkcd
 
+import "xkcd/pkg/words"
+
 type ClientInterface interface {
-	GetLatestComicNumber() (int, error)
-	GetComic(int) (*Comic, error)
+	GetLatestComicsNumber() (int, error)
+	GetComics(comicID int) (*map[string]ComicsInfo, error)
 }
 type Client struct {
 	ClientInterface
 }
 
-func NewClient(cl string) *Client {
+func NewClient(cl string, w *words.Words) *Client {
 	return &Client{
-		ClientInterface: NewHttpClient(cl),
+		ClientInterface: NewHttpClient(cl, w),
 	}
 }

@@ -5,9 +5,11 @@ import (
 	"fmt"
 	"io"
 	"net/http"
+
+	"xkcd/pkg/words"
 )
 
-type Comic struct {
+type Comics struct {
 	Num        int      `json:"num"`
 	Img        string   `json:"img"`
 	SafeTitle  string   `json:"safe_title"`
@@ -22,19 +24,25 @@ type Comic struct {
 	Errors     []string `json:"errors"`
 }
 
-type HttpClient struct {
-	baseURL string
+type ComicsInfo struct {
+	Url      string   `json:"url"`
+	Keywords []string `json:"Keywords"`
 }
 
-func NewHttpClient(baseURL string) *HttpClient {
+type HttpClient struct {
+	baseURL string
+	w       *words.Words
+}
+
+func NewHttpClient(baseURL string, w *words.Words) *HttpClient {
 	return &HttpClient{
 		baseURL: baseURL,
+		w:       w,
 	}
 
 }
 
-func (c *HttpClient) GetLatestComicNumber() (int, error) {
-	// url_ := "https://xkcd.com/info.0.json"
+func (c *HttpClient) GetLatestComicsNumber() (int, error) {
 	url := fmt.Sprintf("%s/info.0.json", c.baseURL)
 
 	resp, err := http.Get(url)
@@ -47,16 +55,16 @@ func (c *HttpClient) GetLatestComicNumber() (int, error) {
 		return 0, fmt.Errorf("unexpected status code: %d", resp.StatusCode)
 	}
 
-	var comicInfo Comic
+	var comics Comics
 
-	if err := json.NewDecoder(resp.Body).Decode(&comicInfo); err != nil {
+	if err := json.NewDecoder(resp.Body).Decode(&comics); err != nil {
 		return 0, err
 	}
 
-	return comicInfo.Num, nil
+	return comics.Num, nil
 }
 
-func (c *HttpClient) GetComic(comicID int) (*Comic, error) {
+func (c *HttpClient) GetComics(comicID int) (*map[string]ComicsInfo, error) {
 	url := fmt.Sprintf("%s/%d/info.0.json", c.baseURL, comicID)
 
 	resp, err := http.Get(url)
@@ -74,10 +82,17 @@ func (c *HttpClient) GetComic(comicID int) (*Comic, error) {
 		return nil, err
 	}
 
-	var comic Comic
-	if err := json.Unmarshal(body, &comic); err != nil {
+	var comics Comics
+	if err := json.Unmarshal(body, &comics); err != nil {
 		return nil, err
 	}
+	var comicsInfo ComicsInfo
+	ret := make(map[string]ComicsInfo)
+	comicsInfo.Url = comics.Img
+	map1, _ := c.w.Normalization(comics.Transcript)
+	map2, _ := c.w.Normalization(comics.Alt)
+	comicsInfo.Keywords = c.w.MergeMapToString(map1, map2)
+	ret[fmt.Sprintf("%d", comics.Num)] = comicsInfo
 
-	return &comic, nil
+	return &ret, nil
 }
