@@ -26,7 +26,7 @@ type Comics struct {
 
 type ComicsInfo struct {
 	Url      string   `json:"url"`
-	Keywords []string `json:"Keywords"`
+	Keywords []string `json:"keywords"`
 }
 
 type HttpClient struct {
