@@ -14,8 +14,8 @@ import (
 func main() {
 	var n int
 	flag.IntVar(&n, "n", -1, "max length commics")
-	var useFlagO bool
-	flag.BoolVar(&useFlagO, "o", false, "Use -o")
+	var c bool
+	flag.BoolVar(&c, "c", false, "Use -c")
 	flag.Parse()
 
 	if err := initConfig(); err != nil {
