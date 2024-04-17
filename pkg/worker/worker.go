@@ -3,12 +3,15 @@ package worker
 import (
 	"errors"
 	"fmt"
+	"os"
 	"sync"
+	"syscall"
 
 	"xkcd/pkg/xkcd"
 )
 
-func WorkerPool(cl *xkcd.Client, numIter int, numWorkers int, data *map[string]xkcd.ComicsInfo) {
+func WorkerPool(cl *xkcd.Client, numIter int, numWorkers int, data *map[string]xkcd.ComicsInfo,
+	sigs chan os.Signal, done chan bool) {
 
 	keyChan := make(chan int, numWorkers)
 	stopChan := make(chan struct{})
@@ -51,6 +54,14 @@ func WorkerPool(cl *xkcd.Client, numIter int, numWorkers int, data *map[string]x
 	}
 	key := 1
 	for i := 0; i < numWorkers; i++ {
+		select {
+		case sig := <-sigs:
+			if sig == syscall.SIGINT || sig == syscall.SIGTERM {
+				done <- true
+				return
+			}
+		default:
+		}
 		if _, ok := (*data)[fmt.Sprintf("%d", key)]; ok {
 			key++
 			i -= 1
@@ -62,6 +73,14 @@ func WorkerPool(cl *xkcd.Client, numIter int, numWorkers int, data *map[string]x
 		key++
 	}
 	for {
+		select {
+		case sig := <-sigs:
+			if sig == syscall.SIGINT || sig == syscall.SIGTERM {
+				done <- true
+				return
+			}
+		default:
+		}
 		if err := <-errChan; err != nil {
 			close(stopChan) // Закрываем канал, когда карта заполнена
 			break
