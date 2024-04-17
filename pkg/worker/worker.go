@@ -8,7 +8,6 @@ import (
 	"xkcd/pkg/xkcd"
 )
 
-
 func WorkerPool(cl *xkcd.Client, numIter int, numWorkers int, data *map[string]xkcd.ComicsInfo) {
 
 	keyChan := make(chan int, numWorkers)
@@ -77,7 +76,6 @@ func WorkerPool(cl *xkcd.Client, numIter int, numWorkers int, data *map[string]x
 		keyChan <- key
 		key++
 	}
-
 	// Ожидаем завершения всех воркеров
 	wg.Wait()
 }
