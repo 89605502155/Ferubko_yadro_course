@@ -1,3 +1,5 @@
 source_url: "https://xkcd.com"
 db_file: "database.json"
-parallel: 5
+parallel: 100 # я не смог найти теоретической формулы расчёта количества горутин. А экспериментально, около 100.
+max_dev: 4000
+number_404_neighbors: 100

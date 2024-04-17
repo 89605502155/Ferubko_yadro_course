@@ -8,8 +8,8 @@ import (
 	"xkcd/pkg/xkcd"
 )
 
-
-func WorkerPool(cl *xkcd.Client, numIter int, numWorkers int, data *map[string]xkcd.ComicsInfo) {
+func WorkerPool(cl *xkcd.Client, numIter int, numWorkers int, data *map[string]xkcd.ComicsInfo,
+	done *bool) {
 
 	keyChan := make(chan int, numWorkers)
 	stopChan := make(chan struct{})
@@ -24,14 +24,17 @@ func WorkerPool(cl *xkcd.Client, numIter int, numWorkers int, data *map[string]x
 			for {
 				select {
 				case key := <-keyChan:
-					res, err, stCode := cl.GetComics(key)
+					res, err, _ := cl.GetComics(key)
 					if err != nil {
+						continue
 
-						if stCode >= 500 || (stCode >= 300 && stCode < 400) {
-							errChan <- nil
-						}
-						errChan <- err
-						return
+						// if stCode >= 500 || (stCode >= 300 && stCode < 400) {
+						// 	errChan <- nil
+
+						// } else {
+						// 	errChan <- err
+						// 	return
+						// }
 
 					} else if key >= numIter {
 						errChan <- errors.New("very long base")
@@ -39,10 +42,10 @@ func WorkerPool(cl *xkcd.Client, numIter int, numWorkers int, data *map[string]x
 					} else {
 						mu.Lock()
 						errChan <- nil
+						(*data)[fmt.Sprintf("%d", key)] = (*res)[key]
+						mu.Unlock()
 					}
 
-					(*data)[fmt.Sprintf("%d", key)] = (*res)[key]
-					mu.Unlock()
 				case <-stopChan:
 					return
 				}
@@ -52,6 +55,14 @@ func WorkerPool(cl *xkcd.Client, numIter int, numWorkers int, data *map[string]x
 	}
 	key := 1
 	for i := 0; i < numWorkers; i++ {
+		if *done {
+			close(stopChan)
+			wg.Wait()
+			return
+
+		}
+		// fmt.Println(i)
+
 		if _, ok := (*data)[fmt.Sprintf("%d", key)]; ok {
 			key++
 			i -= 1
@@ -63,14 +74,24 @@ func WorkerPool(cl *xkcd.Client, numIter int, numWorkers int, data *map[string]x
 		key++
 	}
 	for {
+		if *done {
+			close(stopChan)
+			wg.Wait()
+			return
+
+		}
+		// fmt.Println("k", key)
 		if err := <-errChan; err != nil {
 			close(stopChan) // Закрываем канал, когда карта заполнена
 			break
 		}
 		for {
+			mu.Lock()
 			if _, ok := (*data)[fmt.Sprintf("%d", key)]; !ok {
+				mu.Unlock()
 				break
 			}
+			mu.Unlock()
 			key++
 		}
 

@@ -29,7 +29,7 @@ func (d *DatabaseStruct) ReadDatabase() *map[string]xkcd.ComicsInfo {
 
 	// Определяем map для разбора JSON
 	data := make(map[string]xkcd.ComicsInfo)
-	fmt.Println(string(fileContent))
+	// fmt.Println(string(fileContent))
 	// Парсим JSON
 	err = json.Unmarshal(fileContent, &data)
 	if err != nil {
