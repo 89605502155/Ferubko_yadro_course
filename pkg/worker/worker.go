@@ -8,7 +8,6 @@ import (
 	"xkcd/pkg/xkcd"
 )
 
-
 func WorkerPool(cl *xkcd.Client, numIter int, numWorkers int, data *map[string]xkcd.ComicsInfo) {
 
 	keyChan := make(chan int, numWorkers)
@@ -26,12 +25,11 @@ func WorkerPool(cl *xkcd.Client, numIter int, numWorkers int, data *map[string]x
 				case key := <-keyChan:
 					res, err, stCode := cl.GetComics(key)
 					if err != nil {
-
-						if stCode >= 500 || (stCode >= 300 && stCode < 400) {
-							errChan <- nil
+						if stCode == 404 {
+							continue
+						} else {
+							continue
 						}
-						errChan <- err
-						return
 
 					} else if key >= numIter {
 						errChan <- errors.New("very long base")

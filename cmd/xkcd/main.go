@@ -13,7 +13,7 @@ import (
 )
 
 func main() {
-	n := 9
+	n := 900
 	var c bool
 	flag.BoolVar(&c, "c", false, "Use -c")
 	flag.Parse()
