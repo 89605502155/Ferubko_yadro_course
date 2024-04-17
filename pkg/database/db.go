@@ -20,7 +20,23 @@ func NewDatabase(name string) *DatabaseStruct {
 		Name: name,
 	}
 }
+func (d *DatabaseStruct) ReadDatabase() *map[string]xkcd.ComicsInfo {
+	fileContent, err := os.ReadFile(d.Name)
+	if err != nil {
+		d.CreateEmptyDatabase()
+		logrus.Fatalf("Ошибка чтения файла: %v", err)
+	}
 
+	// Определяем map для разбора JSON
+	data := make(map[string]xkcd.ComicsInfo)
+	fmt.Println(string(fileContent))
+	// Парсим JSON
+	err = json.Unmarshal(fileContent, &data)
+	if err != nil {
+		logrus.Fatalf("Ошибка при разборе JSON: %v", err)
+	}
+	return &data
+}
 func (d *DatabaseStruct) CreateEmptyDatabase() {
 	file, err := os.Create(d.Name)
 	if err != nil {

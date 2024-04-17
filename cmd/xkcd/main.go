@@ -8,53 +8,36 @@ import (
 
 	"xkcd/pkg/database"
 	"xkcd/pkg/words"
+	"xkcd/pkg/worker"
 	"xkcd/pkg/xkcd"
 )
 
 func main() {
-	var n int
-	flag.IntVar(&n, "n", -1, "max length commics")
+	n := 9
 	var c bool
 	flag.BoolVar(&c, "c", false, "Use -c")
 	flag.Parse()
-
-	if err := initConfig(); err != nil {
-		logrus.Fatalf("you have error %s", err.Error())
+	if c {
+		if err := initConfig(); err != nil {
+			logrus.Fatalf("you have error %s", err.Error())
+		}
 	}
+	db := database.NewJsonDatabase(viper.GetString("db_file"))
+
+	// sigs := make(chan os.Signal, 1)
+	// signal.Notify(sigs, syscall.SIGINT, syscall.SIGTERM)
+	// done := make(chan bool, 1)
 
 	words := words.NewWordsStremming()
 
 	cl := xkcd.NewClient(viper.GetString("source_url"), words)
-	maxCommicsIndex, err := cl.GetLatestComicsNumber()
-	if err != nil {
-		logrus.Fatalf("you have error %s", err.Error())
 
-	}
+	data := db.ReadDatabase()
 
-	if n > maxCommicsIndex {
-		panic("Your n is bigger than max index of the commics.")
-	}
-	var numIter int
-	if n > 0 {
-		numIter = n
-	} else {
-		numIter = maxCommicsIndex
-	}
+	worker.WorkerPool(cl, n, viper.GetInt("parallel"), data)
 
-	resoultMap := make(map[string]xkcd.ComicsInfo)
-	for i := 1; i <= numIter; i++ {
-		res, err := cl.GetComics(i)
-		if err != nil {
-			logrus.Fatalf("you have error %s", err.Error())
-		}
-		for k, j := range *res {
-			resoultMap[k] = j
-		}
-	}
-
-	db := database.NewJsonDatabase(viper.GetString("db_file"))
 	db.CreateEmptyDatabase()
-	db.WriteAllOnDatabase(&resoultMap, useFlagO)
+	db.WriteAllOnDatabase(data, true)
 
 }
 

@@ -64,35 +64,38 @@ func (c *HttpClient) GetLatestComicsNumber() (int, error) {
 	return comics.Num, nil
 }
 
-func (c *HttpClient) GetComics(comicID int) (*map[string]ComicsInfo, error) {
+func (c *HttpClient) GetComics(comicID int) (*map[int]ComicsInfo, error, int) {
 	url := fmt.Sprintf("%s/%d/info.0.json", c.baseURL, comicID)
 
 	resp, err := http.Get(url)
 	if err != nil {
-		return nil, err
+		return nil, err, -1
 	}
 	defer resp.Body.Close()
 
 	if resp.StatusCode != http.StatusOK {
-		return nil, fmt.Errorf("unexpected status code: %d", resp.StatusCode)
+		return nil, fmt.Errorf("unexpected status code: %d", resp.StatusCode), resp.StatusCode
 	}
 
 	body, err := io.ReadAll(resp.Body)
 	if err != nil {
-		return nil, err
+		return nil, err, -2
 	}
 
 	var comics Comics
 	if err := json.Unmarshal(body, &comics); err != nil {
-		return nil, err
+		return nil, err, -3
 	}
 	var comicsInfo ComicsInfo
-	ret := make(map[string]ComicsInfo)
+	ret := make(map[int]ComicsInfo)
 	comicsInfo.Url = comics.Img
-	map1, _ := c.w.Normalization(comics.Transcript)
-	map2, _ := c.w.Normalization(comics.Alt)
-	comicsInfo.Keywords = c.w.MergeMapToString(map1, map2)
-	ret[fmt.Sprintf("%d", comics.Num)] = comicsInfo
+	map1, _ := c.w.Normalization(comics.Transcript + " " + comics.Alt)
+	resp_ := make([]string, 0)
+	for k := range *map1 {
+		resp_ = append(resp_, k)
+	}
+	comicsInfo.Keywords = resp_
+	ret[comics.Num] = comicsInfo
 
-	return &ret, nil
+	return &ret, nil, 200
 }
