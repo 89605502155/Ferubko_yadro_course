@@ -1,11 +1,10 @@
 package main
 
 import (
+	"context"
 	"flag"
-	"fmt"
 	"os"
 	"os/signal"
-	"syscall"
 
 	"github.com/sirupsen/logrus"
 	"github.com/spf13/viper"
@@ -28,13 +27,16 @@ func main() {
 	}
 	db := database.NewJsonDatabase(viper.GetString("db_file"))
 
-	sigs := make(chan os.Signal, 1)
-	signal.Notify(sigs, syscall.SIGINT, syscall.SIGTERM)
+	ctx, stop := signal.NotifyContext(context.Background(), os.Interrupt)
+	defer stop()
 	done := make(chan bool, 1)
+
 	go func() {
-		sigs := <-sigs
-		fmt.Println(sigs)
-		done <- true
+		select {
+		case <-ctx.Done():
+			done <- true
+			stop()
+		}
 	}()
 
 	words := words.NewWordsStremming()
@@ -43,7 +45,7 @@ func main() {
 
 	data := db.ReadDatabase()
 
-	worker.WorkerPool(cl, n, viper.GetInt("parallel"), data, sigs, done)
+	worker.WorkerPool(cl, n, viper.GetInt("parallel"), data, ctx, stop, done)
 
 	db.CreateEmptyDatabase()
 	db.WriteAllOnDatabase(data, true)

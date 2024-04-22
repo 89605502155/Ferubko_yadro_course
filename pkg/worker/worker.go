@@ -1,17 +1,16 @@
 package worker
 
 import (
+	"context"
 	"errors"
 	"fmt"
-	"os"
 	"sync"
-	"syscall"
 
 	"xkcd/pkg/xkcd"
 )
 
 func WorkerPool(cl *xkcd.Client, numIter int, numWorkers int, data *map[string]xkcd.ComicsInfo,
-	sigs chan os.Signal, done chan bool) {
+	ctx context.Context, stop context.CancelFunc, done chan bool) {
 
 	keyChan := make(chan int, numWorkers)
 	stopChan := make(chan struct{})
@@ -54,12 +53,12 @@ func WorkerPool(cl *xkcd.Client, numIter int, numWorkers int, data *map[string]x
 	}
 	key := 1
 	for i := 0; i < numWorkers; i++ {
+		fmt.Println(i)
 		select {
-		case sig := <-sigs:
-			if sig == syscall.SIGINT || sig == syscall.SIGTERM {
-				done <- true
-				return
-			}
+		case <-ctx.Done():
+			done <- true
+			close(stopChan)
+			stop()
 		default:
 		}
 		if _, ok := (*data)[fmt.Sprintf("%d", key)]; ok {
@@ -73,12 +72,12 @@ func WorkerPool(cl *xkcd.Client, numIter int, numWorkers int, data *map[string]x
 		key++
 	}
 	for {
+		fmt.Println("key ", key)
 		select {
-		case sig := <-sigs:
-			if sig == syscall.SIGINT || sig == syscall.SIGTERM {
-				done <- true
-				return
-			}
+		case <-ctx.Done():
+			done <- true
+			close(stopChan)
+			stop()
 		default:
 		}
 		if err := <-errChan; err != nil {
