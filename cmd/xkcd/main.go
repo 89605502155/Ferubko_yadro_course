@@ -29,7 +29,6 @@ func main() {
 
 	ctx, stop := signal.NotifyContext(context.Background(), os.Interrupt)
 	defer stop()
-	done := make(chan bool, 1)
 
 	words := words.NewWordsStremming()
 
@@ -39,13 +38,12 @@ func main() {
 
 	go func(db *database.JsonDatabase) {
 		<-ctx.Done()
-		done <- true
 		db.CreateEmptyDatabase()
 		db.WriteAllOnDatabase(data, true)
 		stop()
 	}(db)
 
-	worker.WorkerPool(cl, n, viper.GetInt("parallel"), data, ctx, stop, done)
+	worker.WorkerPool(cl, n, viper.GetInt("parallel"), data, ctx, stop)
 
 	db.CreateEmptyDatabase()
 	db.WriteAllOnDatabase(data, true)

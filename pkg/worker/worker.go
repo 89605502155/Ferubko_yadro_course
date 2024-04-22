@@ -10,7 +10,7 @@ import (
 )
 
 func WorkerPool(cl *xkcd.Client, numIter int, numWorkers int, data *map[string]xkcd.ComicsInfo,
-	ctx context.Context, stop context.CancelFunc, done chan bool) {
+	ctx context.Context, stop context.CancelFunc) {
 
 	keyChan := make(chan int, numWorkers)
 	stopChan := make(chan struct{})
@@ -56,7 +56,6 @@ func WorkerPool(cl *xkcd.Client, numIter int, numWorkers int, data *map[string]x
 		fmt.Println(i)
 		select {
 		case <-ctx.Done():
-			done <- true
 			close(stopChan)
 			stop()
 		default:
@@ -75,7 +74,6 @@ func WorkerPool(cl *xkcd.Client, numIter int, numWorkers int, data *map[string]x
 		fmt.Println("key ", key)
 		select {
 		case <-ctx.Done():
-			done <- true
 			close(stopChan)
 			stop()
 		default:
@@ -96,4 +94,5 @@ func WorkerPool(cl *xkcd.Client, numIter int, numWorkers int, data *map[string]x
 	}
 	// Ожидаем завершения всех воркеров
 	wg.Wait()
+	stop()
 }
