@@ -13,7 +13,6 @@ func WorkerPool(cl *xkcd.Client, numIter int, numWorkers int, data *map[string]x
 	ctx context.Context, stop context.CancelFunc) {
 
 	keyChan := make(chan int, numWorkers)
-	stopChan := make(chan struct{})
 	errChan := make(chan error, numWorkers)
 	var mu sync.Mutex
 	var wg sync.WaitGroup
@@ -23,30 +22,27 @@ func WorkerPool(cl *xkcd.Client, numIter int, numWorkers int, data *map[string]x
 		go func() {
 			defer wg.Done()
 			for {
-				select {
-				case key := <-keyChan:
-					res, err, stCode := cl.GetComics(key)
-					if err != nil {
+				key := <-keyChan
+				res, err, stCode := cl.GetComics(key)
+				if err != nil {
 
-						if stCode >= 500 || (stCode >= 300 && stCode < 400) {
-							errChan <- nil
-						}
-						errChan <- err
-						return
-
-					} else if key >= numIter {
-						errChan <- errors.New("very long base")
-						return
-					} else {
-						mu.Lock()
+					if stCode >= 500 || (stCode >= 300 && stCode < 400) {
 						errChan <- nil
 					}
-
-					(*data)[fmt.Sprintf("%d", key)] = (*res)[key]
-					mu.Unlock()
-				case <-stopChan:
+					errChan <- err
 					return
+
+				} else if key >= numIter {
+					errChan <- errors.New("very long base")
+					return
+				} else {
+					mu.Lock()
+					errChan <- nil
 				}
+
+				(*data)[fmt.Sprintf("%d", key)] = (*res)[key]
+				mu.Unlock()
+
 			}
 
 		}()
@@ -56,7 +52,6 @@ func WorkerPool(cl *xkcd.Client, numIter int, numWorkers int, data *map[string]x
 		fmt.Println(i)
 		select {
 		case <-ctx.Done():
-			close(stopChan)
 			stop()
 		default:
 		}
@@ -74,12 +69,10 @@ func WorkerPool(cl *xkcd.Client, numIter int, numWorkers int, data *map[string]x
 		fmt.Println("key ", key)
 		select {
 		case <-ctx.Done():
-			close(stopChan)
 			stop()
 		default:
 		}
 		if err := <-errChan; err != nil {
-			close(stopChan) // Закрываем канал, когда карта заполнена
 			break
 		}
 		for {
@@ -94,5 +87,4 @@ func WorkerPool(cl *xkcd.Client, numIter int, numWorkers int, data *map[string]x
 	}
 	// Ожидаем завершения всех воркеров
 	wg.Wait()
-	stop()
 }
