@@ -31,19 +31,19 @@ func main() {
 	defer stop()
 	done := make(chan bool, 1)
 
-	go func() {
-		select {
-		case <-ctx.Done():
-			done <- true
-			stop()
-		}
-	}()
-
 	words := words.NewWordsStremming()
 
 	cl := xkcd.NewClient(viper.GetString("source_url"), words)
 
 	data := db.ReadDatabase()
+
+	go func(db *database.JsonDatabase) {
+		<-ctx.Done()
+		done <- true
+		db.CreateEmptyDatabase()
+		db.WriteAllOnDatabase(data, true)
+		stop()
+	}(db)
 
 	worker.WorkerPool(cl, n, viper.GetInt("parallel"), data, ctx, stop, done)
 
