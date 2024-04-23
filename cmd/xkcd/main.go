@@ -66,13 +66,13 @@ func main() {
 
 	index := indexbase.NewJsonIndex(viper.GetString("index_file"))
 	// index.CreateEmptyDatabase()
-	indexes := index.ReadBase()
+	indexes := index.IndexBase.ReadBase()
 
-	index.BuildIndexFromDB(data, indexes)
+	index.IndexBase.BuildIndexFromDB(data, indexes)
 	// fmt.Println(indexes)
-	index.SaveIndexToFile(indexes)
+	index.IndexBase.SaveIndexToFile(indexes)
 
-	inputDataSFlag, err := words.Normalization(s)
+	inputDataSFlag, err := words.Stremming.Normalization(s)
 	if err != nil {
 		logrus.Fatalf("you have error %s", err.Error())
 	}
@@ -80,6 +80,8 @@ func main() {
 	fmt.Println("input string ", inputDataSFlag)
 	firstFind := db.FindInDB.Find(inputDataSFlag)
 	fmt.Println("first find ", firstFind)
+	secondFind := index.IndexFind.Find(inputDataSFlag)
+	fmt.Println("second find ", secondFind)
 
 }
 

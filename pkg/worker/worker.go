@@ -24,7 +24,7 @@ func WorkerPool(cl *xkcd.Client, numIter int, numWorkers int, data *map[string]x
 			for {
 				// mu.Lock()
 				key := <-keyChan
-				res, _, err := cl.GetComics(key)
+				res, _, err := cl.ClientInterface.GetComics(key)
 				if err != nil {
 					fmt.Println(err)
 					mu.Lock()

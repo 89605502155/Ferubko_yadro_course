@@ -9,13 +9,19 @@ type IndexBase interface {
 	SaveIndexToFile(indexBase *map[string]IndexStatistics)
 }
 
+type IndexFind interface {
+	Find(input *map[string]bool) map[string][]int
+}
+
 type JsonIndex struct {
 	IndexBase
+	IndexFind
 }
 
 func NewJsonIndex(name string) *JsonIndex {
 	return &JsonIndex{
 		IndexBase: NewIndexBase(name),
+		IndexFind: NewIndexFinde(name),
 	}
 
 }
