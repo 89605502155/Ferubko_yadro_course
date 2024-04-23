@@ -18,7 +18,7 @@ import (
 )
 
 func main() {
-	n := 190
+	n := 14
 	var c bool
 	flag.BoolVar(&c, "c", false, "Use -c")
 	flag.Parse()
@@ -62,7 +62,12 @@ func main() {
 	fmt.Println("after all")
 
 	index := indexbase.NewJsonIndex(viper.GetString("index_file"))
-	index.CreateEmptyDatabase()
+	// index.CreateEmptyDatabase()
+	indexes := index.ReadBase()
+
+	index.BuildIndexFromDB(data, indexes)
+	fmt.Println(indexes)
+	index.SaveIndexToFile(indexes)
 
 }
 

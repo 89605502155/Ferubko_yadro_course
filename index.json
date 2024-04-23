@@ -1,0 +1,709 @@
+{
+    "": [
+        10,
+        6,
+        12,
+        13,
+        5
+    ],
+    "air": [
+        8
+    ],
+    "alt": [
+        9
+    ],
+    "and": [
+        10,
+        6,
+        13,
+        5,
+        8,
+        9
+    ],
+    "answer": [
+        13
+    ],
+    "answerman": [
+        13
+    ],
+    "arm": [
+        9
+    ],
+    "asleep": [
+        7
+    ],
+    "away": [
+        7
+    ],
+    "awww": [
+        11
+    ],
+    "badland": [
+        6
+    ],
+    "barrel": [
+        1,
+        11
+    ],
+    "barren": [
+        13
+    ],
+    "be": [
+        1,
+        6,
+        2
+    ],
+    "becaus": [
+        12
+    ],
+    "black": [
+        5
+    ],
+    "blackhatwear": [
+        12
+    ],
+    "blown": [
+        5
+    ],
+    "blue": [
+        5
+    ],
+    "book": [
+        9
+    ],
+    "boom": [
+        5
+    ],
+    "bore": [
+        13
+    ],
+    "boy": [
+        1,
+        11
+    ],
+    "burgundycolour": [
+        13
+    ],
+    "but": [
+        7
+    ],
+    "can": [
+        1,
+        6
+    ],
+    "canyon": [
+        13
+    ],
+    "cautionari": [
+        6
+    ],
+    "celebr": [
+        9
+    ],
+    "clear": [
+        13
+    ],
+    "cliff": [
+        13
+    ],
+    "cloud": [
+        5
+    ],
+    "coat": [
+        9
+    ],
+    "comb": [
+        9
+    ],
+    "common": [
+        6
+    ],
+    "cornrow": [
+        9
+    ],
+    "cuboid": [
+        8
+    ],
+    "cur": [
+        9
+    ],
+    "dialogu": [
+        9
+    ],
+    "did": [
+        10
+    ],
+    "distanc": [
+        1
+    ],
+    "distribut": [
+        12
+    ],
+    "distributionhat": [
+        12
+    ],
+    "distributionman": [
+        12
+    ],
+    "do": [
+        12
+    ],
+    "dont": [
+        1,
+        7
+    ],
+    "downer": [
+        6
+    ],
+    "draw": [
+        10
+    ],
+    "dress": [
+        9
+    ],
+    "drift": [
+        1
+    ],
+    "edg": [
+        13
+    ],
+    "edgeman": [
+        13
+    ],
+    "els": [
+        1
+    ],
+    "enthusiast": [
+        9
+    ],
+    "explod": [
+        5
+    ],
+    "face": [
+        7,
+        9
+    ],
+    "factor": [
+        5
+    ],
+    "fall": [
+        9
+    ],
+    "famous": [
+        10
+    ],
+    "farnarr": [
+        6
+    ],
+    "fell": [
+        7
+    ],
+    "femal": [
+        9
+    ],
+    "figur": [
+        12,
+        9
+    ],
+    "figureman": [
+        12
+    ],
+    "first": [
+        10
+    ],
+    "float": [
+        1,
+        11
+    ],
+    "floor": [
+        7
+    ],
+    "flooralt": [
+        5
+    ],
+    "flow": [
+        4
+    ],
+    "flyaway": [
+        9
+    ],
+    "forlorn": [
+        9
+    ],
+    "front": [
+        7
+    ],
+    "funni": [
+        6
+    ],
+    "girl": [
+        7
+    ],
+    "go": [
+        6
+    ],
+    "goate": [
+        9
+    ],
+    "gone": [
+        12
+    ],
+    "green": [
+        5
+    ],
+    "grow": [
+        2
+    ],
+    "guessnarr": [
+        6
+    ],
+    "guy": [
+        12
+    ],
+    "ha": [
+        6
+    ],
+    "had": [
+        11
+    ],
+    "hair": [
+        9
+    ],
+    "halfway": [
+        2
+    ],
+    "haman": [
+        6
+    ],
+    "hang": [
+        8
+    ],
+    "hat": [
+        12
+    ],
+    "have": [
+        12
+    ],
+    "hell": [
+        12
+    ],
+    "hello": [
+        3
+    ],
+    "helpimtrappedinauniversefactori": [
+        10
+    ],
+    "hey": [
+        5
+    ],
+    "horizonalt": [
+        4
+    ],
+    "huge": [
+        13
+    ],
+    "i": [
+        1,
+        10,
+        11,
+        6,
+        7,
+        2
+    ],
+    "if": [
+        6
+    ],
+    "ill": [
+        1
+    ],
+    "im": [
+        12
+    ],
+    "imaginablealt": [
+        13
+    ],
+    "impos": [
+        6
+    ],
+    "inara": [
+        9
+    ],
+    "ironi": [
+        6
+    ],
+    "ironyman": [
+        6
+    ],
+    "island": [
+        3
+    ],
+    "islandalthello": [
+        3
+    ],
+    "isnt": [
+        13
+    ],
+    "itman": [
+        13
+    ],
+    "jayn": [
+        9
+    ],
+    "kayle": [
+        9
+    ],
+    "keep": [
+        12
+    ],
+    "kind": [
+        13
+    ],
+    "known": [
+        6
+    ],
+    "landscap": [
+        6,
+        13,
+        4
+    ],
+    "laterdesol": [
+        6
+    ],
+    "le": [
+        2
+    ],
+    "least": [
+        13
+    ],
+    "less": [
+        12
+    ],
+    "lie": [
+        5
+    ],
+    "lineup": [
+        9
+    ],
+    "lip": [
+        13
+    ],
+    "long": [
+        9
+    ],
+    "mal": [
+        9
+    ],
+    "male": [
+        9
+    ],
+    "man": [
+        12,
+        9
+    ],
+    "mark": [
+        5
+    ],
+    "mean": [
+        8
+    ],
+    "men": [
+        13
+    ],
+    "metahumor": [
+        6
+    ],
+    "mommiesalt": [
+        11
+    ],
+    "moon": [
+        13
+    ],
+    "my": [
+        10
+    ],
+    "name": [
+        7
+    ],
+    "narrat": [
+        6
+    ],
+    "negat": [
+        12
+    ],
+    "nextth": [
+        1
+    ],
+    "not": [
+        6
+    ],
+    "notman": [
+        13
+    ],
+    "nowful": [
+        13
+    ],
+    "number": [
+        12,
+        5
+    ],
+    "ocean": [
+        4
+    ],
+    "oceanboy": [
+        1,
+        11
+    ],
+    "onli": [
+        2
+    ],
+    "opposit": [
+        2
+    ],
+    "outstretch": [
+        9
+    ],
+    "packag": [
+        5
+    ],
+    "packageth": [
+        5
+    ],
+    "perspect": [
+        6
+    ],
+    "petit": [
+        2
+    ],
+    "pi": [
+        10
+    ],
+    "place": [
+        11
+    ],
+    "planet": [
+        13
+    ],
+    "pockmark": [
+        13
+    ],
+    "poisson": [
+        12
+    ],
+    "pretti": [
+        13
+    ],
+    "prime": [
+        5
+    ],
+    "princ": [
+        2
+    ],
+    "rais": [
+        9
+    ],
+    "red": [
+        5,
+        8
+    ],
+    "refer": [
+        2
+    ],
+    "rememb": [
+        7
+    ],
+    "reveal": [
+        13
+    ],
+    "ring": [
+        13
+    ],
+    "river": [
+        4,
+        9
+    ],
+    "rocki": [
+        13
+    ],
+    "say": [
+        12
+    ],
+    "scene": [
+        13
+    ],
+    "scorch": [
+        5
+    ],
+    "see": [
+        5
+    ],
+    "seenalt": [
+        1
+    ],
+    "selfrefer": [
+        6
+    ],
+    "short": [
+        9
+    ],
+    "shorter": [
+        9
+    ],
+    "side": [
+        7,
+        2,
+        9
+    ],
+    "simon": [
+        9
+    ],
+    "sit": [
+        1,
+        11
+    ],
+    "site": [
+        10
+    ],
+    "sixleg": [
+        8
+    ],
+    "sketch": [
+        2,
+        3,
+        4
+    ],
+    "skyit": [
+        6
+    ],
+    "skyman": [
+        13
+    ],
+    "sleep": [
+        7
+    ],
+    "smokether": [
+        5
+    ],
+    "spherealttitl": [
+        2
+    ],
+    "spider": [
+        8
+    ],
+    "spiki": [
+        9
+    ],
+    "stand": [
+        13,
+        8,
+        9
+    ],
+    "statement": [
+        6
+    ],
+    "sternlook": [
+        9
+    ],
+    "stick": [
+        12,
+        9
+    ],
+    "still": [
+        12
+    ],
+    "stringi": [
+        9
+    ],
+    "sun": [
+        6,
+        4
+    ],
+    "supportthey": [
+        8
+    ],
+    "taleman": [
+        6
+    ],
+    "text": [
+        12,
+        13,
+        5
+    ],
+    "than": [
+        12
+    ],
+    "that": [
+        13
+    ],
+    "thatman": [
+        12
+    ],
+    "there": [
+        4,
+        9
+    ],
+    "theyr": [
+        13
+    ],
+    "thought": [
+        2
+    ],
+    "time": [
+        13
+    ],
+    "too": [
+        6
+    ],
+    "total": [
+        12
+    ],
+    "tree": [
+        2
+    ],
+    "two": [
+        13,
+        2
+    ],
+    "valu": [
+        12
+    ],
+    "view": [
+        7
+    ],
+    "visibl": [
+        13,
+        8
+    ],
+    "wash": [
+        9
+    ],
+    "wear": [
+        9
+    ],
+    "when": [
+        6
+    ],
+    "where": [
+        1
+    ],
+    "whi": [
+        12
+    ],
+    "whistlingalt": [
+        12
+    ],
+    "wonder": [
+        1
+    ],
+    "wouldnt": [
+        6
+    ],
+    "year": [
+        6
+    ],
+    "zeroman": [
+        12
+    ],
+    "zoe": [
+        9
+    ]
+}
