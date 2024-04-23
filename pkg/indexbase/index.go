@@ -23,19 +23,24 @@ func NewIndexBase(name string) *IndexBaseStruct {
 	}
 }
 
-func (ind *IndexBaseStruct) ReadBase() *map[string][]int {
+type IndexStatistics struct {
+	ComicsIndex         []int `json:"comics_index"`
+	NumberComicsOfIndex []int `json:"number_comics_of_index"`
+}
+
+func (ind *IndexBaseStruct) ReadBase() *map[string]IndexStatistics {
 	fileContent, err := os.ReadFile(ind.Name)
 	if err != nil {
 		ind.CreateEmptyDatabase()
 		logrus.Fatalf("Ошибка чтения файла: %v", err)
 	}
-	data := make(map[string][]int)
+	data := make(map[string]IndexStatistics)
 	fmt.Println(string(fileContent))
 	// Парсим JSON
 	err = json.Unmarshal(fileContent, &data)
 	if err != nil {
 		logrus.Fatalf("Ошибка при разборе JSON: %v", err)
-		return &map[string][]int{}
+		return &map[string]IndexStatistics{}
 	}
 	return &data
 }
@@ -49,11 +54,13 @@ func (ind *IndexBaseStruct) CreateEmptyDatabase() {
 	defer file.Close()
 }
 
-func (ind *IndexBaseStruct) BuildIndexFromDB(db *map[string]xkcd.ComicsInfo, indexBase *map[string][]int) {
+func (ind *IndexBaseStruct) BuildIndexFromDB(db *map[string]xkcd.ComicsInfo, indexBase *map[string]IndexStatistics) {
 	for index, comic := range *db {
 		for _, words := range comic.Keywords {
 			if _, ok := (*indexBase)[words]; !ok {
-				slic := make([]int, 0)
+				slic := IndexStatistics{}
+				slic.NumberComicsOfIndex = make([]int, 0)
+				slic.ComicsIndex = make([]int, 0)
 				(*indexBase)[words] = slic
 			}
 			intIndex, err := strconv.Atoi(index)
@@ -61,17 +68,20 @@ func (ind *IndexBaseStruct) BuildIndexFromDB(db *map[string]xkcd.ComicsInfo, ind
 				logrus.Fatalf("you have error %s", err.Error())
 				return
 			}
-			indexInSlice := slices.Index((*indexBase)[words], intIndex)
+			indexInSlice := slices.Index((*indexBase)[words].ComicsIndex, intIndex)
 			if indexInSlice >= 0 {
-				continue
+				(*indexBase)[words].NumberComicsOfIndex[indexInSlice]++
 			} else {
-				(*indexBase)[words] = append((*indexBase)[words], intIndex)
+				str := (*indexBase)[words]
+				str.ComicsIndex = append(str.ComicsIndex, intIndex)
+				str.NumberComicsOfIndex = append(str.NumberComicsOfIndex, 1)
+				(*indexBase)[words] = str
 			}
 		}
 	}
 }
 
-func (ind *IndexBaseStruct) SaveIndexToFile(indexBase *map[string][]int) {
+func (ind *IndexBaseStruct) SaveIndexToFile(indexBase *map[string]IndexStatistics) {
 	jsonData, err := json.MarshalIndent(*indexBase, "", "    ")
 	if err != nil {
 		logrus.Fatalf("you have error %s", err.Error())

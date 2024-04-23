@@ -45,6 +45,10 @@ func NewHttpClient(baseURL string, w *words.Words) *HttpClient {
 func (c *HttpClient) GetLatestComicsNumber() (int, error) {
 	url := fmt.Sprintf("%s/info.0.json", c.baseURL)
 
+	// a:=http.Client{
+	// 	Timeout: 10*time.Second,
+	// }
+
 	resp, err := http.Get(url)
 	if err != nil {
 		return 0, err

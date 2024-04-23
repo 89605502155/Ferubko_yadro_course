@@ -18,7 +18,7 @@ import (
 )
 
 func main() {
-	n := 14
+	n := 1400
 	var c bool
 	var s string
 	flag.BoolVar(&c, "c", false, "Use -c")

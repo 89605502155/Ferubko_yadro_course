@@ -4,9 +4,9 @@ import "xkcd/pkg/xkcd"
 
 type IndexBase interface {
 	CreateEmptyDatabase()
-	ReadBase() *map[string][]int
-	BuildIndexFromDB(db *map[string]xkcd.ComicsInfo, index *map[string][]int)
-	SaveIndexToFile(indexBase *map[string][]int)
+	ReadBase() *map[string]IndexStatistics
+	BuildIndexFromDB(db *map[string]xkcd.ComicsInfo, indexBase *map[string]IndexStatistics)
+	SaveIndexToFile(indexBase *map[string]IndexStatistics)
 }
 
 type JsonIndex struct {

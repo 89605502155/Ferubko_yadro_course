@@ -1,709 +1,1858 @@
 {
-    "": [
-        10,
-        6,
-        12,
-        13,
-        5
-    ],
-    "air": [
-        8
-    ],
-    "alt": [
-        9
-    ],
-    "and": [
-        10,
-        6,
-        13,
-        5,
-        8,
-        9
-    ],
-    "answer": [
-        13
-    ],
-    "answerman": [
-        13
-    ],
-    "arm": [
-        9
-    ],
-    "asleep": [
-        7
-    ],
-    "away": [
-        7
-    ],
-    "awww": [
-        11
-    ],
-    "badland": [
-        6
-    ],
-    "barrel": [
-        1,
-        11
-    ],
-    "barren": [
-        13
-    ],
-    "be": [
-        1,
-        6,
-        2
-    ],
-    "becaus": [
-        12
-    ],
-    "black": [
-        5
-    ],
-    "blackhatwear": [
-        12
-    ],
-    "blown": [
-        5
-    ],
-    "blue": [
-        5
-    ],
-    "book": [
-        9
-    ],
-    "boom": [
-        5
-    ],
-    "bore": [
-        13
-    ],
-    "boy": [
-        1,
-        11
-    ],
-    "burgundycolour": [
-        13
-    ],
-    "but": [
-        7
-    ],
-    "can": [
-        1,
-        6
-    ],
-    "canyon": [
-        13
-    ],
-    "cautionari": [
-        6
-    ],
-    "celebr": [
-        9
-    ],
-    "clear": [
-        13
-    ],
-    "cliff": [
-        13
-    ],
-    "cloud": [
-        5
-    ],
-    "coat": [
-        9
-    ],
-    "comb": [
-        9
-    ],
-    "common": [
-        6
-    ],
-    "cornrow": [
-        9
-    ],
-    "cuboid": [
-        8
-    ],
-    "cur": [
-        9
-    ],
-    "dialogu": [
-        9
-    ],
-    "did": [
-        10
-    ],
-    "distanc": [
-        1
-    ],
-    "distribut": [
-        12
-    ],
-    "distributionhat": [
-        12
-    ],
-    "distributionman": [
-        12
-    ],
-    "do": [
-        12
-    ],
-    "dont": [
-        1,
-        7
-    ],
-    "downer": [
-        6
-    ],
-    "draw": [
-        10
-    ],
-    "dress": [
-        9
-    ],
-    "drift": [
-        1
-    ],
-    "edg": [
-        13
-    ],
-    "edgeman": [
-        13
-    ],
-    "els": [
-        1
-    ],
-    "enthusiast": [
-        9
-    ],
-    "explod": [
-        5
-    ],
-    "face": [
-        7,
-        9
-    ],
-    "factor": [
-        5
-    ],
-    "fall": [
-        9
-    ],
-    "famous": [
-        10
-    ],
-    "farnarr": [
-        6
-    ],
-    "fell": [
-        7
-    ],
-    "femal": [
-        9
-    ],
-    "figur": [
-        12,
-        9
-    ],
-    "figureman": [
-        12
-    ],
-    "first": [
-        10
-    ],
-    "float": [
-        1,
-        11
-    ],
-    "floor": [
-        7
-    ],
-    "flooralt": [
-        5
-    ],
-    "flow": [
-        4
-    ],
-    "flyaway": [
-        9
-    ],
-    "forlorn": [
-        9
-    ],
-    "front": [
-        7
-    ],
-    "funni": [
-        6
-    ],
-    "girl": [
-        7
-    ],
-    "go": [
-        6
-    ],
-    "goate": [
-        9
-    ],
-    "gone": [
-        12
-    ],
-    "green": [
-        5
-    ],
-    "grow": [
-        2
-    ],
-    "guessnarr": [
-        6
-    ],
-    "guy": [
-        12
-    ],
-    "ha": [
-        6
-    ],
-    "had": [
-        11
-    ],
-    "hair": [
-        9
-    ],
-    "halfway": [
-        2
-    ],
-    "haman": [
-        6
-    ],
-    "hang": [
-        8
-    ],
-    "hat": [
-        12
-    ],
-    "have": [
-        12
-    ],
-    "hell": [
-        12
-    ],
-    "hello": [
-        3
-    ],
-    "helpimtrappedinauniversefactori": [
-        10
-    ],
-    "hey": [
-        5
-    ],
-    "horizonalt": [
-        4
-    ],
-    "huge": [
-        13
-    ],
-    "i": [
-        1,
-        10,
-        11,
-        6,
-        7,
-        2
-    ],
-    "if": [
-        6
-    ],
-    "ill": [
-        1
-    ],
-    "im": [
-        12
-    ],
-    "imaginablealt": [
-        13
-    ],
-    "impos": [
-        6
-    ],
-    "inara": [
-        9
-    ],
-    "ironi": [
-        6
-    ],
-    "ironyman": [
-        6
-    ],
-    "island": [
-        3
-    ],
-    "islandalthello": [
-        3
-    ],
-    "isnt": [
-        13
-    ],
-    "itman": [
-        13
-    ],
-    "jayn": [
-        9
-    ],
-    "kayle": [
-        9
-    ],
-    "keep": [
-        12
-    ],
-    "kind": [
-        13
-    ],
-    "known": [
-        6
-    ],
-    "landscap": [
-        6,
-        13,
-        4
-    ],
-    "laterdesol": [
-        6
-    ],
-    "le": [
-        2
-    ],
-    "least": [
-        13
-    ],
-    "less": [
-        12
-    ],
-    "lie": [
-        5
-    ],
-    "lineup": [
-        9
-    ],
-    "lip": [
-        13
-    ],
-    "long": [
-        9
-    ],
-    "mal": [
-        9
-    ],
-    "male": [
-        9
-    ],
-    "man": [
-        12,
-        9
-    ],
-    "mark": [
-        5
-    ],
-    "mean": [
-        8
-    ],
-    "men": [
-        13
-    ],
-    "metahumor": [
-        6
-    ],
-    "mommiesalt": [
-        11
-    ],
-    "moon": [
-        13
-    ],
-    "my": [
-        10
-    ],
-    "name": [
-        7
-    ],
-    "narrat": [
-        6
-    ],
-    "negat": [
-        12
-    ],
-    "nextth": [
-        1
-    ],
-    "not": [
-        6
-    ],
-    "notman": [
-        13
-    ],
-    "nowful": [
-        13
-    ],
-    "number": [
-        12,
-        5
-    ],
-    "ocean": [
-        4
-    ],
-    "oceanboy": [
-        1,
-        11
-    ],
-    "onli": [
-        2
-    ],
-    "opposit": [
-        2
-    ],
-    "outstretch": [
-        9
-    ],
-    "packag": [
-        5
-    ],
-    "packageth": [
-        5
-    ],
-    "perspect": [
-        6
-    ],
-    "petit": [
-        2
-    ],
-    "pi": [
-        10
-    ],
-    "place": [
-        11
-    ],
-    "planet": [
-        13
-    ],
-    "pockmark": [
-        13
-    ],
-    "poisson": [
-        12
-    ],
-    "pretti": [
-        13
-    ],
-    "prime": [
-        5
-    ],
-    "princ": [
-        2
-    ],
-    "rais": [
-        9
-    ],
-    "red": [
-        5,
-        8
-    ],
-    "refer": [
-        2
-    ],
-    "rememb": [
-        7
-    ],
-    "reveal": [
-        13
-    ],
-    "ring": [
-        13
-    ],
-    "river": [
-        4,
-        9
-    ],
-    "rocki": [
-        13
-    ],
-    "say": [
-        12
-    ],
-    "scene": [
-        13
-    ],
-    "scorch": [
-        5
-    ],
-    "see": [
-        5
-    ],
-    "seenalt": [
-        1
-    ],
-    "selfrefer": [
-        6
-    ],
-    "short": [
-        9
-    ],
-    "shorter": [
-        9
-    ],
-    "side": [
-        7,
-        2,
-        9
-    ],
-    "simon": [
-        9
-    ],
-    "sit": [
-        1,
-        11
-    ],
-    "site": [
-        10
-    ],
-    "sixleg": [
-        8
-    ],
-    "sketch": [
-        2,
-        3,
-        4
-    ],
-    "skyit": [
-        6
-    ],
-    "skyman": [
-        13
-    ],
-    "sleep": [
-        7
-    ],
-    "smokether": [
-        5
-    ],
-    "spherealttitl": [
-        2
-    ],
-    "spider": [
-        8
-    ],
-    "spiki": [
-        9
-    ],
-    "stand": [
-        13,
-        8,
-        9
-    ],
-    "statement": [
-        6
-    ],
-    "sternlook": [
-        9
-    ],
-    "stick": [
-        12,
-        9
-    ],
-    "still": [
-        12
-    ],
-    "stringi": [
-        9
-    ],
-    "sun": [
-        6,
-        4
-    ],
-    "supportthey": [
-        8
-    ],
-    "taleman": [
-        6
-    ],
-    "text": [
-        12,
-        13,
-        5
-    ],
-    "than": [
-        12
-    ],
-    "that": [
-        13
-    ],
-    "thatman": [
-        12
-    ],
-    "there": [
-        4,
-        9
-    ],
-    "theyr": [
-        13
-    ],
-    "thought": [
-        2
-    ],
-    "time": [
-        13
-    ],
-    "too": [
-        6
-    ],
-    "total": [
-        12
-    ],
-    "tree": [
-        2
-    ],
-    "two": [
-        13,
-        2
-    ],
-    "valu": [
-        12
-    ],
-    "view": [
-        7
-    ],
-    "visibl": [
-        13,
-        8
-    ],
-    "wash": [
-        9
-    ],
-    "wear": [
-        9
-    ],
-    "when": [
-        6
-    ],
-    "where": [
-        1
-    ],
-    "whi": [
-        12
-    ],
-    "whistlingalt": [
-        12
-    ],
-    "wonder": [
-        1
-    ],
-    "wouldnt": [
-        6
-    ],
-    "year": [
-        6
-    ],
-    "zeroman": [
-        12
-    ],
-    "zoe": [
-        9
-    ]
+    "": {
+        "comics_index": [
+            12,
+            5,
+            6,
+            10,
+            13
+        ],
+        "number_comics_of_index": [
+            1,
+            1,
+            1,
+            1,
+            1
+        ]
+    },
+    "air": {
+        "comics_index": [
+            8
+        ],
+        "number_comics_of_index": [
+            1
+        ]
+    },
+    "alt": {
+        "comics_index": [
+            9
+        ],
+        "number_comics_of_index": [
+            1
+        ]
+    },
+    "and": {
+        "comics_index": [
+            5,
+            6,
+            8,
+            10,
+            13,
+            9
+        ],
+        "number_comics_of_index": [
+            1,
+            1,
+            1,
+            1,
+            1,
+            1
+        ]
+    },
+    "answer": {
+        "comics_index": [
+            13
+        ],
+        "number_comics_of_index": [
+            1
+        ]
+    },
+    "answerman": {
+        "comics_index": [
+            13
+        ],
+        "number_comics_of_index": [
+            1
+        ]
+    },
+    "arm": {
+        "comics_index": [
+            9
+        ],
+        "number_comics_of_index": [
+            1
+        ]
+    },
+    "asleep": {
+        "comics_index": [
+            7
+        ],
+        "number_comics_of_index": [
+            1
+        ]
+    },
+    "away": {
+        "comics_index": [
+            7
+        ],
+        "number_comics_of_index": [
+            1
+        ]
+    },
+    "awww": {
+        "comics_index": [
+            11
+        ],
+        "number_comics_of_index": [
+            1
+        ]
+    },
+    "badland": {
+        "comics_index": [
+            6
+        ],
+        "number_comics_of_index": [
+            1
+        ]
+    },
+    "barrel": {
+        "comics_index": [
+            1,
+            11
+        ],
+        "number_comics_of_index": [
+            1,
+            1
+        ]
+    },
+    "barren": {
+        "comics_index": [
+            13
+        ],
+        "number_comics_of_index": [
+            1
+        ]
+    },
+    "be": {
+        "comics_index": [
+            6,
+            2,
+            1
+        ],
+        "number_comics_of_index": [
+            1,
+            1,
+            1
+        ]
+    },
+    "becaus": {
+        "comics_index": [
+            12
+        ],
+        "number_comics_of_index": [
+            1
+        ]
+    },
+    "black": {
+        "comics_index": [
+            5
+        ],
+        "number_comics_of_index": [
+            1
+        ]
+    },
+    "blackhatwear": {
+        "comics_index": [
+            12
+        ],
+        "number_comics_of_index": [
+            1
+        ]
+    },
+    "blown": {
+        "comics_index": [
+            5
+        ],
+        "number_comics_of_index": [
+            1
+        ]
+    },
+    "blue": {
+        "comics_index": [
+            5
+        ],
+        "number_comics_of_index": [
+            1
+        ]
+    },
+    "book": {
+        "comics_index": [
+            9
+        ],
+        "number_comics_of_index": [
+            1
+        ]
+    },
+    "boom": {
+        "comics_index": [
+            5
+        ],
+        "number_comics_of_index": [
+            1
+        ]
+    },
+    "bore": {
+        "comics_index": [
+            13
+        ],
+        "number_comics_of_index": [
+            1
+        ]
+    },
+    "boy": {
+        "comics_index": [
+            1,
+            11
+        ],
+        "number_comics_of_index": [
+            1,
+            1
+        ]
+    },
+    "burgundycolour": {
+        "comics_index": [
+            13
+        ],
+        "number_comics_of_index": [
+            1
+        ]
+    },
+    "but": {
+        "comics_index": [
+            7
+        ],
+        "number_comics_of_index": [
+            1
+        ]
+    },
+    "can": {
+        "comics_index": [
+            6,
+            1
+        ],
+        "number_comics_of_index": [
+            1,
+            1
+        ]
+    },
+    "canyon": {
+        "comics_index": [
+            13
+        ],
+        "number_comics_of_index": [
+            1
+        ]
+    },
+    "cautionari": {
+        "comics_index": [
+            6
+        ],
+        "number_comics_of_index": [
+            1
+        ]
+    },
+    "celebr": {
+        "comics_index": [
+            9
+        ],
+        "number_comics_of_index": [
+            1
+        ]
+    },
+    "clear": {
+        "comics_index": [
+            13
+        ],
+        "number_comics_of_index": [
+            1
+        ]
+    },
+    "cliff": {
+        "comics_index": [
+            13
+        ],
+        "number_comics_of_index": [
+            1
+        ]
+    },
+    "cloud": {
+        "comics_index": [
+            5
+        ],
+        "number_comics_of_index": [
+            1
+        ]
+    },
+    "coat": {
+        "comics_index": [
+            9
+        ],
+        "number_comics_of_index": [
+            1
+        ]
+    },
+    "comb": {
+        "comics_index": [
+            9
+        ],
+        "number_comics_of_index": [
+            1
+        ]
+    },
+    "common": {
+        "comics_index": [
+            6
+        ],
+        "number_comics_of_index": [
+            1
+        ]
+    },
+    "cornrow": {
+        "comics_index": [
+            9
+        ],
+        "number_comics_of_index": [
+            1
+        ]
+    },
+    "cuboid": {
+        "comics_index": [
+            8
+        ],
+        "number_comics_of_index": [
+            1
+        ]
+    },
+    "cur": {
+        "comics_index": [
+            9
+        ],
+        "number_comics_of_index": [
+            1
+        ]
+    },
+    "dialogu": {
+        "comics_index": [
+            9
+        ],
+        "number_comics_of_index": [
+            1
+        ]
+    },
+    "did": {
+        "comics_index": [
+            10
+        ],
+        "number_comics_of_index": [
+            1
+        ]
+    },
+    "distanc": {
+        "comics_index": [
+            1
+        ],
+        "number_comics_of_index": [
+            1
+        ]
+    },
+    "distribut": {
+        "comics_index": [
+            12
+        ],
+        "number_comics_of_index": [
+            1
+        ]
+    },
+    "distributionhat": {
+        "comics_index": [
+            12
+        ],
+        "number_comics_of_index": [
+            1
+        ]
+    },
+    "distributionman": {
+        "comics_index": [
+            12
+        ],
+        "number_comics_of_index": [
+            1
+        ]
+    },
+    "do": {
+        "comics_index": [
+            12
+        ],
+        "number_comics_of_index": [
+            1
+        ]
+    },
+    "dont": {
+        "comics_index": [
+            7,
+            1
+        ],
+        "number_comics_of_index": [
+            1,
+            1
+        ]
+    },
+    "downer": {
+        "comics_index": [
+            6
+        ],
+        "number_comics_of_index": [
+            1
+        ]
+    },
+    "draw": {
+        "comics_index": [
+            10
+        ],
+        "number_comics_of_index": [
+            1
+        ]
+    },
+    "dress": {
+        "comics_index": [
+            9
+        ],
+        "number_comics_of_index": [
+            1
+        ]
+    },
+    "drift": {
+        "comics_index": [
+            1
+        ],
+        "number_comics_of_index": [
+            1
+        ]
+    },
+    "edg": {
+        "comics_index": [
+            13
+        ],
+        "number_comics_of_index": [
+            1
+        ]
+    },
+    "edgeman": {
+        "comics_index": [
+            13
+        ],
+        "number_comics_of_index": [
+            1
+        ]
+    },
+    "els": {
+        "comics_index": [
+            1
+        ],
+        "number_comics_of_index": [
+            1
+        ]
+    },
+    "enthusiast": {
+        "comics_index": [
+            9
+        ],
+        "number_comics_of_index": [
+            1
+        ]
+    },
+    "explod": {
+        "comics_index": [
+            5
+        ],
+        "number_comics_of_index": [
+            1
+        ]
+    },
+    "face": {
+        "comics_index": [
+            7,
+            9
+        ],
+        "number_comics_of_index": [
+            1,
+            1
+        ]
+    },
+    "factor": {
+        "comics_index": [
+            5
+        ],
+        "number_comics_of_index": [
+            1
+        ]
+    },
+    "fall": {
+        "comics_index": [
+            9
+        ],
+        "number_comics_of_index": [
+            1
+        ]
+    },
+    "famous": {
+        "comics_index": [
+            10
+        ],
+        "number_comics_of_index": [
+            1
+        ]
+    },
+    "farnarr": {
+        "comics_index": [
+            6
+        ],
+        "number_comics_of_index": [
+            1
+        ]
+    },
+    "fell": {
+        "comics_index": [
+            7
+        ],
+        "number_comics_of_index": [
+            1
+        ]
+    },
+    "femal": {
+        "comics_index": [
+            9
+        ],
+        "number_comics_of_index": [
+            1
+        ]
+    },
+    "figur": {
+        "comics_index": [
+            12,
+            9
+        ],
+        "number_comics_of_index": [
+            1,
+            1
+        ]
+    },
+    "figureman": {
+        "comics_index": [
+            12
+        ],
+        "number_comics_of_index": [
+            1
+        ]
+    },
+    "first": {
+        "comics_index": [
+            10
+        ],
+        "number_comics_of_index": [
+            1
+        ]
+    },
+    "float": {
+        "comics_index": [
+            1,
+            11
+        ],
+        "number_comics_of_index": [
+            1,
+            1
+        ]
+    },
+    "floor": {
+        "comics_index": [
+            7
+        ],
+        "number_comics_of_index": [
+            1
+        ]
+    },
+    "flooralt": {
+        "comics_index": [
+            5
+        ],
+        "number_comics_of_index": [
+            1
+        ]
+    },
+    "flow": {
+        "comics_index": [
+            4
+        ],
+        "number_comics_of_index": [
+            1
+        ]
+    },
+    "flyaway": {
+        "comics_index": [
+            9
+        ],
+        "number_comics_of_index": [
+            1
+        ]
+    },
+    "forlorn": {
+        "comics_index": [
+            9
+        ],
+        "number_comics_of_index": [
+            1
+        ]
+    },
+    "front": {
+        "comics_index": [
+            7
+        ],
+        "number_comics_of_index": [
+            1
+        ]
+    },
+    "funni": {
+        "comics_index": [
+            6
+        ],
+        "number_comics_of_index": [
+            1
+        ]
+    },
+    "girl": {
+        "comics_index": [
+            7
+        ],
+        "number_comics_of_index": [
+            1
+        ]
+    },
+    "go": {
+        "comics_index": [
+            6
+        ],
+        "number_comics_of_index": [
+            1
+        ]
+    },
+    "goate": {
+        "comics_index": [
+            9
+        ],
+        "number_comics_of_index": [
+            1
+        ]
+    },
+    "gone": {
+        "comics_index": [
+            12
+        ],
+        "number_comics_of_index": [
+            1
+        ]
+    },
+    "green": {
+        "comics_index": [
+            5
+        ],
+        "number_comics_of_index": [
+            1
+        ]
+    },
+    "grow": {
+        "comics_index": [
+            2
+        ],
+        "number_comics_of_index": [
+            1
+        ]
+    },
+    "guessnarr": {
+        "comics_index": [
+            6
+        ],
+        "number_comics_of_index": [
+            1
+        ]
+    },
+    "guy": {
+        "comics_index": [
+            12
+        ],
+        "number_comics_of_index": [
+            1
+        ]
+    },
+    "ha": {
+        "comics_index": [
+            6
+        ],
+        "number_comics_of_index": [
+            1
+        ]
+    },
+    "had": {
+        "comics_index": [
+            11
+        ],
+        "number_comics_of_index": [
+            1
+        ]
+    },
+    "hair": {
+        "comics_index": [
+            9
+        ],
+        "number_comics_of_index": [
+            1
+        ]
+    },
+    "halfway": {
+        "comics_index": [
+            2
+        ],
+        "number_comics_of_index": [
+            1
+        ]
+    },
+    "haman": {
+        "comics_index": [
+            6
+        ],
+        "number_comics_of_index": [
+            1
+        ]
+    },
+    "hang": {
+        "comics_index": [
+            8
+        ],
+        "number_comics_of_index": [
+            1
+        ]
+    },
+    "hat": {
+        "comics_index": [
+            12
+        ],
+        "number_comics_of_index": [
+            1
+        ]
+    },
+    "have": {
+        "comics_index": [
+            12
+        ],
+        "number_comics_of_index": [
+            1
+        ]
+    },
+    "hell": {
+        "comics_index": [
+            12
+        ],
+        "number_comics_of_index": [
+            1
+        ]
+    },
+    "hello": {
+        "comics_index": [
+            3
+        ],
+        "number_comics_of_index": [
+            1
+        ]
+    },
+    "helpimtrappedinauniversefactori": {
+        "comics_index": [
+            10
+        ],
+        "number_comics_of_index": [
+            1
+        ]
+    },
+    "hey": {
+        "comics_index": [
+            5
+        ],
+        "number_comics_of_index": [
+            1
+        ]
+    },
+    "horizonalt": {
+        "comics_index": [
+            4
+        ],
+        "number_comics_of_index": [
+            1
+        ]
+    },
+    "huge": {
+        "comics_index": [
+            13
+        ],
+        "number_comics_of_index": [
+            1
+        ]
+    },
+    "i": {
+        "comics_index": [
+            6,
+            2,
+            7,
+            1,
+            10,
+            11
+        ],
+        "number_comics_of_index": [
+            1,
+            1,
+            1,
+            1,
+            1,
+            1
+        ]
+    },
+    "if": {
+        "comics_index": [
+            6
+        ],
+        "number_comics_of_index": [
+            1
+        ]
+    },
+    "ill": {
+        "comics_index": [
+            1
+        ],
+        "number_comics_of_index": [
+            1
+        ]
+    },
+    "im": {
+        "comics_index": [
+            12
+        ],
+        "number_comics_of_index": [
+            1
+        ]
+    },
+    "imaginablealt": {
+        "comics_index": [
+            13
+        ],
+        "number_comics_of_index": [
+            1
+        ]
+    },
+    "impos": {
+        "comics_index": [
+            6
+        ],
+        "number_comics_of_index": [
+            1
+        ]
+    },
+    "inara": {
+        "comics_index": [
+            9
+        ],
+        "number_comics_of_index": [
+            1
+        ]
+    },
+    "ironi": {
+        "comics_index": [
+            6
+        ],
+        "number_comics_of_index": [
+            1
+        ]
+    },
+    "ironyman": {
+        "comics_index": [
+            6
+        ],
+        "number_comics_of_index": [
+            1
+        ]
+    },
+    "island": {
+        "comics_index": [
+            3
+        ],
+        "number_comics_of_index": [
+            1
+        ]
+    },
+    "islandalthello": {
+        "comics_index": [
+            3
+        ],
+        "number_comics_of_index": [
+            1
+        ]
+    },
+    "isnt": {
+        "comics_index": [
+            13
+        ],
+        "number_comics_of_index": [
+            1
+        ]
+    },
+    "itman": {
+        "comics_index": [
+            13
+        ],
+        "number_comics_of_index": [
+            1
+        ]
+    },
+    "jayn": {
+        "comics_index": [
+            9
+        ],
+        "number_comics_of_index": [
+            1
+        ]
+    },
+    "kayle": {
+        "comics_index": [
+            9
+        ],
+        "number_comics_of_index": [
+            1
+        ]
+    },
+    "keep": {
+        "comics_index": [
+            12
+        ],
+        "number_comics_of_index": [
+            1
+        ]
+    },
+    "kind": {
+        "comics_index": [
+            13
+        ],
+        "number_comics_of_index": [
+            1
+        ]
+    },
+    "known": {
+        "comics_index": [
+            6
+        ],
+        "number_comics_of_index": [
+            1
+        ]
+    },
+    "landscap": {
+        "comics_index": [
+            6,
+            4,
+            13
+        ],
+        "number_comics_of_index": [
+            1,
+            1,
+            1
+        ]
+    },
+    "laterdesol": {
+        "comics_index": [
+            6
+        ],
+        "number_comics_of_index": [
+            1
+        ]
+    },
+    "le": {
+        "comics_index": [
+            2
+        ],
+        "number_comics_of_index": [
+            1
+        ]
+    },
+    "least": {
+        "comics_index": [
+            13
+        ],
+        "number_comics_of_index": [
+            1
+        ]
+    },
+    "less": {
+        "comics_index": [
+            12
+        ],
+        "number_comics_of_index": [
+            1
+        ]
+    },
+    "lie": {
+        "comics_index": [
+            5
+        ],
+        "number_comics_of_index": [
+            1
+        ]
+    },
+    "lineup": {
+        "comics_index": [
+            9
+        ],
+        "number_comics_of_index": [
+            1
+        ]
+    },
+    "lip": {
+        "comics_index": [
+            13
+        ],
+        "number_comics_of_index": [
+            1
+        ]
+    },
+    "long": {
+        "comics_index": [
+            9
+        ],
+        "number_comics_of_index": [
+            1
+        ]
+    },
+    "mal": {
+        "comics_index": [
+            9
+        ],
+        "number_comics_of_index": [
+            1
+        ]
+    },
+    "male": {
+        "comics_index": [
+            9
+        ],
+        "number_comics_of_index": [
+            1
+        ]
+    },
+    "man": {
+        "comics_index": [
+            12,
+            9
+        ],
+        "number_comics_of_index": [
+            1,
+            1
+        ]
+    },
+    "mark": {
+        "comics_index": [
+            5
+        ],
+        "number_comics_of_index": [
+            1
+        ]
+    },
+    "mean": {
+        "comics_index": [
+            8
+        ],
+        "number_comics_of_index": [
+            1
+        ]
+    },
+    "men": {
+        "comics_index": [
+            13
+        ],
+        "number_comics_of_index": [
+            1
+        ]
+    },
+    "metahumor": {
+        "comics_index": [
+            6
+        ],
+        "number_comics_of_index": [
+            1
+        ]
+    },
+    "mommiesalt": {
+        "comics_index": [
+            11
+        ],
+        "number_comics_of_index": [
+            1
+        ]
+    },
+    "moon": {
+        "comics_index": [
+            13
+        ],
+        "number_comics_of_index": [
+            1
+        ]
+    },
+    "my": {
+        "comics_index": [
+            10
+        ],
+        "number_comics_of_index": [
+            1
+        ]
+    },
+    "name": {
+        "comics_index": [
+            7
+        ],
+        "number_comics_of_index": [
+            1
+        ]
+    },
+    "narrat": {
+        "comics_index": [
+            6
+        ],
+        "number_comics_of_index": [
+            1
+        ]
+    },
+    "negat": {
+        "comics_index": [
+            12
+        ],
+        "number_comics_of_index": [
+            1
+        ]
+    },
+    "nextth": {
+        "comics_index": [
+            1
+        ],
+        "number_comics_of_index": [
+            1
+        ]
+    },
+    "not": {
+        "comics_index": [
+            6
+        ],
+        "number_comics_of_index": [
+            1
+        ]
+    },
+    "notman": {
+        "comics_index": [
+            13
+        ],
+        "number_comics_of_index": [
+            1
+        ]
+    },
+    "nowful": {
+        "comics_index": [
+            13
+        ],
+        "number_comics_of_index": [
+            1
+        ]
+    },
+    "number": {
+        "comics_index": [
+            12,
+            5
+        ],
+        "number_comics_of_index": [
+            1,
+            1
+        ]
+    },
+    "ocean": {
+        "comics_index": [
+            4
+        ],
+        "number_comics_of_index": [
+            1
+        ]
+    },
+    "oceanboy": {
+        "comics_index": [
+            1,
+            11
+        ],
+        "number_comics_of_index": [
+            1,
+            1
+        ]
+    },
+    "onli": {
+        "comics_index": [
+            2
+        ],
+        "number_comics_of_index": [
+            1
+        ]
+    },
+    "opposit": {
+        "comics_index": [
+            2
+        ],
+        "number_comics_of_index": [
+            1
+        ]
+    },
+    "outstretch": {
+        "comics_index": [
+            9
+        ],
+        "number_comics_of_index": [
+            1
+        ]
+    },
+    "packag": {
+        "comics_index": [
+            5
+        ],
+        "number_comics_of_index": [
+            1
+        ]
+    },
+    "packageth": {
+        "comics_index": [
+            5
+        ],
+        "number_comics_of_index": [
+            1
+        ]
+    },
+    "perspect": {
+        "comics_index": [
+            6
+        ],
+        "number_comics_of_index": [
+            1
+        ]
+    },
+    "petit": {
+        "comics_index": [
+            2
+        ],
+        "number_comics_of_index": [
+            1
+        ]
+    },
+    "pi": {
+        "comics_index": [
+            10
+        ],
+        "number_comics_of_index": [
+            1
+        ]
+    },
+    "place": {
+        "comics_index": [
+            11
+        ],
+        "number_comics_of_index": [
+            1
+        ]
+    },
+    "planet": {
+        "comics_index": [
+            13
+        ],
+        "number_comics_of_index": [
+            1
+        ]
+    },
+    "pockmark": {
+        "comics_index": [
+            13
+        ],
+        "number_comics_of_index": [
+            1
+        ]
+    },
+    "poisson": {
+        "comics_index": [
+            12
+        ],
+        "number_comics_of_index": [
+            1
+        ]
+    },
+    "pretti": {
+        "comics_index": [
+            13
+        ],
+        "number_comics_of_index": [
+            1
+        ]
+    },
+    "prime": {
+        "comics_index": [
+            5
+        ],
+        "number_comics_of_index": [
+            1
+        ]
+    },
+    "princ": {
+        "comics_index": [
+            2
+        ],
+        "number_comics_of_index": [
+            1
+        ]
+    },
+    "rais": {
+        "comics_index": [
+            9
+        ],
+        "number_comics_of_index": [
+            1
+        ]
+    },
+    "red": {
+        "comics_index": [
+            5,
+            8
+        ],
+        "number_comics_of_index": [
+            1,
+            1
+        ]
+    },
+    "refer": {
+        "comics_index": [
+            2
+        ],
+        "number_comics_of_index": [
+            1
+        ]
+    },
+    "rememb": {
+        "comics_index": [
+            7
+        ],
+        "number_comics_of_index": [
+            1
+        ]
+    },
+    "reveal": {
+        "comics_index": [
+            13
+        ],
+        "number_comics_of_index": [
+            1
+        ]
+    },
+    "ring": {
+        "comics_index": [
+            13
+        ],
+        "number_comics_of_index": [
+            1
+        ]
+    },
+    "river": {
+        "comics_index": [
+            4,
+            9
+        ],
+        "number_comics_of_index": [
+            1,
+            1
+        ]
+    },
+    "rocki": {
+        "comics_index": [
+            13
+        ],
+        "number_comics_of_index": [
+            1
+        ]
+    },
+    "say": {
+        "comics_index": [
+            12
+        ],
+        "number_comics_of_index": [
+            1
+        ]
+    },
+    "scene": {
+        "comics_index": [
+            13
+        ],
+        "number_comics_of_index": [
+            1
+        ]
+    },
+    "scorch": {
+        "comics_index": [
+            5
+        ],
+        "number_comics_of_index": [
+            1
+        ]
+    },
+    "see": {
+        "comics_index": [
+            5
+        ],
+        "number_comics_of_index": [
+            1
+        ]
+    },
+    "seenalt": {
+        "comics_index": [
+            1
+        ],
+        "number_comics_of_index": [
+            1
+        ]
+    },
+    "selfrefer": {
+        "comics_index": [
+            6
+        ],
+        "number_comics_of_index": [
+            1
+        ]
+    },
+    "short": {
+        "comics_index": [
+            9
+        ],
+        "number_comics_of_index": [
+            1
+        ]
+    },
+    "shorter": {
+        "comics_index": [
+            9
+        ],
+        "number_comics_of_index": [
+            1
+        ]
+    },
+    "side": {
+        "comics_index": [
+            2,
+            7,
+            9
+        ],
+        "number_comics_of_index": [
+            1,
+            1,
+            1
+        ]
+    },
+    "simon": {
+        "comics_index": [
+            9
+        ],
+        "number_comics_of_index": [
+            1
+        ]
+    },
+    "sit": {
+        "comics_index": [
+            1,
+            11
+        ],
+        "number_comics_of_index": [
+            1,
+            1
+        ]
+    },
+    "site": {
+        "comics_index": [
+            10
+        ],
+        "number_comics_of_index": [
+            1
+        ]
+    },
+    "sixleg": {
+        "comics_index": [
+            8
+        ],
+        "number_comics_of_index": [
+            1
+        ]
+    },
+    "sketch": {
+        "comics_index": [
+            3,
+            2,
+            4
+        ],
+        "number_comics_of_index": [
+            1,
+            1,
+            1
+        ]
+    },
+    "skyit": {
+        "comics_index": [
+            6
+        ],
+        "number_comics_of_index": [
+            1
+        ]
+    },
+    "skyman": {
+        "comics_index": [
+            13
+        ],
+        "number_comics_of_index": [
+            1
+        ]
+    },
+    "sleep": {
+        "comics_index": [
+            7
+        ],
+        "number_comics_of_index": [
+            1
+        ]
+    },
+    "smokether": {
+        "comics_index": [
+            5
+        ],
+        "number_comics_of_index": [
+            1
+        ]
+    },
+    "spherealttitl": {
+        "comics_index": [
+            2
+        ],
+        "number_comics_of_index": [
+            1
+        ]
+    },
+    "spider": {
+        "comics_index": [
+            8
+        ],
+        "number_comics_of_index": [
+            1
+        ]
+    },
+    "spiki": {
+        "comics_index": [
+            9
+        ],
+        "number_comics_of_index": [
+            1
+        ]
+    },
+    "stand": {
+        "comics_index": [
+            8,
+            13,
+            9
+        ],
+        "number_comics_of_index": [
+            1,
+            1,
+            1
+        ]
+    },
+    "statement": {
+        "comics_index": [
+            6
+        ],
+        "number_comics_of_index": [
+            1
+        ]
+    },
+    "sternlook": {
+        "comics_index": [
+            9
+        ],
+        "number_comics_of_index": [
+            1
+        ]
+    },
+    "stick": {
+        "comics_index": [
+            12,
+            9
+        ],
+        "number_comics_of_index": [
+            1,
+            1
+        ]
+    },
+    "still": {
+        "comics_index": [
+            12
+        ],
+        "number_comics_of_index": [
+            1
+        ]
+    },
+    "stringi": {
+        "comics_index": [
+            9
+        ],
+        "number_comics_of_index": [
+            1
+        ]
+    },
+    "sun": {
+        "comics_index": [
+            6,
+            4
+        ],
+        "number_comics_of_index": [
+            1,
+            1
+        ]
+    },
+    "supportthey": {
+        "comics_index": [
+            8
+        ],
+        "number_comics_of_index": [
+            1
+        ]
+    },
+    "taleman": {
+        "comics_index": [
+            6
+        ],
+        "number_comics_of_index": [
+            1
+        ]
+    },
+    "text": {
+        "comics_index": [
+            12,
+            5,
+            13
+        ],
+        "number_comics_of_index": [
+            1,
+            1,
+            1
+        ]
+    },
+    "than": {
+        "comics_index": [
+            12
+        ],
+        "number_comics_of_index": [
+            1
+        ]
+    },
+    "that": {
+        "comics_index": [
+            13
+        ],
+        "number_comics_of_index": [
+            1
+        ]
+    },
+    "thatman": {
+        "comics_index": [
+            12
+        ],
+        "number_comics_of_index": [
+            1
+        ]
+    },
+    "there": {
+        "comics_index": [
+            4,
+            9
+        ],
+        "number_comics_of_index": [
+            1,
+            1
+        ]
+    },
+    "theyr": {
+        "comics_index": [
+            13
+        ],
+        "number_comics_of_index": [
+            1
+        ]
+    },
+    "thought": {
+        "comics_index": [
+            2
+        ],
+        "number_comics_of_index": [
+            1
+        ]
+    },
+    "time": {
+        "comics_index": [
+            13
+        ],
+        "number_comics_of_index": [
+            1
+        ]
+    },
+    "too": {
+        "comics_index": [
+            6
+        ],
+        "number_comics_of_index": [
+            1
+        ]
+    },
+    "total": {
+        "comics_index": [
+            12
+        ],
+        "number_comics_of_index": [
+            1
+        ]
+    },
+    "tree": {
+        "comics_index": [
+            2
+        ],
+        "number_comics_of_index": [
+            1
+        ]
+    },
+    "two": {
+        "comics_index": [
+            2,
+            13
+        ],
+        "number_comics_of_index": [
+            1,
+            1
+        ]
+    },
+    "valu": {
+        "comics_index": [
+            12
+        ],
+        "number_comics_of_index": [
+            1
+        ]
+    },
+    "view": {
+        "comics_index": [
+            7
+        ],
+        "number_comics_of_index": [
+            1
+        ]
+    },
+    "visibl": {
+        "comics_index": [
+            8,
+            13
+        ],
+        "number_comics_of_index": [
+            1,
+            1
+        ]
+    },
+    "wash": {
+        "comics_index": [
+            9
+        ],
+        "number_comics_of_index": [
+            1
+        ]
+    },
+    "wear": {
+        "comics_index": [
+            9
+        ],
+        "number_comics_of_index": [
+            1
+        ]
+    },
+    "when": {
+        "comics_index": [
+            6
+        ],
+        "number_comics_of_index": [
+            1
+        ]
+    },
+    "where": {
+        "comics_index": [
+            1
+        ],
+        "number_comics_of_index": [
+            1
+        ]
+    },
+    "whi": {
+        "comics_index": [
+            12
+        ],
+        "number_comics_of_index": [
+            1
+        ]
+    },
+    "whistlingalt": {
+        "comics_index": [
+            12
+        ],
+        "number_comics_of_index": [
+            1
+        ]
+    },
+    "wonder": {
+        "comics_index": [
+            1
+        ],
+        "number_comics_of_index": [
+            1
+        ]
+    },
+    "wouldnt": {
+        "comics_index": [
+            6
+        ],
+        "number_comics_of_index": [
+            1
+        ]
+    },
+    "year": {
+        "comics_index": [
+            6
+        ],
+        "number_comics_of_index": [
+            1
+        ]
+    },
+    "zeroman": {
+        "comics_index": [
+            12
+        ],
+        "number_comics_of_index": [
+            1
+        ]
+    },
+    "zoe": {
+        "comics_index": [
+            9
+        ],
+        "number_comics_of_index": [
+            1
+        ]
+    }
 }
