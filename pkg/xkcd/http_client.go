@@ -64,7 +64,7 @@ func (c *HttpClient) GetLatestComicsNumber() (int, error) {
 	return comics.Num, nil
 }
 
-func (c *HttpClient) GetComics(comicID int) (*map[int]ComicsInfo, error, int) {
+func (c *HttpClient) GetComics(comicID int) (map[int]ComicsInfo, error, int) {
 	url := fmt.Sprintf("%s/%d/info.0.json", c.baseURL, comicID)
 
 	resp, err := http.Get(url)
@@ -97,5 +97,5 @@ func (c *HttpClient) GetComics(comicID int) (*map[int]ComicsInfo, error, int) {
 	comicsInfo.Keywords = resp_
 	ret[comics.Num] = comicsInfo
 
-	return &ret, nil, 200
+	return ret, nil, 200
 }

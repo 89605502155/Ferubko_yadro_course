@@ -41,7 +41,7 @@ func WorkerPool(cl *xkcd.Client, numIter int, numWorkers int, data *map[string]x
 					errChan <- nil
 				}
 
-				(*data)[fmt.Sprintf("%d", key)] = (*res)[key]
+				(*data)[fmt.Sprintf("%d", key)] = res[key]
 				mu.Unlock()
 
 			}
