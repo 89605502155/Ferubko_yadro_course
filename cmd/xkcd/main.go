@@ -3,6 +3,7 @@ package main
 import (
 	"context"
 	"flag"
+	"fmt"
 	"os"
 	"os/signal"
 
@@ -35,18 +36,38 @@ func main() {
 	cl := xkcd.NewClient(viper.GetString("source_url"), words)
 
 	data := db.ReadDatabase()
+	exitChan := make(chan bool, 1)
+	isWriteChan := make(chan bool, 1)
+
+	// select {
+	// case <-ctx.Done():
+	// 	db.CreateEmptyDatabase()
+	// 	db.WriteAllOnDatabase(data, true)
+	// 	stop()
+	// default:
+
+	// }
 
 	go func(db *database.JsonDatabase) {
-		<-ctx.Done()
-		db.CreateEmptyDatabase()
-		db.WriteAllOnDatabase(data, true)
-		stop()
+		for {
+			if <-exitChan {
+				fmt.Println("Genrich")
+				db.CreateEmptyDatabase()
+				db.WriteAllOnDatabase(data, false)
+				fmt.Println("go func")
+				// stop()
+				isWriteChan <- true
+				return
+			}
+		}
 	}(db)
 
-	worker.WorkerPool(cl, n, viper.GetInt("parallel"), data, ctx, stop)
+	worker.WorkerPool(cl, n, viper.GetInt("parallel"), data, ctx, stop, exitChan, isWriteChan)
 
 	db.CreateEmptyDatabase()
 	db.WriteAllOnDatabase(data, true)
+
+	fmt.Println("after all")
 
 }
 
