@@ -24,14 +24,22 @@ func WorkerPool(cl *xkcd.Client, numIter int, numWorkers int, data *map[string]x
 			for {
 				// mu.Lock()
 				key := <-keyChan
-				res, err, stCode := cl.GetComics(key)
+				res, _, err := cl.GetComics(key)
 				if err != nil {
+					fmt.Println(err)
+					mu.Lock()
+					errChan <- nil
+					mu.Unlock()
+					continue
+					// if stCode >= 500 || (stCode >= 300 && stCode < 400) {
+					// 	errChan <- nil
+					// } else {
 
-					if stCode >= 500 || (stCode >= 300 && stCode < 400) {
-						errChan <- nil
-					}
-					errChan <- err
-					return
+					// 	continue
+
+					// }
+					// errChan <- err
+					// return
 
 				} else if key >= numIter {
 					errChan <- errors.New("very long base")
@@ -109,7 +117,9 @@ func WorkerPool(cl *xkcd.Client, numIter int, numWorkers int, data *map[string]x
 			break
 		}
 		for {
+			mu.Lock()
 			if _, ok := (*data)[fmt.Sprintf("%d", key)]; !ok {
+				mu.Unlock()
 				break
 			}
 			mu.Lock()

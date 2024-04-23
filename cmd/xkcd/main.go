@@ -18,7 +18,7 @@ import (
 )
 
 func main() {
-	n := 1400
+	n := 407
 	var c bool
 	var s string
 	flag.BoolVar(&c, "c", false, "Use -c")
@@ -58,6 +58,7 @@ func main() {
 
 	worker.WorkerPool(cl, n, viper.GetInt("parallel"), data, ctx, stop, exitChan, isWriteChan)
 
+	fmt.Println("Egaspotamo")
 	db.CreateEmptyDatabase()
 	db.WriteAllOnDatabase(data, false)
 

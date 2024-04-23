@@ -3,7 +3,6 @@ package xkcd
 import (
 	"encoding/json"
 	"fmt"
-	"io"
 	"net/http"
 
 	"xkcd/pkg/words"
@@ -68,27 +67,24 @@ func (c *HttpClient) GetLatestComicsNumber() (int, error) {
 	return comics.Num, nil
 }
 
-func (c *HttpClient) GetComics(comicID int) (map[int]ComicsInfo, error, int) {
+func (c *HttpClient) GetComics(comicID int) (map[int]ComicsInfo, int, error) {
 	url := fmt.Sprintf("%s/%d/info.0.json", c.baseURL, comicID)
 
-	resp, err := http.Get(url)
+	client := &http.Client{}
+	resp, err := client.Get(url)
 	if err != nil {
-		return nil, err, -1
+		return nil, -1, err
 	}
 	defer resp.Body.Close()
-
 	if resp.StatusCode != http.StatusOK {
-		return nil, fmt.Errorf("unexpected status code: %d", resp.StatusCode), resp.StatusCode
+		return nil, resp.StatusCode, fmt.Errorf("unexpected status code: %d", resp.StatusCode)
 	}
-
-	body, err := io.ReadAll(resp.Body)
-	if err != nil {
-		return nil, err, -2
-	}
-
 	var comics Comics
-	if err := json.Unmarshal(body, &comics); err != nil {
-		return nil, err, -3
+	// var data map[string]interface{}
+	err = json.NewDecoder(resp.Body).Decode(&comics)
+	if err != nil {
+		fmt.Println("Ошибка при декодировании JSON:", err)
+		return nil, 0, nil
 	}
 	var comicsInfo ComicsInfo
 	ret := make(map[int]ComicsInfo)
@@ -101,5 +97,5 @@ func (c *HttpClient) GetComics(comicID int) (map[int]ComicsInfo, error, int) {
 	comicsInfo.Keywords = resp_
 	ret[comics.Num] = comicsInfo
 
-	return ret, nil, 200
+	return ret, 200, nil
 }
