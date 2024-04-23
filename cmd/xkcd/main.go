@@ -38,7 +38,7 @@ func main() {
 
 	cl := xkcd.NewClient(viper.GetString("source_url"), words)
 
-	data := db.ReadDatabase()
+	data := db.Database.ReadDatabase()
 	exitChan := make(chan bool, 1)
 	isWriteChan := make(chan bool, 1)
 
@@ -46,8 +46,8 @@ func main() {
 		for {
 			if <-exitChan {
 				fmt.Println("Genrich")
-				db.CreateEmptyDatabase()
-				db.WriteAllOnDatabase(data, false)
+				db.Database.CreateEmptyDatabase()
+				db.Database.WriteAllOnDatabase(data, false)
 				fmt.Println("go func")
 				// stop()
 				isWriteChan <- true
@@ -59,8 +59,8 @@ func main() {
 	worker.WorkerPool(cl, n, viper.GetInt("parallel"), data, ctx, stop, exitChan, isWriteChan)
 
 	fmt.Println("Egaspotamo")
-	db.CreateEmptyDatabase()
-	db.WriteAllOnDatabase(data, false)
+	db.Database.CreateEmptyDatabase()
+	db.Database.WriteAllOnDatabase(data, false)
 
 	fmt.Println("after all")
 
@@ -78,6 +78,8 @@ func main() {
 	}
 	fmt.Println("Robert")
 	fmt.Println("input string ", inputDataSFlag)
+	firstFind := db.FindInDB.Find(inputDataSFlag)
+	fmt.Println("first find ", firstFind)
 
 }
 
