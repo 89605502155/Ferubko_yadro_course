@@ -39,15 +39,6 @@ func main() {
 	exitChan := make(chan bool, 1)
 	isWriteChan := make(chan bool, 1)
 
-	// select {
-	// case <-ctx.Done():
-	// 	db.CreateEmptyDatabase()
-	// 	db.WriteAllOnDatabase(data, true)
-	// 	stop()
-	// default:
-
-	// }
-
 	go func(db *database.JsonDatabase) {
 		for {
 			if <-exitChan {
