@@ -11,6 +11,7 @@ import (
 	"github.com/spf13/viper"
 
 	"xkcd/pkg/database"
+	"xkcd/pkg/indexbase"
 	"xkcd/pkg/words"
 	"xkcd/pkg/worker"
 	"xkcd/pkg/xkcd"
@@ -56,9 +57,12 @@ func main() {
 	worker.WorkerPool(cl, n, viper.GetInt("parallel"), data, ctx, stop, exitChan, isWriteChan)
 
 	db.CreateEmptyDatabase()
-	db.WriteAllOnDatabase(data, true)
+	db.WriteAllOnDatabase(data, false)
 
 	fmt.Println("after all")
+
+	index := indexbase.NewJsonIndex(viper.GetString("index_file"))
+	index.CreateEmptyDatabase()
 
 }
 

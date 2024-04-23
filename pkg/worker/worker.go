@@ -39,8 +39,9 @@ func WorkerPool(cl *xkcd.Client, numIter int, numWorkers int, data *map[string]x
 				} else {
 					mu.Lock()
 					errChan <- nil
+					mu.Unlock()
 				}
-
+				mu.Lock()
 				(*data)[fmt.Sprintf("%d", key)] = res[key]
 				mu.Unlock()
 
@@ -60,11 +61,11 @@ func WorkerPool(cl *xkcd.Client, numIter int, numWorkers int, data *map[string]x
 				fmt.Println("Betta")
 				wg.Wait()
 			}
-		case <-exitChan:
-			fmt.Println("Betta")
-			stop()
-			wg.Wait()
-			return
+		// case <-exitChan:
+		// 	fmt.Println("Betta")
+		// 	stop()
+		// 	wg.Wait()
+		// 	return
 		default:
 		}
 		if _, ok := (*data)[fmt.Sprintf("%d", key)]; ok {
@@ -85,7 +86,9 @@ func WorkerPool(cl *xkcd.Client, numIter int, numWorkers int, data *map[string]x
 			// wg.Wait()
 			// fmt.Println("Betta")
 
+			mu.Lock()
 			exitChan <- true
+			mu.Unlock()
 			fmt.Println("Gamma")
 			if <-isWrite {
 				fmt.Println("Tissafern", key)
@@ -95,11 +98,11 @@ func WorkerPool(cl *xkcd.Client, numIter int, numWorkers int, data *map[string]x
 			}
 			fmt.Println("Rockrua")
 
-		case <-exitChan:
-			fmt.Println("Betta")
-			stop()
-			wg.Wait()
-			return
+		// case <-exitChan:
+		// 	fmt.Println("Betta")
+		// 	stop()
+		// 	wg.Wait()
+		// 	return
 		default:
 		}
 		if err := <-errChan; err != nil {
@@ -109,11 +112,15 @@ func WorkerPool(cl *xkcd.Client, numIter int, numWorkers int, data *map[string]x
 			if _, ok := (*data)[fmt.Sprintf("%d", key)]; !ok {
 				break
 			}
+			mu.Lock()
 			key++
+			mu.Unlock()
 		}
 		fmt.Println("key ", key)
+		mu.Lock()
 		keyChan <- key
 		key++
+		mu.Unlock()
 	}
 	// Ожидаем завершения всех воркеров
 	wg.Wait()
