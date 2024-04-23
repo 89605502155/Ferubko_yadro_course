@@ -67,7 +67,6 @@ func WorkerPool(cl *xkcd.Client, numIter int, numWorkers int, data *map[string]x
 			return
 		default:
 		}
-
 		if _, ok := (*data)[fmt.Sprintf("%d", key)]; ok {
 			key++
 			i -= 1
