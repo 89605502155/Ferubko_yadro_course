@@ -20,7 +20,9 @@ import (
 func main() {
 	n := 14
 	var c bool
+	var s string
 	flag.BoolVar(&c, "c", false, "Use -c")
+	flag.StringVar(&s, "s", "", "string")
 	flag.Parse()
 	if c {
 		if err := initConfig(); err != nil {
@@ -66,8 +68,15 @@ func main() {
 	indexes := index.ReadBase()
 
 	index.BuildIndexFromDB(data, indexes)
-	fmt.Println(indexes)
+	// fmt.Println(indexes)
 	index.SaveIndexToFile(indexes)
+
+	inputDataSFlag, err := words.Normalization(s)
+	if err != nil {
+		logrus.Fatalf("you have error %s", err.Error())
+	}
+	fmt.Println("Robert")
+	fmt.Println("input string ", inputDataSFlag)
 
 }
 
