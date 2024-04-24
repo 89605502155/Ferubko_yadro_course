@@ -20,9 +20,10 @@ import (
 
 func main() {
 	n := 406
-	var c bool
+	var c, i bool
 	var s string
 	flag.BoolVar(&c, "c", false, "Use -c")
+	flag.BoolVar(&i, "i", false, "Use -i")
 	flag.StringVar(&s, "s", "", "string")
 	flag.Parse()
 	if c {
@@ -46,10 +47,10 @@ func main() {
 	go func(db *database.JsonDatabase) {
 		for {
 			if <-exitChan {
-				fmt.Println("Genrich")
+				// fmt.Println("Genrich")
 				db.Database.CreateEmptyDatabase()
 				db.Database.WriteAllOnDatabase(data, false)
-				fmt.Println("go func")
+				// fmt.Println("go func")
 				// stop()
 				isWriteChan <- true
 				return
@@ -59,11 +60,11 @@ func main() {
 
 	worker.WorkerPool(cl, n, viper.GetInt("parallel"), data, ctx, stop, exitChan, isWriteChan)
 
-	fmt.Println("Egaspotamo")
+	// fmt.Println("Egaspotamo")
 	db.Database.CreateEmptyDatabase()
 	db.Database.WriteAllOnDatabase(data, false)
 
-	fmt.Println("after all")
+	// fmt.Println("after all")
 
 	index := indexbase.NewJsonIndex(viper.GetString("index_file"))
 	// index.CreateEmptyDatabase()
@@ -73,23 +74,27 @@ func main() {
 	// fmt.Println(indexes)
 	index.IndexBase.SaveIndexToFile(indexes)
 
-	inputDataSFlag, err := words.Stremming.Normalization(s)
-	if err != nil {
-		logrus.Fatalf("you have error %s", err.Error())
+	if s != "" {
+		inputDataSFlag, err := words.Stremming.Normalization(s)
+		if err != nil {
+			logrus.Fatalf("you have error %s", err.Error())
+		}
+		// fmt.Println("Robert")
+		// fmt.Println("input string ", inputDataSFlag)
+		a1 := time.Now()
+		firstFind := db.FindInDB.Find(inputDataSFlag, viper.GetInt("serch_limit"))
+		a2 := time.Now()
+		aDelta := a2.Sub(a1)
+		fmt.Println("first find ", firstFind)
+		if i {
+			b1 := time.Now()
+			secondFind := index.IndexFind.Find(inputDataSFlag, viper.GetInt("serch_limit"))
+			b2 := time.Now()
+			bDelta := b2.Sub(b1)
+			fmt.Println("second find ", secondFind)
+			fmt.Println("time ", aDelta, bDelta, aDelta/bDelta)
+		}
 	}
-	fmt.Println("Robert")
-	fmt.Println("input string ", inputDataSFlag)
-	a1 := time.Now()
-	firstFind := db.FindInDB.Find(inputDataSFlag, viper.GetInt("serch_limit"))
-	a2 := time.Now()
-	aDelta := a2.Sub(a1)
-	fmt.Println("first find ", firstFind)
-	b1 := time.Now()
-	secondFind := index.IndexFind.Find(inputDataSFlag, viper.GetInt("serch_limit"))
-	b2 := time.Now()
-	bDelta := b2.Sub(b1)
-	fmt.Println("second find ", secondFind)
-	fmt.Println("time ", aDelta, bDelta, aDelta/bDelta)
 
 }
 
