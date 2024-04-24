@@ -8,7 +8,7 @@ type Database interface {
 	ReadDatabase() *map[string]xkcd.ComicsInfo
 }
 type FindInDB interface {
-	Find(input *map[string]bool, limit int) map[string][]int
+	Find(input *map[string]bool, limit int) []int
 }
 
 type JsonDatabase struct {
