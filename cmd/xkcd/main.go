@@ -1,8 +1,11 @@
 package main
 
 import (
+	"context"
 	"flag"
 	"fmt"
+	"os"
+	"os/signal"
 	"time"
 
 	"github.com/sirupsen/logrus"
@@ -11,14 +14,17 @@ import (
 	"xkcd/pkg/database"
 	"xkcd/pkg/indexbase"
 	"xkcd/pkg/words"
+	"xkcd/pkg/worker"
+	"xkcd/pkg/xkcd"
 )
 
 func main() {
-	// n := 40
-	var c, i bool
+	n := 1408
+	var c, i, u bool
 	var s string
 	flag.BoolVar(&c, "c", false, "Use -c")
 	flag.BoolVar(&i, "i", false, "Use -i")
+	flag.BoolVar(&u, "u", false, "update db and index")
 	flag.StringVar(&s, "s", "", "string")
 	flag.Parse()
 	if c {
@@ -28,47 +34,46 @@ func main() {
 	}
 	db := database.NewJsonDatabase(viper.GetString("db_file"))
 
-	// ctx, stop := signal.NotifyContext(context.Background(), os.Interrupt)
-	// defer stop()
-
 	words := words.NewWordsStremming()
 
-	// cl := xkcd.NewClient(viper.GetString("source_url"), words)
-
-	// data := db.Database.ReadDatabase()
-	// exitChan := make(chan bool, 1)
-	// isWriteChan := make(chan bool, 1)
-
-	// go func(db *database.JsonDatabase) {
-	// 	for {
-	// 		if <-exitChan {
-	// 			// fmt.Println("Genrich")
-	// 			db.Database.CreateEmptyDatabase()
-	// 			db.Database.WriteAllOnDatabase(data, false)
-	// 			// fmt.Println("go func")
-	// 			// stop()
-	// 			isWriteChan <- true
-	// 			return
-	// 		}
-	// 	}
-	// }(db)
-
-	// worker.WorkerPool(cl, n, viper.GetInt("parallel"), data, ctx, stop, exitChan, isWriteChan)
-
-	// fmt.Println("Egaspotamo")
-	// db.Database.CreateEmptyDatabase()
-	// db.Database.WriteAllOnDatabase(data, false)
-
-	// fmt.Println("after all")
-
+	cl := xkcd.NewClient(viper.GetString("source_url"), words)
 	index := indexbase.NewJsonIndex(viper.GetString("index_file"))
-	// // index.CreateEmptyDatabase()
-	// indexes := index.IndexBase.ReadBase()
+	if u {
+		ctx, stop := signal.NotifyContext(context.Background(), os.Interrupt)
+		defer stop()
+		data := db.Database.ReadDatabase()
+		exitChan := make(chan bool, 1)
+		isWriteChan := make(chan bool, 1)
 
-	// index.IndexBase.BuildIndexFromDB(data, indexes)
-	// // fmt.Println(indexes)
-	// index.IndexBase.SaveIndexToFile(indexes)
+		go func(db *database.JsonDatabase) {
+			for {
+				if <-exitChan {
+					// fmt.Println("Genrich")
+					db.Database.CreateEmptyDatabase()
+					db.Database.WriteAllOnDatabase(data, false)
+					// fmt.Println("go func")
+					// stop()
+					return
+				}
+			}
+		}(db)
 
+		worker.WorkerPool(cl, n, viper.GetInt("parallel"), data, ctx, stop, exitChan, isWriteChan)
+
+		fmt.Println("Egaspotamo")
+		db.Database.CreateEmptyDatabase()
+		db.Database.WriteAllOnDatabase(data, false)
+
+		fmt.Println("after all")
+		time.Sleep(5 * time.Second)
+
+		// index.CreateEmptyDatabase()
+		indexes := index.IndexBase.ReadBase()
+
+		index.IndexBase.BuildIndexFromDB(data, indexes)
+		// fmt.Println(indexes)
+		index.IndexBase.SaveIndexToFile(indexes)
+	}
 	if s != "" {
 		inputDataSFlag, err := words.Stremming.Normalization(s)
 		if err != nil {
