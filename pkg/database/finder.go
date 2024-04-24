@@ -49,19 +49,19 @@ func (d *DatabaseFind) makeTwoSlices(word string, data *map[string]xkcd.ComicsIn
 				s++
 			}
 		}
-		if len(result) == 0 {
+		if len(result) == 0 && s > 0 {
 			index, _ := strconv.Atoi(key)
 			result = append(result, index)
 			lenght = append(lenght, s)
 			mi = s
-		} else if len(result) < maxLenOfResult {
+		} else if len(result) < maxLenOfResult && s > 0 {
 			if s < mi {
 				mi = s
 			}
 			index, _ := strconv.Atoi(key)
 			result = append(result, index)
 			lenght = append(lenght, s)
-		} else {
+		} else if len(result) >= maxLenOfResult && s > 0 {
 			if s > mi {
 				miIndex := slices.Index(lenght, mi)
 				result = append(result[:miIndex], result[miIndex+1:]...)
