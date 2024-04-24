@@ -6,6 +6,7 @@ import (
 	"fmt"
 	"os"
 	"os/signal"
+	"time"
 
 	"github.com/sirupsen/logrus"
 	"github.com/spf13/viper"
@@ -18,7 +19,7 @@ import (
 )
 
 func main() {
-	n := 100
+	n := 406
 	var c bool
 	var s string
 	flag.BoolVar(&c, "c", false, "Use -c")
@@ -78,10 +79,17 @@ func main() {
 	}
 	fmt.Println("Robert")
 	fmt.Println("input string ", inputDataSFlag)
+	a1 := time.Now()
 	firstFind := db.FindInDB.Find(inputDataSFlag)
+	a2 := time.Now()
+	aDelta := a2.Sub(a1)
 	fmt.Println("first find ", firstFind)
+	b1 := time.Now()
 	secondFind := index.IndexFind.Find(inputDataSFlag)
+	b2 := time.Now()
+	bDelta := b2.Sub(b1)
 	fmt.Println("second find ", secondFind)
+	fmt.Println("time ", aDelta, bDelta, aDelta/bDelta)
 
 }
 
