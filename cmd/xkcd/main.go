@@ -60,11 +60,11 @@ func main() {
 
 		worker.WorkerPool(cl, n, viper.GetInt("parallel"), data, ctx, stop, exitChan, isWriteChan)
 
-		fmt.Println("Egaspotamo")
+		// fmt.Println("Egaspotamo")
 		db.Database.CreateEmptyDatabase()
 		db.Database.WriteAllOnDatabase(data, false)
 
-		fmt.Println("after all")
+		// fmt.Println("after all")
 		time.Sleep(5 * time.Second)
 
 		// index.CreateEmptyDatabase()
@@ -79,7 +79,7 @@ func main() {
 		if err != nil {
 			logrus.Fatalf("you have error %s", err.Error())
 		}
-		fmt.Println("Robert")
+		// fmt.Println("Robert")
 		fmt.Println("input string ", inputDataSFlag)
 		a1 := time.Now()
 		firstFind := db.FindInDB.Find(inputDataSFlag, viper.GetInt("serch_limit"))
