@@ -10,7 +10,7 @@ type IndexBase interface {
 }
 
 type IndexFind interface {
-	Find(input *map[string]bool) map[string][]int
+	Find(input *map[string]bool, limit int) map[string][]int
 }
 
 type JsonIndex struct {

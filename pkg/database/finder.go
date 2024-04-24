@@ -76,11 +76,11 @@ func (d *DatabaseFind) makeTwoSlices(word string, data *map[string]xkcd.ComicsIn
 	return result
 }
 
-func (d *DatabaseFind) Find(input *map[string]bool) map[string][]int {
+func (d *DatabaseFind) Find(input *map[string]bool, limit int) map[string][]int {
 	data := d.read()
 	res := make(map[string][]int)
 	for word, _ := range *input {
-		res[word] = d.makeTwoSlices(word, &data, 10)
+		res[word] = d.makeTwoSlices(word, &data, limit)
 
 	}
 	return res

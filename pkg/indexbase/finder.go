@@ -68,15 +68,15 @@ func (ind *IndexBaseFinde) sorted(d IndexStatistics, limit int) []int {
 	return res
 }
 
-func (ind *IndexBaseFinde) Find(input *map[string]bool) map[string][]int {
+func (ind *IndexBaseFinde) Find(input *map[string]bool, limit int) map[string][]int {
 	data := ind.read()
 	res := make(map[string][]int)
 	for word, _ := range *input {
 		if _, ok := data[word]; ok {
-			if len(data[word].ComicsIndex) <= 10 {
+			if len(data[word].ComicsIndex) <= limit {
 				res[word] = data[word].ComicsIndex
 			} else {
-				res[word] = ind.sorted(data[word], 10)
+				res[word] = ind.sorted(data[word], limit)
 			}
 		}
 
