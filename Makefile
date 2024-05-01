@@ -4,10 +4,10 @@ all:
 build: 
 	go build -c -i xkcd cmd/xkcd/main.go
 runn:
-	go run cmd/xkcd/main.go -c -u
+	go run cmd/xkcd/main.go -c "." -u
 run1:
-	go run cmd/xkcd/main.go -c -i -s "follower brings bunch of questions"
+	go run cmd/xkcd/main.go -c "." -i -s "follower brings bunch of questions"
 run2:
-	go run cmd/xkcd/main.go -c -i -s "i'll follow you as long as you are following me"
+	go run cmd/xkcd/main.go -c "." -i -s "i'll follow you as long as you are following me"
 runf:
-	go run cmd/xkcd/main.go -c -i -s "$(DEFOULT_STRING)"
+	go run cmd/xkcd/main.go -c "." -i -s "$(DEFOULT_STRING)"

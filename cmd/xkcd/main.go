@@ -20,17 +20,16 @@ import (
 
 func main() {
 	n := 1408
-	var c, i, u bool
-	var s string
-	flag.BoolVar(&c, "c", false, "Use -c")
+	var i, u bool
+	var s, c string
+	flag.StringVar(&c, "c", "", "Use -c")
 	flag.BoolVar(&i, "i", false, "Use -i")
 	flag.BoolVar(&u, "u", false, "update db and index")
 	flag.StringVar(&s, "s", "", "string")
 	flag.Parse()
-	if c {
-		if err := initConfig(); err != nil {
-			logrus.Fatalf("you have error %s", err.Error())
-		}
+	if err := initConfig(c); err != nil {
+		fmt.Println(c)
+		logrus.Fatalf("you have error %s", err.Error())
 	}
 	db := database.NewJsonDatabase(viper.GetString("db_file"))
 
@@ -42,21 +41,6 @@ func main() {
 		ctx, stop := signal.NotifyContext(context.Background(), os.Interrupt)
 		defer stop()
 		data := db.Database.ReadDatabase()
-		// exitChan := make(chan bool, 1)
-		// isWriteChan := make(chan bool, 1)
-
-		// go func(db *database.JsonDatabase) {
-		// 	for {
-		// 		if <-exitChan {
-		// 			// fmt.Println("Genrich")
-		// 			db.Database.CreateEmptyDatabase()
-		// 			db.Database.WriteAllOnDatabase(data, false)
-		// 			// fmt.Println("go func")
-		// 			// stop()
-		// 			return
-		// 		}
-		// 	}
-		// }(db)
 
 		worker.WorkerPool(cl, n, viper.GetInt("parallel"), data, ctx, stop)
 		defer func(db *database.JsonDatabase, index *indexbase.JsonIndex) {
@@ -95,8 +79,8 @@ func main() {
 
 }
 
-func initConfig() error {
-	viper.AddConfigPath(".")
+func initConfig(c string) error {
+	viper.AddConfigPath(c)
 	viper.SetConfigName("config")
 	return viper.ReadInConfig()
 }

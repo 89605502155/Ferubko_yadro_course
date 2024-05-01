@@ -37,20 +37,7 @@ func WorkerPool(cl *xkcd.Client, numIter int, numWorkers int, data *map[string]x
 		select {
 		case <-ctx.Done():
 			stop()
-			fmt.Println("Auershtedte")
-			fmt.Println("Presish-Eilay", key)
-			// wg.Wait()
-			// fmt.Println("Edessa")
-
-			// close(keyChan)
-			fmt.Println("Edessa")
 			key = numIter
-			// go func() {
-			// 	fmt.Println("Presish-Eilay", key)
-			// 	wg.Wait()
-			// 	fmt.Println("Edessa")
-			// 	close(keyChan)
-			// }()
 		default:
 			if _, ok := (*data)[fmt.Sprintf("%d", key)]; ok {
 				key++
@@ -58,11 +45,6 @@ func WorkerPool(cl *xkcd.Client, numIter int, numWorkers int, data *map[string]x
 			}
 			keyChan <- key
 		}
-		// if _, ok := (*data)[fmt.Sprintf("%d", key)]; ok {
-		// 	key++
-		// 	continue
-		// }
-		// keyChan <- key
 	}
 	close(keyChan)
 
