@@ -13,8 +13,8 @@ import (
 
 	"xkcd/pkg/database"
 	"xkcd/pkg/indexbase"
+	"xkcd/pkg/service"
 	"xkcd/pkg/words"
-	"xkcd/pkg/worker"
 	"xkcd/pkg/xkcd"
 )
 
@@ -37,23 +37,12 @@ func main() {
 
 	cl := xkcd.NewClient(viper.GetString("source_url"), words)
 	index := indexbase.NewJsonIndex(viper.GetString("index_file"))
+
+	ctx, stop := signal.NotifyContext(context.Background(), os.Interrupt)
+	defer stop()
 	if u {
-		ctx, stop := signal.NotifyContext(context.Background(), os.Interrupt)
-		defer stop()
-		data := db.Database.ReadDatabase()
-
-		worker.WorkerPool(cl, n, viper.GetInt("parallel"), data, ctx, stop)
-		defer func(db *database.JsonDatabase, index *indexbase.JsonIndex) {
-			fmt.Println("Gangut")
-			db.Database.CreateEmptyDatabase()
-			db.Database.WriteAllOnDatabase(data, false)
-			indexes := index.IndexBase.ReadBase()
-
-			index.IndexBase.BuildIndexFromDB(data, indexes)
-			// fmt.Println(indexes)
-			index.IndexBase.SaveIndexToFile(indexes)
-			fmt.Println("Davu")
-		}(db, index)
+		service := service.NewService(db, index, n, cl, ctx, stop)
+		service.Comics.Update()
 	}
 	if s != "" {
 		inputDataSFlag, err := words.Stremming.Normalization(s)
