@@ -36,7 +36,9 @@ func WorkerPool(cl *xkcd.Client, numIter int, numWorkers int, data *map[string]x
 	for key := 1; key < numIter; key++ {
 		select {
 		case <-ctx.Done():
+			fmt.Println("Pressish-Eilay")
 			stop()
+			fmt.Println("Bagram")
 			key = numIter
 		default:
 			if _, ok := (*data)[fmt.Sprintf("%d", key)]; ok {

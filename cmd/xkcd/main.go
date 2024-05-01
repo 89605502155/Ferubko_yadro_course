@@ -11,7 +11,9 @@ import (
 	"github.com/sirupsen/logrus"
 	"github.com/spf13/viper"
 
+	server "xkcd"
 	"xkcd/pkg/database"
+	"xkcd/pkg/handler"
 	"xkcd/pkg/indexbase"
 	"xkcd/pkg/service"
 	"xkcd/pkg/words"
@@ -39,11 +41,8 @@ func main() {
 	index := indexbase.NewJsonIndex(viper.GetString("index_file"))
 
 	ctx, stop := signal.NotifyContext(context.Background(), os.Interrupt)
+	service := service.NewService(db, index, n, cl, ctx, stop)
 	defer stop()
-	if u {
-		service := service.NewService(db, index, n, cl, ctx, stop)
-		service.Comics.Update()
-	}
 	if s != "" {
 		inputDataSFlag, err := words.Stremming.Normalization(s)
 		if err != nil {
@@ -64,6 +63,25 @@ func main() {
 			fmt.Println("second find ", secondFind)
 			fmt.Println("time ", aDelta, bDelta, aDelta/bDelta)
 		}
+	}
+
+	handler := handler.NewHandler(service)
+	srv := new(server.Server)
+	go func() {
+		if err := srv.Run(viper.GetString("port"), handler.InitRoutes()); err != nil {
+			logrus.Fatalf("you have error %s", err.Error())
+		}
+
+	}()
+	logrus.Print("RNEB Started")
+
+	<-ctx.Done()
+	time.Sleep(5 * time.Second)
+
+	logrus.Print("RNEB Shutting Down")
+
+	if err := srv.ShutDown(ctx); err != nil {
+		logrus.Errorf("error occured on server shutting down: %s", err.Error())
 	}
 
 }

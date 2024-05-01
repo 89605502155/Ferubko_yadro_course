@@ -9,7 +9,7 @@ import (
 )
 
 type Comics interface {
-	Update()
+	Update() error
 }
 
 type Service struct {
@@ -19,7 +19,6 @@ type Service struct {
 func NewService(db *database.JsonDatabase, index *indexbase.JsonIndex, n int,
 	cl *xkcd.Client, ctx context.Context, stop context.CancelFunc) *Service {
 	return &Service{
-		Comics: NewComicsService(db,index,n,cl,ctx,stop),
-	
+		Comics: NewComicsService(db, index, n, cl, ctx, stop),
 	}
 }

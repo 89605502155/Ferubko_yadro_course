@@ -2,6 +2,7 @@ package service
 
 import (
 	"context"
+	"errors"
 	"fmt"
 
 	"github.com/spf13/viper"
@@ -33,7 +34,7 @@ func NewComicsService(db *database.JsonDatabase, index *indexbase.JsonIndex, n i
 	}
 }
 
-func (s *ComicsService) Update() {
+func (s *ComicsService) Update() error {
 	data := s.db.Database.ReadDatabase()
 
 	worker.WorkerPool(s.cl, s.n, viper.GetInt("parallel"), data, s.ctx, s.stop)
@@ -48,4 +49,8 @@ func (s *ComicsService) Update() {
 		index.IndexBase.SaveIndexToFile(indexes)
 		fmt.Println("Davu")
 	}(s.db, s.index)
+	if s.n == 123 {
+		return errors.New("123")
+	}
+	return nil
 }
