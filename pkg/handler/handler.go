@@ -16,7 +16,7 @@ func NewHandler(services *service.Service) *Handler {
 
 func (h *Handler) InitRoutes() http.Handler {
 	mux := http.NewServeMux()
-	// mux.HandleFunc("/" )
+	mux.HandleFunc("/", h.Auth)
 	mux.HandleFunc("/update/", h.Update)
 	// mux.HandleFunc("/comic/random", h.GetRandomComic)
 	// mux.HandleFunc("/comic/latest", h.GetLatestComic)
