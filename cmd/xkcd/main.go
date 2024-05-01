@@ -42,37 +42,34 @@ func main() {
 		ctx, stop := signal.NotifyContext(context.Background(), os.Interrupt)
 		defer stop()
 		data := db.Database.ReadDatabase()
-		exitChan := make(chan bool, 1)
-		isWriteChan := make(chan bool, 1)
+		// exitChan := make(chan bool, 1)
+		// isWriteChan := make(chan bool, 1)
 
-		go func(db *database.JsonDatabase) {
-			for {
-				if <-exitChan {
-					// fmt.Println("Genrich")
-					db.Database.CreateEmptyDatabase()
-					db.Database.WriteAllOnDatabase(data, false)
-					// fmt.Println("go func")
-					// stop()
-					return
-				}
-			}
-		}(db)
+		// go func(db *database.JsonDatabase) {
+		// 	for {
+		// 		if <-exitChan {
+		// 			// fmt.Println("Genrich")
+		// 			db.Database.CreateEmptyDatabase()
+		// 			db.Database.WriteAllOnDatabase(data, false)
+		// 			// fmt.Println("go func")
+		// 			// stop()
+		// 			return
+		// 		}
+		// 	}
+		// }(db)
 
-		worker.WorkerPool(cl, n, viper.GetInt("parallel"), data, ctx, stop, exitChan, isWriteChan)
+		worker.WorkerPool(cl, n, viper.GetInt("parallel"), data, ctx, stop)
+		defer func(db *database.JsonDatabase, index *indexbase.JsonIndex) {
+			fmt.Println("Gangut")
+			db.Database.CreateEmptyDatabase()
+			db.Database.WriteAllOnDatabase(data, false)
+			indexes := index.IndexBase.ReadBase()
 
-		// fmt.Println("Egaspotamo")
-		db.Database.CreateEmptyDatabase()
-		db.Database.WriteAllOnDatabase(data, false)
-
-		// fmt.Println("after all")
-		time.Sleep(5 * time.Second)
-
-		// index.CreateEmptyDatabase()
-		indexes := index.IndexBase.ReadBase()
-
-		index.IndexBase.BuildIndexFromDB(data, indexes)
-		// fmt.Println(indexes)
-		index.IndexBase.SaveIndexToFile(indexes)
+			index.IndexBase.BuildIndexFromDB(data, indexes)
+			// fmt.Println(indexes)
+			index.IndexBase.SaveIndexToFile(indexes)
+			fmt.Println("Davu")
+		}(db, index)
 	}
 	if s != "" {
 		inputDataSFlag, err := words.Stremming.Normalization(s)
