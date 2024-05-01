@@ -3,7 +3,6 @@ package indexbase
 import (
 	"encoding/json"
 	"fmt"
-	"io"
 	"os"
 	"slices"
 	"strconv"
@@ -95,11 +94,7 @@ func (ind *IndexBaseStruct) SaveIndexToFile(indexBase *map[string]IndexStatistic
 	}
 	defer file.Close()
 
-	// Записываем строку JSON в файл
-	writer := io.Writer(file)
-
-	// Записываем строку JSON в файл
-	_, err = fmt.Fprint(writer, string(jsonData))
+	_, err = fmt.Fprint(file, string(jsonData))
 	if err != nil {
 		logrus.Fatalf("you have error %s", err.Error())
 		return
