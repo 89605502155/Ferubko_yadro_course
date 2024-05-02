@@ -19,8 +19,6 @@ func (h *Handler) InitRoutes() http.Handler {
 	mux.HandleFunc("POST /", h.Auth)
 	mux.HandleFunc("POST /update/", h.Update)
 	mux.HandleFunc("GET /pics", h.Search)
-	// mux.HandleFunc("/comic/latest", h.GetLatestComic)
-	// mux.HandleFunc("/comic/search", h.SearchComic)
 	return mux
 
 }

@@ -49,7 +49,7 @@ func (s *ComicsService) Update() error {
 		index.IndexBase.SaveIndexToFile(indexes)
 		fmt.Println("Davu")
 	}(s.db, s.index)
-	if s.n == 123 {
+	if s.n == -123 {
 		return errors.New("123")
 	}
 	return nil
