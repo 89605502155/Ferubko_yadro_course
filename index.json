@@ -1,51 +1,23 @@
 {
     "": {
         "comics_index": [
-            5,
-            16,
-            57,
-            56,
-            44,
             6,
-            54,
-            18,
-            65,
-            68,
-            12,
-            20,
-            36,
-            38,
-            55,
-            59,
-            24,
-            13,
-            21,
-            10,
-            29,
-            53,
-            47,
-            25,
             33,
-            60,
-            30,
+            12,
+            13,
+            5,
+            10,
+            16,
             26,
-            50
+            24,
+            20,
+            25,
+            21,
+            30,
+            29,
+            18
         ],
         "number_comics_of_index": [
-            1,
-            1,
-            1,
-            1,
-            1,
-            1,
-            1,
-            1,
-            1,
-            1,
-            1,
-            1,
-            1,
-            1,
             1,
             1,
             1,
@@ -81,24 +53,8 @@
     },
     "actual": {
         "comics_index": [
-            43,
             34,
-            65,
-            60,
             30
-        ],
-        "number_comics_of_index": [
-            1,
-            1,
-            1,
-            1,
-            1
-        ]
-    },
-    "ad": {
-        "comics_index": [
-            38,
-            60
         ],
         "number_comics_of_index": [
             1,
@@ -107,73 +63,21 @@
     },
     "addit": {
         "comics_index": [
-            28,
-            60
+            28
         ],
         "number_comics_of_index": [
-            1,
-            1
-        ]
-    },
-    "adjac": {
-        "comics_index": [
-            52
-        ],
-        "number_comics_of_index": [
-            1
-        ]
-    },
-    "adjectiveass": {
-        "comics_index": [
-            37
-        ],
-        "number_comics_of_index": [
-            1
-        ]
-    },
-    "admit": {
-        "comics_index": [
-            63
-        ],
-        "number_comics_of_index": [
-            1
-        ]
-    },
-    "affair": {
-        "comics_index": [
-            57,
-            67
-        ],
-        "number_comics_of_index": [
-            1,
             1
         ]
     },
     "again": {
         "comics_index": [
+            33,
             16,
-            24,
-            33
+            24
         ],
         "number_comics_of_index": [
             1,
             1,
-            1
-        ]
-    },
-    "age": {
-        "comics_index": [
-            57
-        ],
-        "number_comics_of_index": [
-            1
-        ]
-    },
-    "agent": {
-        "comics_index": [
-            42
-        ],
-        "number_comics_of_index": [
             1
         ]
     },
@@ -192,14 +96,6 @@
         ],
         "number_comics_of_index": [
             1,
-            1
-        ]
-    },
-    "airth": {
-        "comics_index": [
-            47
-        ],
-        "number_comics_of_index": [
             1
         ]
     },
@@ -251,30 +147,12 @@
             1
         ]
     },
-    "alreadi": {
-        "comics_index": [
-            50
-        ],
-        "number_comics_of_index": [
-            1
-        ]
-    },
-    "also": {
-        "comics_index": [
-            49
-        ],
-        "number_comics_of_index": [
-            1
-        ]
-    },
     "alt": {
         "comics_index": [
-            36,
             9,
             21
         ],
         "number_comics_of_index": [
-            1,
             1,
             1
         ]
@@ -282,30 +160,6 @@
     "altern": {
         "comics_index": [
             29
-        ],
-        "number_comics_of_index": [
-            1
-        ]
-    },
-    "alttext": {
-        "comics_index": [
-            45
-        ],
-        "number_comics_of_index": [
-            1
-        ]
-    },
-    "ama": {
-        "comics_index": [
-            68
-        ],
-        "number_comics_of_index": [
-            1
-        ]
-    },
-    "amaz": {
-        "comics_index": [
-            52
         ],
         "number_comics_of_index": [
             1
@@ -319,75 +173,27 @@
             1
         ]
     },
-    "analysi": {
-        "comics_index": [
-            62
-        ],
-        "number_comics_of_index": [
-            1
-        ]
-    },
     "and": {
         "comics_index": [
-            61,
-            5,
-            15,
-            16,
-            57,
-            56,
-            43,
-            44,
             6,
             34,
-            18,
-            65,
-            68,
-            20,
-            55,
             9,
-            14,
-            17,
-            59,
-            24,
-            31,
-            35,
-            48,
-            49,
-            58,
-            62,
             13,
-            32,
+            14,
+            5,
             10,
-            53,
-            52,
-            67,
-            40,
-            45,
-            8,
+            16,
+            24,
+            20,
+            15,
+            32,
             30,
-            64
+            31,
+            8,
+            18,
+            17
         ],
         "number_comics_of_index": [
-            1,
-            1,
-            1,
-            1,
-            1,
-            1,
-            1,
-            1,
-            1,
-            1,
-            1,
-            1,
-            1,
-            1,
-            1,
-            1,
-            1,
-            1,
-            1,
-            1,
             1,
             1,
             1,
@@ -415,14 +221,6 @@
             1
         ]
     },
-    "anglefuck": {
-        "comics_index": [
-            68
-        ],
-        "number_comics_of_index": [
-            1
-        ]
-    },
     "anniversari": {
         "comics_index": [
             17
@@ -431,28 +229,10 @@
             1
         ]
     },
-    "anotherman": {
-        "comics_index": [
-            44,
-            68
-        ],
-        "number_comics_of_index": [
-            1,
-            1
-        ]
-    },
-    "anotherwoman": {
-        "comics_index": [
-            57
-        ],
-        "number_comics_of_index": [
-            1
-        ]
-    },
     "answer": {
         "comics_index": [
-            28,
-            13
+            13,
+            28
         ],
         "number_comics_of_index": [
             1,
@@ -519,35 +299,9 @@
             1
         ]
     },
-    "appendag": {
-        "comics_index": [
-            43,
-            68
-        ],
-        "number_comics_of_index": [
-            1,
-            1
-        ]
-    },
     "appl": {
         "comics_index": [
             18
-        ],
-        "number_comics_of_index": [
-            1
-        ]
-    },
-    "applesson": {
-        "comics_index": [
-            38
-        ],
-        "number_comics_of_index": [
-            1
-        ]
-    },
-    "approach": {
-        "comics_index": [
-            55
         ],
         "number_comics_of_index": [
             1
@@ -561,41 +315,21 @@
             1
         ]
     },
-    "arc": {
-        "comics_index": [
-            35
-        ],
-        "number_comics_of_index": [
-            1
-        ]
-    },
-    "arcad": {
-        "comics_index": [
-            50
-        ],
-        "number_comics_of_index": [
-            1
-        ]
-    },
     "area": {
         "comics_index": [
             24,
-            21,
-            53
+            21
         ],
         "number_comics_of_index": [
-            1,
             1,
             1
         ]
     },
     "arm": {
         "comics_index": [
-            68,
             9
         ],
         "number_comics_of_index": [
-            1,
             1
         ]
     },
@@ -610,30 +344,6 @@
     "asleep": {
         "comics_index": [
             7
-        ],
-        "number_comics_of_index": [
-            1
-        ]
-    },
-    "asolarplexussayswhatman": {
-        "comics_index": [
-            64
-        ],
-        "number_comics_of_index": [
-            1
-        ]
-    },
-    "ass": {
-        "comics_index": [
-            65
-        ],
-        "number_comics_of_index": [
-            1
-        ]
-    },
-    "asscartitl": {
-        "comics_index": [
-            37
         ],
         "number_comics_of_index": [
             1
@@ -659,33 +369,17 @@
     },
     "away": {
         "comics_index": [
-            7,
-            24
+            24,
+            7
         ],
         "number_comics_of_index": [
             1,
             1
         ]
     },
-    "awayalt": {
-        "comics_index": [
-            46
-        ],
-        "number_comics_of_index": [
-            1
-        ]
-    },
     "awayi": {
         "comics_index": [
             23
-        ],
-        "number_comics_of_index": [
-            1
-        ]
-    },
-    "awwno": {
-        "comics_index": [
-            58
         ],
         "number_comics_of_index": [
             1
@@ -699,14 +393,6 @@
             1
         ]
     },
-    "axi": {
-        "comics_index": [
-            54
-        ],
-        "number_comics_of_index": [
-            1
-        ]
-    },
     "ba": {
         "comics_index": [
             19
@@ -715,35 +401,9 @@
             1
         ]
     },
-    "bachelor": {
-        "comics_index": [
-            68
-        ],
-        "number_comics_of_index": [
-            1
-        ]
-    },
-    "back": {
-        "comics_index": [
-            57,
-            59
-        ],
-        "number_comics_of_index": [
-            1,
-            1
-        ]
-    },
     "backgo": {
         "comics_index": [
             23
-        ],
-        "number_comics_of_index": [
-            1
-        ]
-    },
-    "background": {
-        "comics_index": [
-            54
         ],
         "number_comics_of_index": [
             1
@@ -759,8 +419,8 @@
     },
     "bad": {
         "comics_index": [
-            16,
             19,
+            16,
             29
         ],
         "number_comics_of_index": [
@@ -777,22 +437,6 @@
             1
         ]
     },
-    "balloon": {
-        "comics_index": [
-            51
-        ],
-        "number_comics_of_index": [
-            1
-        ]
-    },
-    "barbershop": {
-        "comics_index": [
-            68
-        ],
-        "number_comics_of_index": [
-            1
-        ]
-    },
     "bare": {
         "comics_index": [
             16
@@ -803,11 +447,11 @@
     },
     "barrel": {
         "comics_index": [
-            1,
             11,
+            25,
             31,
             22,
-            25
+            1
         ],
         "number_comics_of_index": [
             1,
@@ -835,41 +479,19 @@
             1
         ]
     },
-    "basic": {
-        "comics_index": [
-            68
-        ],
-        "number_comics_of_index": [
-            1
-        ]
-    },
     "be": {
         "comics_index": [
-            57,
-            1,
-            2,
             6,
-            18,
-            68,
-            20,
-            38,
-            59,
-            24,
             19,
-            49,
-            22,
-            51,
+            24,
+            20,
             25,
-            64
+            2,
+            22,
+            1,
+            18
         ],
         "number_comics_of_index": [
-            1,
-            1,
-            1,
-            1,
-            1,
-            1,
-            1,
             1,
             1,
             1,
@@ -889,67 +511,9 @@
             1
         ]
     },
-    "beacon": {
-        "comics_index": [
-            40
-        ],
-        "number_comics_of_index": [
-            1
-        ]
-    },
-    "beam": {
-        "comics_index": [
-            40
-        ],
-        "number_comics_of_index": [
-            1
-        ]
-    },
     "becaus": {
         "comics_index": [
-            65,
             12
-        ],
-        "number_comics_of_index": [
-            1,
-            1
-        ]
-    },
-    "becausetheyr": {
-        "comics_index": [
-            60
-        ],
-        "number_comics_of_index": [
-            1
-        ]
-    },
-    "becom": {
-        "comics_index": [
-            59
-        ],
-        "number_comics_of_index": [
-            1
-        ]
-    },
-    "been": {
-        "comics_index": [
-            65
-        ],
-        "number_comics_of_index": [
-            1
-        ]
-    },
-    "beetleman": {
-        "comics_index": [
-            37
-        ],
-        "number_comics_of_index": [
-            1
-        ]
-    },
-    "begin": {
-        "comics_index": [
-            47
         ],
         "number_comics_of_index": [
             1
@@ -958,14 +522,6 @@
     "beim": {
         "comics_index": [
             17
-        ],
-        "number_comics_of_index": [
-            1
-        ]
-    },
-    "beingshitalt": {
-        "comics_index": [
-            45
         ],
         "number_comics_of_index": [
             1
@@ -1011,33 +567,9 @@
             1
         ]
     },
-    "bet": {
-        "comics_index": [
-            61
-        ],
-        "number_comics_of_index": [
-            1
-        ]
-    },
-    "big": {
-        "comics_index": [
-            46
-        ],
-        "number_comics_of_index": [
-            1
-        ]
-    },
     "bit": {
         "comics_index": [
             24
-        ],
-        "number_comics_of_index": [
-            1
-        ]
-    },
-    "bitchestitl": {
-        "comics_index": [
-            54
         ],
         "number_comics_of_index": [
             1
@@ -1062,11 +594,9 @@
     "black": {
         "comics_index": [
             5,
-            17,
-            45
+            17
         ],
         "number_comics_of_index": [
-            1,
             1,
             1
         ]
@@ -1082,46 +612,6 @@
     "blackhatwear": {
         "comics_index": [
             12
-        ],
-        "number_comics_of_index": [
-            1
-        ]
-    },
-    "blackth": {
-        "comics_index": [
-            68
-        ],
-        "number_comics_of_index": [
-            1
-        ]
-    },
-    "bleedingman": {
-        "comics_index": [
-            68
-        ],
-        "number_comics_of_index": [
-            1
-        ]
-    },
-    "block": {
-        "comics_index": [
-            43
-        ],
-        "number_comics_of_index": [
-            1
-        ]
-    },
-    "blond": {
-        "comics_index": [
-            59
-        ],
-        "number_comics_of_index": [
-            1
-        ]
-    },
-    "blood": {
-        "comics_index": [
-            53
         ],
         "number_comics_of_index": [
             1
@@ -1155,33 +645,9 @@
             1
         ]
     },
-    "bodi": {
-        "comics_index": [
-            53
-        ],
-        "number_comics_of_index": [
-            1
-        ]
-    },
     "boingbo": {
         "comics_index": [
             14
-        ],
-        "number_comics_of_index": [
-            1
-        ]
-    },
-    "bolt": {
-        "comics_index": [
-            35
-        ],
-        "number_comics_of_index": [
-            1
-        ]
-    },
-    "bonus": {
-        "comics_index": [
-            54
         ],
         "number_comics_of_index": [
             1
@@ -1213,17 +679,7 @@
     },
     "bore": {
         "comics_index": [
-            13,
-            52
-        ],
-        "number_comics_of_index": [
-            1,
-            1
-        ]
-    },
-    "bother": {
-        "comics_index": [
-            50
+            13
         ],
         "number_comics_of_index": [
             1
@@ -1231,67 +687,27 @@
     },
     "bottom": {
         "comics_index": [
-            24,
-            47
+            24
         ],
         "number_comics_of_index": [
-            1,
-            1
-        ]
-    },
-    "bowl": {
-        "comics_index": [
-            38,
-            39,
-            60
-        ],
-        "number_comics_of_index": [
-            1,
-            1,
             1
         ]
     },
     "boy": {
         "comics_index": [
-            1,
-            39,
-            11,
             24,
+            11,
+            25,
             31,
             22,
-            25
-        ],
-        "number_comics_of_index": [
-            1,
-            1,
-            1,
-            1,
-            1,
-            1,
             1
-        ]
-    },
-    "brave": {
-        "comics_index": [
-            49
         ],
         "number_comics_of_index": [
-            1
-        ]
-    },
-    "break": {
-        "comics_index": [
-            59
-        ],
-        "number_comics_of_index": [
-            1
-        ]
-    },
-    "bright": {
-        "comics_index": [
-            40
-        ],
-        "number_comics_of_index": [
+            1,
+            1,
+            1,
+            1,
+            1,
             1
         ]
     },
@@ -1313,22 +729,6 @@
             1
         ]
     },
-    "brown": {
-        "comics_index": [
-            67
-        ],
-        "number_comics_of_index": [
-            1
-        ]
-    },
-    "brunett": {
-        "comics_index": [
-            59
-        ],
-        "number_comics_of_index": [
-            1
-        ]
-    },
     "bubbl": {
         "comics_index": [
             17
@@ -1337,21 +737,11 @@
             1
         ]
     },
-    "built": {
-        "comics_index": [
-            59
-        ],
-        "number_comics_of_index": [
-            1
-        ]
-    },
     "bunch": {
         "comics_index": [
-            27,
-            42
+            27
         ],
         "number_comics_of_index": [
-            1,
             1
         ]
     },
@@ -1363,65 +753,27 @@
             1
         ]
     },
-    "burn": {
-        "comics_index": [
-            40
-        ],
-        "number_comics_of_index": [
-            1
-        ]
-    },
-    "bust": {
-        "comics_index": [
-            53
-        ],
-        "number_comics_of_index": [
-            1
-        ]
-    },
     "but": {
         "comics_index": [
-            61,
-            7,
-            57,
-            63,
-            65,
-            24,
             19,
-            29,
-            51
+            24,
+            7,
+            29
         ],
         "number_comics_of_index": [
             1,
             1,
             1,
-            1,
-            1,
-            1,
-            1,
-            1,
-            1
-        ]
-    },
-    "cactus": {
-        "comics_index": [
-            35
-        ],
-        "number_comics_of_index": [
             1
         ]
     },
     "call": {
         "comics_index": [
             23,
-            36,
             24,
-            32,
-            37
+            32
         ],
         "number_comics_of_index": [
-            1,
-            1,
             1,
             1,
             1
@@ -1437,33 +789,19 @@
     },
     "can": {
         "comics_index": [
-            56,
-            1,
             6,
-            54,
             23,
             24,
+            25,
             32,
-            47,
-            25
-        ],
-        "number_comics_of_index": [
-            1,
-            1,
-            1,
-            1,
-            1,
-            1,
-            1,
-            1,
             1
-        ]
-    },
-    "canalt": {
-        "comics_index": [
-            61
         ],
         "number_comics_of_index": [
+            1,
+            1,
+            1,
+            1,
+            1,
             1
         ]
     },
@@ -1477,14 +815,10 @@
     },
     "cant": {
         "comics_index": [
-            36,
             14,
-            24,
-            62
+            24
         ],
         "number_comics_of_index": [
-            1,
-            1,
             1,
             1
         ]
@@ -1497,59 +831,25 @@
             1
         ]
     },
-    "caption": {
-        "comics_index": [
-            56
-        ],
-        "number_comics_of_index": [
-            1
-        ]
-    },
     "car": {
         "comics_index": [
-            16,
-            42,
-            37,
-            60
+            16
         ],
         "number_comics_of_index": [
-            1,
-            1,
-            1,
             1
         ]
     },
     "card": {
         "comics_index": [
-            63,
             17
         ],
         "number_comics_of_index": [
-            1,
-            1
-        ]
-    },
-    "care": {
-        "comics_index": [
-            49,
-            50
-        ],
-        "number_comics_of_index": [
-            1,
             1
         ]
     },
     "carri": {
         "comics_index": [
             31
-        ],
-        "number_comics_of_index": [
-            1
-        ]
-    },
-    "carv": {
-        "comics_index": [
-            68
         ],
         "number_comics_of_index": [
             1
@@ -1566,14 +866,6 @@
     "cautionari": {
         "comics_index": [
             6
-        ],
-        "number_comics_of_index": [
-            1
-        ]
-    },
-    "ceilingman": {
-        "comics_index": [
-            68
         ],
         "number_comics_of_index": [
             1
@@ -1621,14 +913,6 @@
             1
         ]
     },
-    "chainsaw": {
-        "comics_index": [
-            41
-        ],
-        "number_comics_of_index": [
-            1
-        ]
-    },
     "changew": {
         "comics_index": [
             24
@@ -1653,30 +937,6 @@
             1
         ]
     },
-    "character": {
-        "comics_index": [
-            36
-        ],
-        "number_comics_of_index": [
-            1
-        ]
-    },
-    "chestalt": {
-        "comics_index": [
-            64
-        ],
-        "number_comics_of_index": [
-            1
-        ]
-    },
-    "choiceman": {
-        "comics_index": [
-            58
-        ],
-        "number_comics_of_index": [
-            1
-        ]
-    },
     "choppi": {
         "comics_index": [
             25
@@ -1695,12 +955,10 @@
     },
     "circl": {
         "comics_index": [
-            17,
             24,
-            52
+            17
         ],
         "number_comics_of_index": [
-            1,
             1,
             1
         ]
@@ -1708,14 +966,6 @@
     "circlesit": {
         "comics_index": [
             24
-        ],
-        "number_comics_of_index": [
-            1
-        ]
-    },
-    "circuit": {
-        "comics_index": [
-            62
         ],
         "number_comics_of_index": [
             1
@@ -1761,14 +1011,6 @@
             1
         ]
     },
-    "clock": {
-        "comics_index": [
-            56
-        ],
-        "number_comics_of_index": [
-            1
-        ]
-    },
     "close": {
         "comics_index": [
             29
@@ -1793,22 +1035,6 @@
             1
         ]
     },
-    "club": {
-        "comics_index": [
-            68
-        ],
-        "number_comics_of_index": [
-            1
-        ]
-    },
-    "clubtitl": {
-        "comics_index": [
-            42
-        ],
-        "number_comics_of_index": [
-            1
-        ]
-    },
     "cluedo": {
         "comics_index": [
             23
@@ -1825,33 +1051,9 @@
             1
         ]
     },
-    "cmon": {
-        "comics_index": [
-            65
-        ],
-        "number_comics_of_index": [
-            1
-        ]
-    },
-    "coast": {
-        "comics_index": [
-            59
-        ],
-        "number_comics_of_index": [
-            1
-        ]
-    },
     "coat": {
         "comics_index": [
             9
-        ],
-        "number_comics_of_index": [
-            1
-        ]
-    },
-    "cock": {
-        "comics_index": [
-            65
         ],
         "number_comics_of_index": [
             1
@@ -1865,19 +1067,11 @@
             1
         ]
     },
-    "coldplay": {
-        "comics_index": [
-            56
-        ],
-        "number_comics_of_index": [
-            1
-        ]
-    },
     "collect": {
         "comics_index": [
-            27,
             23,
-            24
+            24,
+            27
         ],
         "number_comics_of_index": [
             1,
@@ -1889,21 +1083,11 @@
         "comics_index": [
             34,
             14,
-            32,
-            52
+            32
         ],
         "number_comics_of_index": [
             1,
             1,
-            1,
-            1
-        ]
-    },
-    "coloredeverybodi": {
-        "comics_index": [
-            52
-        ],
-        "number_comics_of_index": [
             1
         ]
     },
@@ -1915,29 +1099,9 @@
             1
         ]
     },
-    "come": {
-        "comics_index": [
-            59
-        ],
-        "number_comics_of_index": [
-            1
-        ]
-    },
     "comic": {
         "comics_index": [
-            68,
-            32,
-            45
-        ],
-        "number_comics_of_index": [
-            1,
-            1,
-            1
-        ]
-    },
-    "comictwo": {
-        "comics_index": [
-            45
+            32
         ],
         "number_comics_of_index": [
             1
@@ -1945,8 +1109,8 @@
     },
     "comment": {
         "comics_index": [
-            18,
-            33
+            33,
+            18
         ],
         "number_comics_of_index": [
             1,
@@ -1969,14 +1133,6 @@
             1
         ]
     },
-    "complet": {
-        "comics_index": [
-            68
-        ],
-        "number_comics_of_index": [
-            1
-        ]
-    },
     "compon": {
         "comics_index": [
             26
@@ -1993,43 +1149,9 @@
             1
         ]
     },
-    "concoct": {
-        "comics_index": [
-            60
-        ],
-        "number_comics_of_index": [
-            1
-        ]
-    },
-    "confus": {
-        "comics_index": [
-            40
-        ],
-        "number_comics_of_index": [
-            1
-        ]
-    },
     "consequ": {
         "comics_index": [
             24
-        ],
-        "number_comics_of_index": [
-            1
-        ]
-    },
-    "constant": {
-        "comics_index": [
-            37,
-            67
-        ],
-        "number_comics_of_index": [
-            1,
-            1
-        ]
-    },
-    "constructionstitl": {
-        "comics_index": [
-            43
         ],
         "number_comics_of_index": [
             1
@@ -2055,29 +1177,17 @@
     },
     "continu": {
         "comics_index": [
-            18,
             24,
-            64
+            18
         ],
         "number_comics_of_index": [
-            1,
             1,
             1
         ]
     },
     "convers": {
         "comics_index": [
-            16,
-            65
-        ],
-        "number_comics_of_index": [
-            1,
-            1
-        ]
-    },
-    "coolfirst": {
-        "comics_index": [
-            65
+            16
         ],
         "number_comics_of_index": [
             1
@@ -2115,22 +1225,6 @@
             1
         ]
     },
-    "cosineman": {
-        "comics_index": [
-            68
-        ],
-        "number_comics_of_index": [
-            1
-        ]
-    },
-    "cosmic": {
-        "comics_index": [
-            54
-        ],
-        "number_comics_of_index": [
-            1
-        ]
-    },
     "costumefriend": {
         "comics_index": [
             20
@@ -2141,27 +1235,15 @@
     },
     "could": {
         "comics_index": [
-            61,
-            20,
-            62
+            20
         ],
         "number_comics_of_index": [
-            1,
-            1,
             1
         ]
     },
     "couldnt": {
         "comics_index": [
             24
-        ],
-        "number_comics_of_index": [
-            1
-        ]
-    },
-    "counterredspid": {
-        "comics_index": [
-            47
         ],
         "number_comics_of_index": [
             1
@@ -2177,25 +1259,19 @@
     },
     "cours": {
         "comics_index": [
-            20,
             24,
-            50
+            20
         ],
         "number_comics_of_index": [
-            1,
             1,
             1
         ]
     },
     "cover": {
         "comics_index": [
-            56,
-            48,
             22
         ],
         "number_comics_of_index": [
-            1,
-            1,
             1
         ]
     },
@@ -2215,25 +1291,9 @@
             1
         ]
     },
-    "crash": {
-        "comics_index": [
-            68
-        ],
-        "number_comics_of_index": [
-            1
-        ]
-    },
     "cross": {
         "comics_index": [
             28
-        ],
-        "number_comics_of_index": [
-            1
-        ]
-    },
-    "crowd": {
-        "comics_index": [
-            40
         ],
         "number_comics_of_index": [
             1
@@ -2257,17 +1317,7 @@
     },
     "cuboid": {
         "comics_index": [
-            47,
             8
-        ],
-        "number_comics_of_index": [
-            1,
-            1
-        ]
-    },
-    "cum": {
-        "comics_index": [
-            65
         ],
         "number_comics_of_index": [
             1
@@ -2281,41 +1331,9 @@
             1
         ]
     },
-    "cure": {
-        "comics_index": [
-            56
-        ],
-        "number_comics_of_index": [
-            1
-        ]
-    },
     "cut": {
         "comics_index": [
             24
-        ],
-        "number_comics_of_index": [
-            1
-        ]
-    },
-    "cutdown": {
-        "comics_index": [
-            41
-        ],
-        "number_comics_of_index": [
-            1
-        ]
-    },
-    "dad": {
-        "comics_index": [
-            61
-        ],
-        "number_comics_of_index": [
-            1
-        ]
-    },
-    "dadalt": {
-        "comics_index": [
-            38
         ],
         "number_comics_of_index": [
             1
@@ -2329,21 +1347,11 @@
             1
         ]
     },
-    "damntitl": {
-        "comics_index": [
-            49
-        ],
-        "number_comics_of_index": [
-            1
-        ]
-    },
     "dark": {
         "comics_index": [
-            24,
-            40
+            24
         ],
         "number_comics_of_index": [
-            1,
             1
         ]
     },
@@ -2355,29 +1363,9 @@
             1
         ]
     },
-    "david": {
-        "comics_index": [
-            42,
-            51
-        ],
-        "number_comics_of_index": [
-            1,
-            1
-        ]
-    },
     "day": {
         "comics_index": [
-            63,
             23
-        ],
-        "number_comics_of_index": [
-            1,
-            1
-        ]
-    },
-    "daycut": {
-        "comics_index": [
-            59
         ],
         "number_comics_of_index": [
             1
@@ -2386,22 +1374,6 @@
     "dayyou": {
         "comics_index": [
             23
-        ],
-        "number_comics_of_index": [
-            1
-        ]
-    },
-    "dead": {
-        "comics_index": [
-            53
-        ],
-        "number_comics_of_index": [
-            1
-        ]
-    },
-    "deathtitl": {
-        "comics_index": [
-            68
         ],
         "number_comics_of_index": [
             1
@@ -2431,89 +1403,19 @@
             1
         ]
     },
-    "densetsu": {
-        "comics_index": [
-            50
-        ],
-        "number_comics_of_index": [
-            1
-        ]
-    },
-    "densiti": {
-        "comics_index": [
-            54
-        ],
-        "number_comics_of_index": [
-            1
-        ]
-    },
     "depress": {
         "comics_index": [
-            16,
-            23
+            23,
+            16
         ],
         "number_comics_of_index": [
             1,
-            1
-        ]
-    },
-    "designa": {
-        "comics_index": [
-            62
-        ],
-        "number_comics_of_index": [
-            1
-        ]
-    },
-    "designso": {
-        "comics_index": [
-            62
-        ],
-        "number_comics_of_index": [
-            1
-        ]
-    },
-    "designyou": {
-        "comics_index": [
-            62
-        ],
-        "number_comics_of_index": [
-            1
-        ]
-    },
-    "desiretangl": {
-        "comics_index": [
-            62
-        ],
-        "number_comics_of_index": [
-            1
-        ]
-    },
-    "diagram": {
-        "comics_index": [
-            68
-        ],
-        "number_comics_of_index": [
             1
         ]
     },
     "dialogu": {
         "comics_index": [
-            57,
-            9,
-            59,
-            58
-        ],
-        "number_comics_of_index": [
-            1,
-            1,
-            1,
-            1
-        ]
-    },
-    "dialoguewoman": {
-        "comics_index": [
-            58
+            9
         ],
         "number_comics_of_index": [
             1
@@ -2521,12 +1423,10 @@
     },
     "did": {
         "comics_index": [
-            42,
-            20,
-            10
+            10,
+            20
         ],
         "number_comics_of_index": [
-            1,
             1,
             1
         ]
@@ -2534,11 +1434,9 @@
     "didnt": {
         "comics_index": [
             16,
-            57,
             29
         ],
         "number_comics_of_index": [
-            1,
             1,
             1
         ]
@@ -2553,11 +1451,9 @@
     },
     "differ": {
         "comics_index": [
-            55,
             24
         ],
         "number_comics_of_index": [
-            1,
             1
         ]
     },
@@ -2577,22 +1473,6 @@
             1
         ]
     },
-    "discard": {
-        "comics_index": [
-            51
-        ],
-        "number_comics_of_index": [
-            1
-        ]
-    },
-    "diseas": {
-        "comics_index": [
-            56
-        ],
-        "number_comics_of_index": [
-            1
-        ]
-    },
     "disgust": {
         "comics_index": [
             27
@@ -2603,8 +1483,8 @@
     },
     "distanc": {
         "comics_index": [
-            1,
-            31
+            31,
+            1
         ],
         "number_comics_of_index": [
             1,
@@ -2645,22 +1525,12 @@
     },
     "do": {
         "comics_index": [
-            56,
-            28,
             12,
-            59,
             24,
-            58,
-            21,
-            37,
-            67
+            28,
+            21
         ],
         "number_comics_of_index": [
-            1,
-            1,
-            1,
-            1,
-            1,
             1,
             1,
             1,
@@ -2669,27 +1539,19 @@
     },
     "doe": {
         "comics_index": [
-            16,
-            68,
-            23
+            23,
+            16
         ],
         "number_comics_of_index": [
-            1,
             1,
             1
         ]
     },
     "doesnt": {
         "comics_index": [
-            61,
-            65,
-            55,
             21
         ],
         "number_comics_of_index": [
-            1,
-            1,
-            1,
             1
         ]
     },
@@ -2711,35 +1573,17 @@
     },
     "dont": {
         "comics_index": [
-            7,
-            1,
-            20,
-            38,
-            59,
             24,
-            58,
+            20,
+            7,
             29,
-            41,
-            50
-        ],
-        "number_comics_of_index": [
-            1,
-            1,
-            1,
-            1,
-            1,
-            1,
-            1,
-            1,
-            1,
             1
-        ]
-    },
-    "dotsw": {
-        "comics_index": [
-            48
         ],
         "number_comics_of_index": [
+            1,
+            1,
+            1,
+            1,
             1
         ]
     },
@@ -2767,14 +1611,6 @@
             1
         ]
     },
-    "downand": {
-        "comics_index": [
-            46
-        ],
-        "number_comics_of_index": [
-            1
-        ]
-    },
     "downer": {
         "comics_index": [
             6
@@ -2791,31 +1627,13 @@
             1
         ]
     },
-    "drag": {
-        "comics_index": [
-            57
-        ],
-        "number_comics_of_index": [
-            1
-        ]
-    },
-    "dragonsgirl": {
-        "comics_index": [
-            67
-        ],
-        "number_comics_of_index": [
-            1
-        ]
-    },
     "draw": {
         "comics_index": [
-            56,
             14,
-            24,
-            10
+            10,
+            24
         ],
         "number_comics_of_index": [
-            1,
             1,
             1,
             1
@@ -2823,16 +1641,10 @@
     },
     "drawn": {
         "comics_index": [
-            43,
             34,
-            24,
-            35,
-            52
+            24
         ],
         "number_comics_of_index": [
-            1,
-            1,
-            1,
             1,
             1
         ]
@@ -2847,25 +1659,15 @@
     },
     "drew": {
         "comics_index": [
-            20,
-            41
+            20
         ],
         "number_comics_of_index": [
-            1,
             1
         ]
     },
     "drift": {
         "comics_index": [
             1
-        ],
-        "number_comics_of_index": [
-            1
-        ]
-    },
-    "drive": {
-        "comics_index": [
-            49
         ],
         "number_comics_of_index": [
             1
@@ -2879,25 +1681,9 @@
             1
         ]
     },
-    "drug": {
-        "comics_index": [
-            53
-        ],
-        "number_comics_of_index": [
-            1
-        ]
-    },
     "dude": {
         "comics_index": [
             21
-        ],
-        "number_comics_of_index": [
-            1
-        ]
-    },
-    "dull": {
-        "comics_index": [
-            52
         ],
         "number_comics_of_index": [
             1
@@ -2910,14 +1696,6 @@
         ],
         "number_comics_of_index": [
             1,
-            1
-        ]
-    },
-    "dumpstersil": {
-        "comics_index": [
-            65
-        ],
-        "number_comics_of_index": [
             1
         ]
     },
@@ -2939,8 +1717,8 @@
     },
     "edg": {
         "comics_index": [
-            24,
             13,
+            24,
             22
         ],
         "number_comics_of_index": [
@@ -2952,30 +1730,6 @@
     "edgeman": {
         "comics_index": [
             13
-        ],
-        "number_comics_of_index": [
-            1
-        ]
-    },
-    "eighth": {
-        "comics_index": [
-            68
-        ],
-        "number_comics_of_index": [
-            1
-        ]
-    },
-    "elabor": {
-        "comics_index": [
-            60
-        ],
-        "number_comics_of_index": [
-            1
-        ]
-    },
-    "electr": {
-        "comics_index": [
-            35
         ],
         "number_comics_of_index": [
             1
@@ -3000,9 +1754,9 @@
     "els": {
         "comics_index": [
             16,
-            1,
             24,
-            32
+            32,
+            1
         ],
         "number_comics_of_index": [
             1,
@@ -3029,29 +1783,7 @@
     },
     "end": {
         "comics_index": [
-            43,
-            24,
-            49,
-            45
-        ],
-        "number_comics_of_index": [
-            1,
-            1,
-            1,
-            1
-        ]
-    },
-    "endsmen": {
-        "comics_index": [
-            68
-        ],
-        "number_comics_of_index": [
-            1
-        ]
-    },
-    "energi": {
-        "comics_index": [
-            54
+            24
         ],
         "number_comics_of_index": [
             1
@@ -3059,12 +1791,10 @@
     },
     "enough": {
         "comics_index": [
-            16,
             23,
-            49
+            16
         ],
         "number_comics_of_index": [
-            1,
             1,
             1
         ]
@@ -3093,43 +1823,27 @@
             1
         ]
     },
-    "environ": {
-        "comics_index": [
-            43
-        ],
-        "number_comics_of_index": [
-            1
-        ]
-    },
     "equal": {
         "comics_index": [
-            28,
-            55
+            28
         ],
         "number_comics_of_index": [
-            1,
             1
         ]
     },
     "equat": {
         "comics_index": [
-            55,
             19
         ],
         "number_comics_of_index": [
-            1,
             1
         ]
     },
     "even": {
         "comics_index": [
-            55,
-            17,
-            50
+            17
         ],
         "number_comics_of_index": [
-            1,
-            1,
             1
         ]
     },
@@ -3141,23 +1855,11 @@
             1
         ]
     },
-    "everybodyno": {
-        "comics_index": [
-            52
-        ],
-        "number_comics_of_index": [
-            1
-        ]
-    },
     "everyon": {
         "comics_index": [
-            65,
-            32,
-            60
+            32
         ],
         "number_comics_of_index": [
-            1,
-            1,
             1
         ]
     },
@@ -3177,25 +1879,9 @@
             1
         ]
     },
-    "excus": {
-        "comics_index": [
-            67
-        ],
-        "number_comics_of_index": [
-            1
-        ]
-    },
     "experi": {
         "comics_index": [
             32
-        ],
-        "number_comics_of_index": [
-            1
-        ]
-    },
-    "expert": {
-        "comics_index": [
-            36
         ],
         "number_comics_of_index": [
             1
@@ -3209,29 +1895,13 @@
             1
         ]
     },
-    "extend": {
-        "comics_index": [
-            47
-        ],
-        "number_comics_of_index": [
-            1
-        ]
-    },
     "face": {
         "comics_index": [
-            7,
-            57,
-            56,
-            44,
-            68,
             9,
-            24
+            24,
+            7
         ],
         "number_comics_of_index": [
-            1,
-            1,
-            1,
-            1,
             1,
             1,
             1
@@ -3269,14 +1939,6 @@
             1
         ]
     },
-    "fagsecond": {
-        "comics_index": [
-            65
-        ],
-        "number_comics_of_index": [
-            1
-        ]
-    },
     "faint": {
         "comics_index": [
             24
@@ -3298,14 +1960,6 @@
     "famous": {
         "comics_index": [
             10
-        ],
-        "number_comics_of_index": [
-            1
-        ]
-    },
-    "fan": {
-        "comics_index": [
-            46
         ],
         "number_comics_of_index": [
             1
@@ -3337,17 +1991,7 @@
     },
     "fast": {
         "comics_index": [
-            16,
-            57
-        ],
-        "number_comics_of_index": [
-            1,
-            1
-        ]
-    },
-    "father": {
-        "comics_index": [
-            38
+            16
         ],
         "number_comics_of_index": [
             1
@@ -3361,63 +2005,9 @@
             1
         ]
     },
-    "favorit": {
-        "comics_index": [
-            68
-        ],
-        "number_comics_of_index": [
-            1
-        ]
-    },
-    "favourit": {
-        "comics_index": [
-            68
-        ],
-        "number_comics_of_index": [
-            1
-        ]
-    },
-    "fawn": {
-        "comics_index": [
-            67
-        ],
-        "number_comics_of_index": [
-            1
-        ]
-    },
     "feel": {
         "comics_index": [
-            59,
-            24,
-            62,
-            40
-        ],
-        "number_comics_of_index": [
-            1,
-            1,
-            1,
-            1
-        ]
-    },
-    "feeli": {
-        "comics_index": [
-            49
-        ],
-        "number_comics_of_index": [
-            1
-        ]
-    },
-    "feelingscrisscross": {
-        "comics_index": [
-            62
-        ],
-        "number_comics_of_index": [
-            1
-        ]
-    },
-    "feelingsmug": {
-        "comics_index": [
-            60
+            24
         ],
         "number_comics_of_index": [
             1
@@ -3441,11 +2031,9 @@
     },
     "femal": {
         "comics_index": [
-            9,
-            48
+            9
         ],
         "number_comics_of_index": [
-            1,
             1
         ]
     },
@@ -3477,33 +2065,15 @@
     },
     "figur": {
         "comics_index": [
-            68,
-            12,
             9,
+            12,
             14,
-            17,
-            48,
-            40,
-            45,
-            47
+            17
         ],
         "number_comics_of_index": [
             1,
             1,
             1,
-            1,
-            1,
-            1,
-            1,
-            1,
-            1
-        ]
-    },
-    "figurefigur": {
-        "comics_index": [
-            68
-        ],
-        "number_comics_of_index": [
             1
         ]
     },
@@ -3525,27 +2095,15 @@
     },
     "final": {
         "comics_index": [
-            63,
             23
         ],
         "number_comics_of_index": [
-            1,
             1
         ]
     },
     "find": {
         "comics_index": [
-            16,
-            36
-        ],
-        "number_comics_of_index": [
-            1,
-            1
-        ]
-    },
-    "findth": {
-        "comics_index": [
-            62
+            16
         ],
         "number_comics_of_index": [
             1
@@ -3553,14 +2111,10 @@
     },
     "first": {
         "comics_index": [
-            57,
-            56,
-            24,
-            10
+            10,
+            24
         ],
         "number_comics_of_index": [
-            1,
-            1,
             1,
             1
         ]
@@ -3568,14 +2122,6 @@
     "fissur": {
         "comics_index": [
             24
-        ],
-        "number_comics_of_index": [
-            1
-        ]
-    },
-    "five": {
-        "comics_index": [
-            68
         ],
         "number_comics_of_index": [
             1
@@ -3599,15 +2145,13 @@
     },
     "float": {
         "comics_index": [
-            1,
-            39,
             11,
+            25,
             31,
             22,
-            25
+            1
         ],
         "number_comics_of_index": [
-            1,
             1,
             1,
             1,
@@ -3618,11 +2162,9 @@
     "floor": {
         "comics_index": [
             7,
-            38,
             21
         ],
         "number_comics_of_index": [
-            1,
             1,
             1
         ]
@@ -3667,25 +2209,9 @@
             1
         ]
     },
-    "followssquar": {
-        "comics_index": [
-            55
-        ],
-        "number_comics_of_index": [
-            1
-        ]
-    },
     "foodguy": {
         "comics_index": [
             18
-        ],
-        "number_comics_of_index": [
-            1
-        ]
-    },
-    "foreverwoman": {
-        "comics_index": [
-            57
         ],
         "number_comics_of_index": [
             1
@@ -3704,24 +2230,6 @@
             16
         ],
         "number_comics_of_index": [
-            1
-        ]
-    },
-    "forth": {
-        "comics_index": [
-            60
-        ],
-        "number_comics_of_index": [
-            1
-        ]
-    },
-    "found": {
-        "comics_index": [
-            48,
-            41
-        ],
-        "number_comics_of_index": [
-            1,
             1
         ]
     },
@@ -3765,32 +2273,6 @@
             1
         ]
     },
-    "frame": {
-        "comics_index": [
-            47
-        ],
-        "number_comics_of_index": [
-            1
-        ]
-    },
-    "frequenc": {
-        "comics_index": [
-            54
-        ],
-        "number_comics_of_index": [
-            1
-        ]
-    },
-    "friend": {
-        "comics_index": [
-            65,
-            39
-        ],
-        "number_comics_of_index": [
-            1,
-            1
-        ]
-    },
     "front": {
         "comics_index": [
             7,
@@ -3804,22 +2286,6 @@
     "frozen": {
         "comics_index": [
             18
-        ],
-        "number_comics_of_index": [
-            1
-        ]
-    },
-    "fuck": {
-        "comics_index": [
-            38
-        ],
-        "number_comics_of_index": [
-            1
-        ]
-    },
-    "fudg": {
-        "comics_index": [
-            65
         ],
         "number_comics_of_index": [
             1
@@ -3843,51 +2309,17 @@
     },
     "funni": {
         "comics_index": [
-            16,
             6,
-            45
+            16
         ],
         "number_comics_of_index": [
             1,
-            1,
-            1
-        ]
-    },
-    "funtitl": {
-        "comics_index": [
-            51
-        ],
-        "number_comics_of_index": [
             1
         ]
     },
     "further": {
         "comics_index": [
             24
-        ],
-        "number_comics_of_index": [
-            1
-        ]
-    },
-    "gaimansandman": {
-        "comics_index": [
-            52
-        ],
-        "number_comics_of_index": [
-            1
-        ]
-    },
-    "game": {
-        "comics_index": [
-            53
-        ],
-        "number_comics_of_index": [
-            1
-        ]
-    },
-    "gamesfath": {
-        "comics_index": [
-            38
         ],
         "number_comics_of_index": [
             1
@@ -3901,51 +2333,9 @@
             1
         ]
     },
-    "gave": {
-        "comics_index": [
-            58
-        ],
-        "number_comics_of_index": [
-            1
-        ]
-    },
-    "gay": {
-        "comics_index": [
-            65,
-            36
-        ],
-        "number_comics_of_index": [
-            1,
-            1
-        ]
-    },
-    "gayfirst": {
-        "comics_index": [
-            65
-        ],
-        "number_comics_of_index": [
-            1
-        ]
-    },
-    "gayman": {
-        "comics_index": [
-            68
-        ],
-        "number_comics_of_index": [
-            1
-        ]
-    },
     "generat": {
         "comics_index": [
             24
-        ],
-        "number_comics_of_index": [
-            1
-        ]
-    },
-    "geometr": {
-        "comics_index": [
-            43
         ],
         "number_comics_of_index": [
             1
@@ -3961,37 +2351,13 @@
     },
     "get": {
         "comics_index": [
-            61,
-            28,
-            63,
             14,
-            59,
-            49,
+            28,
             29
         ],
         "number_comics_of_index": [
             1,
             1,
-            1,
-            1,
-            1,
-            1,
-            1
-        ]
-    },
-    "ghz": {
-        "comics_index": [
-            54
-        ],
-        "number_comics_of_index": [
-            1
-        ]
-    },
-    "ghzif": {
-        "comics_index": [
-            54
-        ],
-        "number_comics_of_index": [
             1
         ]
     },
@@ -4005,25 +2371,11 @@
     },
     "girl": {
         "comics_index": [
-            7,
             16,
-            59,
-            46,
-            67
+            7
         ],
         "number_comics_of_index": [
             1,
-            1,
-            1,
-            1,
-            1
-        ]
-    },
-    "girlsbrunett": {
-        "comics_index": [
-            59
-        ],
-        "number_comics_of_index": [
             1
         ]
     },
@@ -4035,44 +2387,14 @@
             1
         ]
     },
-    "glare": {
-        "comics_index": [
-            39
-        ],
-        "number_comics_of_index": [
-            1
-        ]
-    },
-    "glass": {
-        "comics_index": [
-            67
-        ],
-        "number_comics_of_index": [
-            1
-        ]
-    },
-    "glint": {
-        "comics_index": [
-            68
-        ],
-        "number_comics_of_index": [
-            1
-        ]
-    },
     "go": {
         "comics_index": [
-            61,
             6,
-            63,
-            20,
             14,
-            59,
+            20,
             29
         ],
         "number_comics_of_index": [
-            1,
-            1,
-            1,
             1,
             1,
             1,
@@ -4097,10 +2419,10 @@
     },
     "god": {
         "comics_index": [
-            16,
+            33,
             23,
-            29,
-            33
+            16,
+            29
         ],
         "number_comics_of_index": [
             1,
@@ -4125,50 +2447,22 @@
             1
         ]
     },
-    "golf": {
-        "comics_index": [
-            42
-        ],
-        "number_comics_of_index": [
-            1
-        ]
-    },
-    "goman": {
-        "comics_index": [
-            68
-        ],
-        "number_comics_of_index": [
-            1
-        ]
-    },
     "gone": {
         "comics_index": [
-            57,
             12,
             20
         ],
         "number_comics_of_index": [
             1,
-            1,
-            1
-        ]
-    },
-    "goneman": {
-        "comics_index": [
-            57
-        ],
-        "number_comics_of_index": [
             1
         ]
     },
     "good": {
         "comics_index": [
-            59,
-            31,
-            21
+            21,
+            31
         ],
         "number_comics_of_index": [
-            1,
             1,
             1
         ]
@@ -4183,25 +2477,7 @@
     },
     "got": {
         "comics_index": [
-            52,
             30
-        ],
-        "number_comics_of_index": [
-            1,
-            1
-        ]
-    },
-    "grad": {
-        "comics_index": [
-            59
-        ],
-        "number_comics_of_index": [
-            1
-        ]
-    },
-    "graduat": {
-        "comics_index": [
-            59
         ],
         "number_comics_of_index": [
             1
@@ -4215,27 +2491,9 @@
             1
         ]
     },
-    "graph": {
-        "comics_index": [
-            54,
-            35
-        ],
-        "number_comics_of_index": [
-            1,
-            1
-        ]
-    },
     "grassi": {
         "comics_index": [
             14
-        ],
-        "number_comics_of_index": [
-            1
-        ]
-    },
-    "great": {
-        "comics_index": [
-            59
         ],
         "number_comics_of_index": [
             1
@@ -4251,12 +2509,10 @@
     },
     "green": {
         "comics_index": [
-            5,
             34,
-            60
+            5
         ],
         "number_comics_of_index": [
-            1,
             1,
             1
         ]
@@ -4264,14 +2520,6 @@
     "greenperson": {
         "comics_index": [
             32
-        ],
-        "number_comics_of_index": [
-            1
-        ]
-    },
-    "grey": {
-        "comics_index": [
-            48
         ],
         "number_comics_of_index": [
             1
@@ -4287,22 +2535,18 @@
     },
     "ground": {
         "comics_index": [
-            32,
-            53
+            32
         ],
         "number_comics_of_index": [
-            1,
             1
         ]
     },
     "group": {
         "comics_index": [
             16,
-            24,
-            60
+            24
         ],
         "number_comics_of_index": [
-            1,
             1,
             1
         ]
@@ -4347,30 +2591,16 @@
             1
         ]
     },
-    "gun": {
-        "comics_index": [
-            68
-        ],
-        "number_comics_of_index": [
-            1
-        ]
-    },
     "guy": {
         "comics_index": [
-            61,
-            16,
-            18,
-            65,
+            33,
             12,
+            16,
             20,
             29,
-            33,
-            64
+            18
         ],
         "number_comics_of_index": [
-            1,
-            1,
-            1,
             1,
             1,
             1,
@@ -4397,23 +2627,11 @@
     },
     "had": {
         "comics_index": [
-            57,
-            20,
             11,
-            51
+            20
         ],
         "number_comics_of_index": [
             1,
-            1,
-            1,
-            1
-        ]
-    },
-    "hadtitletextopen": {
-        "comics_index": [
-            58
-        ],
-        "number_comics_of_index": [
             1
         ]
     },
@@ -4427,13 +2645,9 @@
     },
     "hair": {
         "comics_index": [
-            68,
-            9,
-            67
+            9
         ],
         "number_comics_of_index": [
-            1,
-            1,
             1
         ]
     },
@@ -4461,14 +2675,6 @@
             1
         ]
     },
-    "halsey": {
-        "comics_index": [
-            46
-        ],
-        "number_comics_of_index": [
-            1
-        ]
-    },
     "haman": {
         "comics_index": [
             6
@@ -4479,13 +2685,9 @@
     },
     "hand": {
         "comics_index": [
-            16,
-            38,
-            62
+            16
         ],
         "number_comics_of_index": [
-            1,
-            1,
             1
         ]
     },
@@ -4499,29 +2701,15 @@
     },
     "hang": {
         "comics_index": [
-            59,
-            49,
-            47,
             8
         ],
         "number_comics_of_index": [
-            1,
-            1,
-            1,
             1
         ]
     },
     "happen": {
         "comics_index": [
             31
-        ],
-        "number_comics_of_index": [
-            1
-        ]
-    },
-    "happi": {
-        "comics_index": [
-            63
         ],
         "number_comics_of_index": [
             1
@@ -4539,18 +2727,12 @@
     },
     "has": {
         "comics_index": [
-            61,
-            24,
             19,
-            29,
-            52,
             26,
-            50
+            24,
+            29
         ],
         "number_comics_of_index": [
-            1,
-            1,
-            1,
             1,
             1,
             1,
@@ -4560,13 +2742,9 @@
     "hat": {
         "comics_index": [
             12,
-            29,
-            51,
-            64
+            29
         ],
         "number_comics_of_index": [
-            1,
-            1,
             1,
             1
         ]
@@ -4587,30 +2765,14 @@
             1
         ]
     },
-    "hatth": {
-        "comics_index": [
-            45
-        ],
-        "number_comics_of_index": [
-            1
-        ]
-    },
     "have": {
         "comics_index": [
-            63,
-            68,
             12,
             14,
-            59,
             24,
-            29,
-            67
+            29
         ],
         "number_comics_of_index": [
-            1,
-            1,
-            1,
-            1,
             1,
             1,
             1,
@@ -4635,37 +2797,9 @@
             1
         ]
     },
-    "head": {
-        "comics_index": [
-            56,
-            68,
-            35
-        ],
-        "number_comics_of_index": [
-            1,
-            1,
-            1
-        ]
-    },
-    "headlin": {
-        "comics_index": [
-            37
-        ],
-        "number_comics_of_index": [
-            1
-        ]
-    },
     "headman": {
         "comics_index": [
             15
-        ],
-        "number_comics_of_index": [
-            1
-        ]
-    },
-    "headsfigur": {
-        "comics_index": [
-            68
         ],
         "number_comics_of_index": [
             1
@@ -4681,58 +2815,18 @@
     },
     "heart": {
         "comics_index": [
-            63,
-            55,
-            17,
             24,
-            58,
-            62
+            17
         ],
         "number_comics_of_index": [
             1,
-            1,
-            1,
-            1,
-            1,
-            1
-        ]
-    },
-    "heartheart": {
-        "comics_index": [
-            62
-        ],
-        "number_comics_of_index": [
-            1
-        ]
-    },
-    "heartsi": {
-        "comics_index": [
-            62
-        ],
-        "number_comics_of_index": [
-            1
-        ]
-    },
-    "hed": {
-        "comics_index": [
-            57
-        ],
-        "number_comics_of_index": [
-            1
-        ]
-    },
-    "helicopterman": {
-        "comics_index": [
-            68
-        ],
-        "number_comics_of_index": [
             1
         ]
     },
     "hell": {
         "comics_index": [
-            28,
-            12
+            12,
+            28
         ],
         "number_comics_of_index": [
             1,
@@ -4769,27 +2863,11 @@
     },
     "here": {
         "comics_index": [
-            18,
-            24
+            24,
+            18
         ],
         "number_comics_of_index": [
             1,
-            1
-        ]
-    },
-    "herealt": {
-        "comics_index": [
-            55
-        ],
-        "number_comics_of_index": [
-            1
-        ]
-    },
-    "heretitl": {
-        "comics_index": [
-            50
-        ],
-        "number_comics_of_index": [
             1
         ]
     },
@@ -4805,19 +2883,7 @@
     },
     "hey": {
         "comics_index": [
-            5,
-            65,
-            38
-        ],
-        "number_comics_of_index": [
-            1,
-            1,
-            1
-        ]
-    },
-    "hfchfektscienceit": {
-        "comics_index": [
-            54
+            5
         ],
         "number_comics_of_index": [
             1
@@ -4831,45 +2897,9 @@
             1
         ]
     },
-    "hide": {
-        "comics_index": [
-            53
-        ],
-        "number_comics_of_index": [
-            1
-        ]
-    },
-    "hideout": {
-        "comics_index": [
-            53
-        ],
-        "number_comics_of_index": [
-            1
-        ]
-    },
     "high": {
         "comics_index": [
-            24,
-            67
-        ],
-        "number_comics_of_index": [
-            1,
-            1
-        ]
-    },
-    "highschool": {
-        "comics_index": [
-            35,
-            41
-        ],
-        "number_comics_of_index": [
-            1,
-            1
-        ]
-    },
-    "hill": {
-        "comics_index": [
-            48
+            24
         ],
         "number_comics_of_index": [
             1
@@ -4915,14 +2945,6 @@
             1
         ]
     },
-    "hit": {
-        "comics_index": [
-            64
-        ],
-        "number_comics_of_index": [
-            1
-        ]
-    },
     "hitler": {
         "comics_index": [
             29
@@ -4931,43 +2953,11 @@
             1
         ]
     },
-    "hobbi": {
-        "comics_index": [
-            37
-        ],
-        "number_comics_of_index": [
-            1
-        ]
-    },
-    "hobbywhen": {
-        "comics_index": [
-            53
-        ],
-        "number_comics_of_index": [
-            1
-        ]
-    },
-    "hobbywhil": {
-        "comics_index": [
-            60
-        ],
-        "number_comics_of_index": [
-            1
-        ]
-    },
     "hold": {
         "comics_index": [
-            15,
-            65,
-            68,
-            38,
-            41
+            15
         ],
         "number_comics_of_index": [
-            1,
-            1,
-            1,
-            1,
             1
         ]
     },
@@ -4997,13 +2987,9 @@
     },
     "hope": {
         "comics_index": [
-            68,
-            24,
-            47
+            24
         ],
         "number_comics_of_index": [
-            1,
-            1,
             1
         ]
     },
@@ -5031,34 +3017,14 @@
             1
         ]
     },
-    "hot": {
-        "comics_index": [
-            49
-        ],
-        "number_comics_of_index": [
-            1
-        ]
-    },
-    "hotsecond": {
-        "comics_index": [
-            65
-        ],
-        "number_comics_of_index": [
-            1
-        ]
-    },
     "how": {
         "comics_index": [
             23,
-            17,
             24,
-            49,
             21,
-            52
+            17
         ],
         "number_comics_of_index": [
-            1,
-            1,
             1,
             1,
             1,
@@ -5075,8 +3041,8 @@
     },
     "huge": {
         "comics_index": [
-            24,
-            13
+            13,
+            24
         ],
         "number_comics_of_index": [
             1,
@@ -5115,71 +3081,27 @@
             1
         ]
     },
-    "hundr": {
-        "comics_index": [
-            52
-        ],
-        "number_comics_of_index": [
-            1
-        ]
-    },
-    "hurt": {
-        "comics_index": [
-            64
-        ],
-        "number_comics_of_index": [
-            1
-        ]
-    },
-    "hyphen": {
-        "comics_index": [
-            37
-        ],
-        "number_comics_of_index": [
-            1
-        ]
-    },
     "i": {
         "comics_index": [
-            61,
+            6,
+            33,
+            19,
+            23,
+            14,
+            10,
+            16,
+            26,
+            24,
+            11,
+            20,
             7,
             15,
-            16,
-            57,
-            56,
-            1,
-            2,
-            42,
-            44,
-            6,
-            28,
-            63,
-            68,
-            23,
-            20,
-            36,
-            14,
-            17,
-            59,
-            11,
-            24,
-            46,
-            19,
-            35,
-            49,
-            58,
-            62,
             32,
-            10,
+            28,
+            2,
             29,
-            37,
-            53,
-            40,
-            47,
-            33,
-            41,
-            60,
-            26
+            1,
+            17
         ],
         "number_comics_of_index": [
             1,
@@ -5199,61 +3121,13 @@
             1,
             1,
             1,
-            1,
-            1,
-            1,
-            1,
-            1,
-            1,
-            1,
-            1,
-            1,
-            1,
-            1,
-            1,
-            1,
-            1,
-            1,
-            1,
-            1,
-            1,
-            1,
-            1,
-            1,
-            1
-        ]
-    },
-    "id": {
-        "comics_index": [
-            57,
-            59
-        ],
-        "number_comics_of_index": [
             1,
             1
         ]
     },
     "idea": {
         "comics_index": [
-            24,
-            51
-        ],
-        "number_comics_of_index": [
-            1,
-            1
-        ]
-    },
-    "ident": {
-        "comics_index": [
-            55
-        ],
-        "number_comics_of_index": [
-            1
-        ]
-    },
-    "identifi": {
-        "comics_index": [
-            54
+            24
         ],
         "number_comics_of_index": [
             1
@@ -5270,19 +3144,13 @@
     "if": {
         "comics_index": [
             6,
-            54,
-            18,
-            28,
-            65,
             23,
-            17,
             32,
-            50
+            28,
+            18,
+            17
         ],
         "number_comics_of_index": [
-            1,
-            1,
-            1,
             1,
             1,
             1,
@@ -5293,17 +3161,7 @@
     },
     "ill": {
         "comics_index": [
-            1,
-            59
-        ],
-        "number_comics_of_index": [
-            1,
             1
-        ]
-    },
-    "illumin": {
-        "comics_index": [
-            40
         ],
         "number_comics_of_index": [
             1
@@ -5311,16 +3169,12 @@
     },
     "im": {
         "comics_index": [
-            16,
-            12,
             23,
-            17,
-            59,
-            46
+            12,
+            16,
+            17
         ],
         "number_comics_of_index": [
-            1,
-            1,
             1,
             1,
             1,
@@ -5329,8 +3183,8 @@
     },
     "imagin": {
         "comics_index": [
-            20,
-            24
+            24,
+            20
         ],
         "number_comics_of_index": [
             1,
@@ -5385,14 +3239,6 @@
             1
         ]
     },
-    "inept": {
-        "comics_index": [
-            67
-        ],
-        "number_comics_of_index": [
-            1
-        ]
-    },
     "infus": {
         "comics_index": [
             18
@@ -5404,22 +3250,6 @@
     "inhost": {
         "comics_index": [
             30
-        ],
-        "number_comics_of_index": [
-            1
-        ]
-    },
-    "insur": {
-        "comics_index": [
-            42
-        ],
-        "number_comics_of_index": [
-            1
-        ]
-    },
-    "interest": {
-        "comics_index": [
-            59
         ],
         "number_comics_of_index": [
             1
@@ -5491,8 +3321,8 @@
     },
     "isnt": {
         "comics_index": [
-            17,
-            13
+            13,
+            17
         ],
         "number_comics_of_index": [
             1,
@@ -5504,16 +3334,6 @@
             24
         ],
         "number_comics_of_index": [
-            1
-        ]
-    },
-    "italt": {
-        "comics_index": [
-            63,
-            53
-        ],
-        "number_comics_of_index": [
-            1,
             1
         ]
     },
@@ -5549,37 +3369,11 @@
             1
         ]
     },
-    "itmi": {
-        "comics_index": [
-            60
-        ],
-        "number_comics_of_index": [
-            1
-        ]
-    },
     "itmuch": {
         "comics_index": [
             24
         ],
         "number_comics_of_index": [
-            1
-        ]
-    },
-    "itstacey": {
-        "comics_index": [
-            61
-        ],
-        "number_comics_of_index": [
-            1
-        ]
-    },
-    "jack": {
-        "comics_index": [
-            68,
-            38
-        ],
-        "number_comics_of_index": [
-            1,
             1
         ]
     },
@@ -5615,14 +3409,6 @@
             1
         ]
     },
-    "jockeyfirst": {
-        "comics_index": [
-            65
-        ],
-        "number_comics_of_index": [
-            1
-        ]
-    },
     "joe": {
         "comics_index": [
             30
@@ -5641,30 +3427,15 @@
             1
         ]
     },
-    "jump": {
-        "comics_index": [
-            53
-        ],
-        "number_comics_of_index": [
-            1
-        ]
-    },
     "just": {
         "comics_index": [
-            15,
-            16,
-            42,
             34,
-            63,
-            68,
-            20,
             14,
+            16,
             24,
-            46,
-            48,
-            21,
-            52,
-            41
+            20,
+            15,
+            21
         ],
         "number_comics_of_index": [
             1,
@@ -5673,21 +3444,6 @@
             1,
             1,
             1,
-            1,
-            1,
-            1,
-            1,
-            1,
-            1,
-            1,
-            1
-        ]
-    },
-    "karnaugh": {
-        "comics_index": [
-            62
-        ],
-        "number_comics_of_index": [
             1
         ]
     },
@@ -5719,24 +3475,18 @@
     },
     "kid": {
         "comics_index": [
-            63,
             24
         ],
         "number_comics_of_index": [
-            1,
             1
         ]
     },
     "kind": {
         "comics_index": [
-            15,
-            59,
             13,
-            50
+            15
         ],
         "number_comics_of_index": [
-            1,
-            1,
             1,
             1
         ]
@@ -5751,30 +3501,16 @@
     },
     "know": {
         "comics_index": [
-            61,
-            15,
-            16,
-            56,
-            18,
-            28,
-            65,
             23,
-            59,
+            16,
             24,
-            58,
+            15,
             32,
+            28,
             29,
-            50,
-            64
+            18
         ],
         "number_comics_of_index": [
-            1,
-            1,
-            1,
-            1,
-            1,
-            1,
-            1,
             1,
             1,
             1,
@@ -5801,25 +3537,9 @@
             1
         ]
     },
-    "kurt": {
-        "comics_index": [
-            46
-        ],
-        "number_comics_of_index": [
-            1
-        ]
-    },
     "kurtth": {
         "comics_index": [
             24
-        ],
-        "number_comics_of_index": [
-            1
-        ]
-    },
-    "label": {
-        "comics_index": [
-            45
         ],
         "number_comics_of_index": [
             1
@@ -5835,10 +3555,10 @@
     },
     "landscap": {
         "comics_index": [
-            4,
             6,
+            13,
             14,
-            13
+            4
         ],
         "number_comics_of_index": [
             1,
@@ -5857,10 +3577,10 @@
     },
     "larg": {
         "comics_index": [
-            28,
-            17,
             24,
-            22
+            28,
+            22,
+            17
         ],
         "number_comics_of_index": [
             1,
@@ -5871,31 +3591,17 @@
     },
     "larger": {
         "comics_index": [
-            68,
             24
         ],
         "number_comics_of_index": [
-            1,
-            1
-        ]
-    },
-    "last": {
-        "comics_index": [
-            62,
-            45
-        ],
-        "number_comics_of_index": [
-            1,
             1
         ]
     },
     "later": {
         "comics_index": [
-            16,
-            39
+            16
         ],
         "number_comics_of_index": [
-            1,
             1
         ]
     },
@@ -5923,14 +3629,6 @@
             1
         ]
     },
-    "lawn": {
-        "comics_index": [
-            61
-        ],
-        "number_comics_of_index": [
-            1
-        ]
-    },
     "layout": {
         "comics_index": [
             17
@@ -5949,11 +3647,9 @@
     },
     "lead": {
         "comics_index": [
-            36,
             24
         ],
         "number_comics_of_index": [
-            1,
             1
         ]
     },
@@ -5975,12 +3671,10 @@
     },
     "least": {
         "comics_index": [
-            24,
             13,
-            67
+            24
         ],
         "number_comics_of_index": [
-            1,
             1,
             1
         ]
@@ -6011,17 +3705,7 @@
     },
     "left": {
         "comics_index": [
-            55,
             24
-        ],
-        "number_comics_of_index": [
-            1,
-            1
-        ]
-    },
-    "leg": {
-        "comics_index": [
-            43
         ],
         "number_comics_of_index": [
             1
@@ -6035,21 +3719,11 @@
             1
         ]
     },
-    "length": {
-        "comics_index": [
-            67
-        ],
-        "number_comics_of_index": [
-            1
-        ]
-    },
     "less": {
         "comics_index": [
-            12,
-            48
+            12
         ],
         "number_comics_of_index": [
-            1,
             1
         ]
     },
@@ -6085,22 +3759,6 @@
             1
         ]
     },
-    "lighthous": {
-        "comics_index": [
-            59
-        ],
-        "number_comics_of_index": [
-            1
-        ]
-    },
-    "lightin": {
-        "comics_index": [
-            40
-        ],
-        "number_comics_of_index": [
-            1
-        ]
-    },
     "like": {
         "comics_index": [
             30
@@ -6111,25 +3769,15 @@
     },
     "line": {
         "comics_index": [
-            24,
-            52
+            24
         ],
         "number_comics_of_index": [
-            1,
             1
         ]
     },
     "lineup": {
         "comics_index": [
             9
-        ],
-        "number_comics_of_index": [
-            1
-        ]
-    },
-    "link": {
-        "comics_index": [
-            35
         ],
         "number_comics_of_index": [
             1
@@ -6145,11 +3793,9 @@
     },
     "listen": {
         "comics_index": [
-            24,
-            49
+            24
         ],
         "number_comics_of_index": [
-            1,
             1
         ]
     },
@@ -6171,17 +3817,13 @@
     },
     "look": {
         "comics_index": [
-            61,
-            16,
             23,
-            20,
+            16,
+            26,
             24,
-            46,
-            26
+            20
         ],
         "number_comics_of_index": [
-            1,
-            1,
             1,
             1,
             1,
@@ -6197,59 +3839,25 @@
             1
         ]
     },
-    "lose": {
-        "comics_index": [
-            53
-        ],
-        "number_comics_of_index": [
-            1
-        ]
-    },
-    "lostalttext": {
-        "comics_index": [
-            40
-        ],
-        "number_comics_of_index": [
-            1
-        ]
-    },
     "lot": {
         "comics_index": [
-            61,
             33
         ],
         "number_comics_of_index": [
-            1,
             1
         ]
     },
     "love": {
         "comics_index": [
-            16,
-            44,
             23,
-            20,
+            16,
             24,
-            49,
-            58,
-            62
+            20
         ],
         "number_comics_of_index": [
             1,
             1,
             1,
-            1,
-            1,
-            1,
-            1,
-            1
-        ]
-    },
-    "lovelov": {
-        "comics_index": [
-            62
-        ],
-        "number_comics_of_index": [
             1
         ]
     },
@@ -6287,19 +3895,11 @@
     },
     "make": {
         "comics_index": [
-            44,
-            65,
-            68,
-            20,
-            17,
             24,
-            62
+            20,
+            17
         ],
         "number_comics_of_index": [
-            1,
-            1,
-            1,
-            1,
             1,
             1,
             1
@@ -6321,79 +3921,37 @@
             1
         ]
     },
-    "malaria": {
-        "comics_index": [
-            51
-        ],
-        "number_comics_of_index": [
-            1
-        ]
-    },
     "male": {
         "comics_index": [
-            9,
-            48
+            9
         ],
         "number_comics_of_index": [
-            1,
             1
         ]
     },
     "man": {
         "comics_index": [
-            15,
-            57,
-            44,
-            65,
-            68,
-            12,
             9,
+            12,
             24,
-            58,
-            29,
-            37,
-            64
+            15,
+            29
         ],
         "number_comics_of_index": [
             1,
             1,
             1,
             1,
-            1,
-            1,
-            1,
-            1,
-            1,
-            1,
-            1,
-            1
-        ]
-    },
-    "map": {
-        "comics_index": [
-            62
-        ],
-        "number_comics_of_index": [
-            1
-        ]
-    },
-    "mapfor": {
-        "comics_index": [
-            62
-        ],
-        "number_comics_of_index": [
             1
         ]
     },
     "mark": {
         "comics_index": [
             5,
-            55,
-            17,
-            24
+            24,
+            17
         ],
         "number_comics_of_index": [
-            1,
             1,
             1,
             1
@@ -6407,22 +3965,6 @@
             1
         ]
     },
-    "markcosinus": {
-        "comics_index": [
-            55
-        ],
-        "number_comics_of_index": [
-            1
-        ]
-    },
-    "markderiv": {
-        "comics_index": [
-            55
-        ],
-        "number_comics_of_index": [
-            1
-        ]
-    },
     "marke": {
         "comics_index": [
             16
@@ -6431,49 +3973,9 @@
             1
         ]
     },
-    "markfouri": {
-        "comics_index": [
-            55
-        ],
-        "number_comics_of_index": [
-            1
-        ]
-    },
-    "markident": {
-        "comics_index": [
-            55
-        ],
-        "number_comics_of_index": [
-            1
-        ]
-    },
-    "markmi": {
-        "comics_index": [
-            55
-        ],
-        "number_comics_of_index": [
-            1
-        ]
-    },
-    "masculin": {
-        "comics_index": [
-            65
-        ],
-        "number_comics_of_index": [
-            1
-        ]
-    },
     "mass": {
         "comics_index": [
             24
-        ],
-        "number_comics_of_index": [
-            1
-        ]
-    },
-    "master": {
-        "comics_index": [
-            60
         ],
         "number_comics_of_index": [
             1
@@ -6489,11 +3991,9 @@
     },
     "mathemat": {
         "comics_index": [
-            28,
-            55
+            28
         ],
         "number_comics_of_index": [
-            1,
             1
         ]
     },
@@ -6505,29 +4005,9 @@
             1
         ]
     },
-    "matrix": {
-        "comics_index": [
-            55,
-            62
-        ],
-        "number_comics_of_index": [
-            1,
-            1
-        ]
-    },
     "matter": {
         "comics_index": [
-            23,
-            52
-        ],
-        "number_comics_of_index": [
-            1,
-            1
-        ]
-    },
-    "maybeneil": {
-        "comics_index": [
-            52
+            23
         ],
         "number_comics_of_index": [
             1
@@ -6535,13 +4015,9 @@
     },
     "mean": {
         "comics_index": [
-            49,
-            52,
             8
         ],
         "number_comics_of_index": [
-            1,
-            1,
             1
         ]
     },
@@ -6553,27 +4029,9 @@
             1
         ]
     },
-    "meddl": {
-        "comics_index": [
-            67
-        ],
-        "number_comics_of_index": [
-            1
-        ]
-    },
     "mei": {
         "comics_index": [
-            23,
-            41
-        ],
-        "number_comics_of_index": [
-            1,
-            1
-        ]
-    },
-    "meman": {
-        "comics_index": [
-            57
+            23
         ],
         "number_comics_of_index": [
             1
@@ -6581,21 +4039,11 @@
     },
     "men": {
         "comics_index": [
-            68,
             13,
             29
         ],
         "number_comics_of_index": [
             1,
-            1,
-            1
-        ]
-    },
-    "mental": {
-        "comics_index": [
-            37
-        ],
-        "number_comics_of_index": [
             1
         ]
     },
@@ -6631,43 +4079,9 @@
             1
         ]
     },
-    "mermaid": {
-        "comics_index": [
-            68
-        ],
-        "number_comics_of_index": [
-            1
-        ]
-    },
     "metahumor": {
         "comics_index": [
             6
-        ],
-        "number_comics_of_index": [
-            1
-        ]
-    },
-    "mewoman": {
-        "comics_index": [
-            57,
-            58
-        ],
-        "number_comics_of_index": [
-            1,
-            1
-        ]
-    },
-    "microwav": {
-        "comics_index": [
-            54
-        ],
-        "number_comics_of_index": [
-            1
-        ]
-    },
-    "mid": {
-        "comics_index": [
-            60
         ],
         "number_comics_of_index": [
             1
@@ -6699,25 +4113,7 @@
     },
     "minut": {
         "comics_index": [
-            16,
-            68
-        ],
-        "number_comics_of_index": [
-            1,
-            1
-        ]
-    },
-    "minuteman": {
-        "comics_index": [
-            57
-        ],
-        "number_comics_of_index": [
-            1
-        ]
-    },
-    "miss": {
-        "comics_index": [
-            65
+            16
         ],
         "number_comics_of_index": [
             1
@@ -6733,43 +4129,7 @@
     },
     "mix": {
         "comics_index": [
-            24,
-            49
-        ],
-        "number_comics_of_index": [
-            1,
-            1
-        ]
-    },
-    "mock": {
-        "comics_index": [
-            65,
-            50
-        ],
-        "number_comics_of_index": [
-            1,
-            1
-        ]
-    },
-    "model": {
-        "comics_index": [
-            39
-        ],
-        "number_comics_of_index": [
-            1
-        ]
-    },
-    "mom": {
-        "comics_index": [
-            65
-        ],
-        "number_comics_of_index": [
-            1
-        ]
-    },
-    "moment": {
-        "comics_index": [
-            39
+            24
         ],
         "number_comics_of_index": [
             1
@@ -6778,14 +4138,6 @@
     "mommiesalt": {
         "comics_index": [
             11
-        ],
-        "number_comics_of_index": [
-            1
-        ]
-    },
-    "money": {
-        "comics_index": [
-            42
         ],
         "number_comics_of_index": [
             1
@@ -6807,14 +4159,6 @@
             1
         ]
     },
-    "morewoman": {
-        "comics_index": [
-            44
-        ],
-        "number_comics_of_index": [
-            1
-        ]
-    },
     "most": {
         "comics_index": [
             32
@@ -6823,72 +4167,26 @@
             1
         ]
     },
-    "mous": {
-        "comics_index": [
-            45
-        ],
-        "number_comics_of_index": [
-            1
-        ]
-    },
     "move": {
         "comics_index": [
             16,
-            21,
-            37
+            21
         ],
         "number_comics_of_index": [
             1,
-            1,
-            1
-        ]
-    },
-    "mow": {
-        "comics_index": [
-            61
-        ],
-        "number_comics_of_index": [
             1
         ]
     },
     "my": {
         "comics_index": [
-            56,
-            42,
-            63,
-            68,
-            20,
-            36,
-            17,
-            39,
-            59,
-            46,
-            35,
-            58,
-            62,
-            32,
             10,
+            26,
+            20,
+            32,
             29,
-            37,
-            53,
-            41,
-            26
+            17
         ],
         "number_comics_of_index": [
-            1,
-            1,
-            1,
-            1,
-            1,
-            1,
-            1,
-            1,
-            1,
-            1,
-            1,
-            1,
-            1,
-            1,
             1,
             1,
             1,
@@ -6905,18 +4203,10 @@
             1
         ]
     },
-    "nake": {
-        "comics_index": [
-            63
-        ],
-        "number_comics_of_index": [
-            1
-        ]
-    },
     "name": {
         "comics_index": [
-            7,
             24,
+            7,
             21
         ],
         "number_comics_of_index": [
@@ -6951,21 +4241,11 @@
             1
         ]
     },
-    "navig": {
-        "comics_index": [
-            43
-        ],
-        "number_comics_of_index": [
-            1
-        ]
-    },
     "need": {
         "comics_index": [
-            24,
-            50
+            24
         ],
         "number_comics_of_index": [
-            1,
             1
         ]
     },
@@ -6977,27 +4257,13 @@
             1
         ]
     },
-    "neithersil": {
-        "comics_index": [
-            65
-        ],
-        "number_comics_of_index": [
-            1
-        ]
-    },
     "never": {
         "comics_index": [
-            24,
-            58,
-            40,
             33,
-            30,
-            50
+            24,
+            30
         ],
         "number_comics_of_index": [
-            1,
-            1,
-            1,
             1,
             1,
             1
@@ -7022,11 +4288,9 @@
     "next": {
         "comics_index": [
             24,
-            60,
             30
         ],
         "number_comics_of_index": [
-            1,
             1,
             1
         ]
@@ -7051,14 +4315,10 @@
     },
     "night": {
         "comics_index": [
-            68,
             24,
-            49,
             21
         ],
         "number_comics_of_index": [
-            1,
-            1,
             1,
             1
         ]
@@ -7079,29 +4339,14 @@
             1
         ]
     },
-    "normal": {
-        "comics_index": [
-            55
-        ],
-        "number_comics_of_index": [
-            1
-        ]
-    },
     "not": {
         "comics_index": [
             6,
-            63,
             23,
-            17,
             24,
+            25,
             31,
-            46,
-            35,
-            49,
-            51,
-            67,
-            45,
-            25
+            17
         ],
         "number_comics_of_index": [
             1,
@@ -7109,43 +4354,12 @@
             1,
             1,
             1,
-            1,
-            1,
-            1,
-            1,
-            1,
-            1,
-            1,
-            1
-        ]
-    },
-    "notebook": {
-        "comics_index": [
-            41
-        ],
-        "number_comics_of_index": [
-            1
-        ]
-    },
-    "notebooksa": {
-        "comics_index": [
-            35
-        ],
-        "number_comics_of_index": [
             1
         ]
     },
     "notguy": {
         "comics_index": [
             20
-        ],
-        "number_comics_of_index": [
-            1
-        ]
-    },
-    "nothingalttext": {
-        "comics_index": [
-            44
         ],
         "number_comics_of_index": [
             1
@@ -7159,29 +4373,13 @@
             1
         ]
     },
-    "noun": {
-        "comics_index": [
-            37
-        ],
-        "number_comics_of_index": [
-            1
-        ]
-    },
     "now": {
         "comics_index": [
-            18,
-            24
+            24,
+            18
         ],
         "number_comics_of_index": [
             1,
-            1
-        ]
-    },
-    "nowalttext": {
-        "comics_index": [
-            57
-        ],
-        "number_comics_of_index": [
             1
         ]
     },
@@ -7195,8 +4393,8 @@
     },
     "number": {
         "comics_index": [
-            5,
-            12
+            12,
+            5
         ],
         "number_comics_of_index": [
             1,
@@ -7215,8 +4413,8 @@
     },
     "oceanboy": {
         "comics_index": [
-            1,
-            11
+            11,
+            1
         ],
         "number_comics_of_index": [
             1,
@@ -7255,49 +4453,15 @@
             1
         ]
     },
-    "offens": {
-        "comics_index": [
-            47
-        ],
-        "number_comics_of_index": [
-            1
-        ]
-    },
     "oh": {
         "comics_index": [
             16,
             20,
-            59,
             21
         ],
         "number_comics_of_index": [
             1,
             1,
-            1,
-            1
-        ]
-    },
-    "ointment": {
-        "comics_index": [
-            68
-        ],
-        "number_comics_of_index": [
-            1
-        ]
-    },
-    "ok": {
-        "comics_index": [
-            65
-        ],
-        "number_comics_of_index": [
-            1
-        ]
-    },
-    "okay": {
-        "comics_index": [
-            65
-        ],
-        "number_comics_of_index": [
             1
         ]
     },
@@ -7319,83 +4483,25 @@
     },
     "onc": {
         "comics_index": [
-            17,
+            19,
             24,
-            19
+            17
         ],
         "number_comics_of_index": [
             1,
             1,
-            1
-        ]
-    },
-    "oncei": {
-        "comics_index": [
-            49
-        ],
-        "number_comics_of_index": [
-            1
-        ]
-    },
-    "onesecond": {
-        "comics_index": [
-            65
-        ],
-        "number_comics_of_index": [
-            1
-        ]
-    },
-    "onetitl": {
-        "comics_index": [
-            56
-        ],
-        "number_comics_of_index": [
             1
         ]
     },
     "onli": {
         "comics_index": [
-            2,
             23,
-            59,
             24,
-            53,
-            60
+            2
         ],
         "number_comics_of_index": [
             1,
             1,
-            1,
-            1,
-            1,
-            1
-        ]
-    },
-    "ooh": {
-        "comics_index": [
-            56
-        ],
-        "number_comics_of_index": [
-            1
-        ]
-    },
-    "open": {
-        "comics_index": [
-            57,
-            59,
-            58
-        ],
-        "number_comics_of_index": [
-            1,
-            1,
-            1
-        ]
-    },
-    "operatorblond": {
-        "comics_index": [
-            59
-        ],
-        "number_comics_of_index": [
             1
         ]
     },
@@ -7409,21 +4515,7 @@
     },
     "or": {
         "comics_index": [
-            56,
-            68,
-            39,
             24
-        ],
-        "number_comics_of_index": [
-            1,
-            1,
-            1,
-            1
-        ]
-    },
-    "other": {
-        "comics_index": [
-            47
         ],
         "number_comics_of_index": [
             1
@@ -7437,22 +4529,6 @@
             1
         ]
     },
-    "otherno": {
-        "comics_index": [
-            48
-        ],
-        "number_comics_of_index": [
-            1
-        ]
-    },
-    "our": {
-        "comics_index": [
-            67
-        ],
-        "number_comics_of_index": [
-            1
-        ]
-    },
     "outrag": {
         "comics_index": [
             14
@@ -7461,41 +4537,9 @@
             1
         ]
     },
-    "outsecond": {
-        "comics_index": [
-            65
-        ],
-        "number_comics_of_index": [
-            1
-        ]
-    },
-    "outsideinsid": {
-        "comics_index": [
-            52
-        ],
-        "number_comics_of_index": [
-            1
-        ]
-    },
     "outstretch": {
         "comics_index": [
             9
-        ],
-        "number_comics_of_index": [
-            1
-        ]
-    },
-    "outtwo": {
-        "comics_index": [
-            68
-        ],
-        "number_comics_of_index": [
-            1
-        ]
-    },
-    "overlaidbrunett": {
-        "comics_index": [
-            59
         ],
         "number_comics_of_index": [
             1
@@ -7525,14 +4569,6 @@
             1
         ]
     },
-    "packersecond": {
-        "comics_index": [
-            65
-        ],
-        "number_comics_of_index": [
-            1
-        ]
-    },
     "paint": {
         "comics_index": [
             29
@@ -7552,56 +4588,18 @@
     "panel": {
         "comics_index": [
             16,
-            65,
-            68,
             24,
-            22,
-            45
+            22
         ],
         "number_comics_of_index": [
             1,
             1,
-            1,
-            1,
-            1,
-            1
-        ]
-    },
-    "panelalt": {
-        "comics_index": [
-            65
-        ],
-        "number_comics_of_index": [
-            1
-        ]
-    },
-    "panelfirst": {
-        "comics_index": [
-            65
-        ],
-        "number_comics_of_index": [
             1
         ]
     },
     "panelgirl": {
         "comics_index": [
             24
-        ],
-        "number_comics_of_index": [
-            1
-        ]
-    },
-    "panelsil": {
-        "comics_index": [
-            65
-        ],
-        "number_comics_of_index": [
-            1
-        ]
-    },
-    "panelsman": {
-        "comics_index": [
-            68
         ],
         "number_comics_of_index": [
             1
@@ -7623,45 +4621,17 @@
             1
         ]
     },
-    "papertitl": {
-        "comics_index": [
-            35
-        ],
-        "number_comics_of_index": [
-            1
-        ]
-    },
     "part": {
         "comics_index": [
-            56,
             24
         ],
         "number_comics_of_index": [
-            1,
             1
         ]
     },
     "parti": {
         "comics_index": [
-            51,
             30
-        ],
-        "number_comics_of_index": [
-            1,
-            1
-        ]
-    },
-    "partywarn": {
-        "comics_index": [
-            68
-        ],
-        "number_comics_of_index": [
-            1
-        ]
-    },
-    "peak": {
-        "comics_index": [
-            54
         ],
         "number_comics_of_index": [
             1
@@ -7669,17 +4639,7 @@
     },
     "pencil": {
         "comics_index": [
-            56,
             34
-        ],
-        "number_comics_of_index": [
-            1,
-            1
-        ]
-    },
-    "penni": {
-        "comics_index": [
-            50
         ],
         "number_comics_of_index": [
             1
@@ -7687,21 +4647,13 @@
     },
     "peopl": {
         "comics_index": [
-            16,
             23,
+            16,
             24,
-            48,
             21,
-            51,
-            52,
-            41,
             30
         ],
         "number_comics_of_index": [
-            1,
-            1,
-            1,
-            1,
             1,
             1,
             1,
@@ -7712,14 +4664,6 @@
     "peoplea": {
         "comics_index": [
             23
-        ],
-        "number_comics_of_index": [
-            1
-        ]
-    },
-    "peoplebrunett": {
-        "comics_index": [
-            59
         ],
         "number_comics_of_index": [
             1
@@ -7745,8 +4689,8 @@
     },
     "period": {
         "comics_index": [
-            18,
-            26
+            26,
+            18
         ],
         "number_comics_of_index": [
             1,
@@ -7756,14 +4700,12 @@
     "person": {
         "comics_index": [
             23,
+            26,
             24,
-            21,
             32,
-            67,
-            26
+            21
         ],
         "number_comics_of_index": [
-            1,
             1,
             1,
             1,
@@ -7807,12 +4749,10 @@
     },
     "phone": {
         "comics_index": [
-            24,
-            49,
-            26
+            26,
+            24
         ],
         "number_comics_of_index": [
-            1,
             1,
             1
         ]
@@ -7843,35 +4783,15 @@
     },
     "pictur": {
         "comics_index": [
-            28,
-            68
+            28
         ],
         "number_comics_of_index": [
-            1,
-            1
-        ]
-    },
-    "piec": {
-        "comics_index": [
-            59,
-            52
-        ],
-        "number_comics_of_index": [
-            1,
             1
         ]
     },
     "pillar": {
         "comics_index": [
             32
-        ],
-        "number_comics_of_index": [
-            1
-        ]
-    },
-    "pink": {
-        "comics_index": [
-            48
         ],
         "number_comics_of_index": [
             1
@@ -7885,21 +4805,11 @@
             1
         ]
     },
-    "piratefirst": {
-        "comics_index": [
-            65
-        ],
-        "number_comics_of_index": [
-            1
-        ]
-    },
     "place": {
         "comics_index": [
-            59,
             11
         ],
         "number_comics_of_index": [
-            1,
             1
         ]
     },
@@ -7913,15 +4823,9 @@
     },
     "play": {
         "comics_index": [
-            20,
-            38,
-            53,
-            50
+            20
         ],
         "number_comics_of_index": [
-            1,
-            1,
-            1,
             1
         ]
     },
@@ -7951,17 +4855,7 @@
     },
     "point": {
         "comics_index": [
-            54,
             26
-        ],
-        "number_comics_of_index": [
-            1,
-            1
-        ]
-    },
-    "pointsa": {
-        "comics_index": [
-            53
         ],
         "number_comics_of_index": [
             1
@@ -7991,22 +4885,6 @@
             1
         ]
     },
-    "polic": {
-        "comics_index": [
-            53
-        ],
-        "number_comics_of_index": [
-            1
-        ]
-    },
-    "pool": {
-        "comics_index": [
-            53
-        ],
-        "number_comics_of_index": [
-            1
-        ]
-    },
     "porn": {
         "comics_index": [
             24
@@ -8018,14 +4896,6 @@
     "pornographi": {
         "comics_index": [
             24
-        ],
-        "number_comics_of_index": [
-            1
-        ]
-    },
-    "pot": {
-        "comics_index": [
-            35
         ],
         "number_comics_of_index": [
             1
@@ -8055,34 +4925,12 @@
             1
         ]
     },
-    "presum": {
-        "comics_index": [
-            48
-        ],
-        "number_comics_of_index": [
-            1
-        ]
-    },
-    "pretend": {
-        "comics_index": [
-            63
-        ],
-        "number_comics_of_index": [
-            1
-        ]
-    },
     "pretti": {
         "comics_index": [
-            65,
-            20,
-            36,
-            49,
-            13
+            13,
+            20
         ],
         "number_comics_of_index": [
-            1,
-            1,
-            1,
             1,
             1
         ]
@@ -8151,46 +4999,6 @@
             1
         ]
     },
-    "pumpkin": {
-        "comics_index": [
-            68
-        ],
-        "number_comics_of_index": [
-            1
-        ]
-    },
-    "punch": {
-        "comics_index": [
-            64
-        ],
-        "number_comics_of_index": [
-            1
-        ]
-    },
-    "purpos": {
-        "comics_index": [
-            60
-        ],
-        "number_comics_of_index": [
-            1
-        ]
-    },
-    "pussiesman": {
-        "comics_index": [
-            68
-        ],
-        "number_comics_of_index": [
-            1
-        ]
-    },
-    "put": {
-        "comics_index": [
-            65
-        ],
-        "number_comics_of_index": [
-            1
-        ]
-    },
     "pythonpromot": {
         "comics_index": [
             16
@@ -8209,15 +5017,11 @@
     },
     "question": {
         "comics_index": [
-            54,
+            32,
             28,
-            55,
-            17,
-            32
+            17
         ],
         "number_comics_of_index": [
-            1,
-            1,
             1,
             1,
             1
@@ -8226,27 +5030,17 @@
     "quot": {
         "comics_index": [
             16,
-            24,
-            52
+            24
         ],
         "number_comics_of_index": [
             1,
-            1,
-            1
-        ]
-    },
-    "radiat": {
-        "comics_index": [
-            54
-        ],
-        "number_comics_of_index": [
             1
         ]
     },
     "rais": {
         "comics_index": [
-            16,
-            9
+            9,
+            16
         ],
         "number_comics_of_index": [
             1,
@@ -8261,24 +5055,12 @@
             1
         ]
     },
-    "random": {
-        "comics_index": [
-            68
-        ],
-        "number_comics_of_index": [
-            1
-        ]
-    },
     "read": {
         "comics_index": [
             14,
-            45,
-            30,
-            50
+            30
         ],
         "number_comics_of_index": [
-            1,
-            1,
             1,
             1
         ]
@@ -8293,49 +5075,23 @@
     },
     "real": {
         "comics_index": [
-            56,
             23,
             29
         ],
         "number_comics_of_index": [
             1,
-            1,
-            1
-        ]
-    },
-    "realist": {
-        "comics_index": [
-            56
-        ],
-        "number_comics_of_index": [
             1
         ]
     },
     "realli": {
         "comics_index": [
-            63,
-            59,
-            49,
-            21,
             32,
-            29,
-            53
+            21,
+            29
         ],
         "number_comics_of_index": [
             1,
             1,
-            1,
-            1,
-            1,
-            1,
-            1
-        ]
-    },
-    "recent": {
-        "comics_index": [
-            41
-        ],
-        "number_comics_of_index": [
             1
         ]
     },
@@ -8349,13 +5105,11 @@
     },
     "red": {
         "comics_index": [
-            5,
-            43,
             34,
+            5,
             8
         ],
         "number_comics_of_index": [
-            1,
             1,
             1,
             1
@@ -8393,33 +5147,9 @@
             1
         ]
     },
-    "relationsi": {
-        "comics_index": [
-            62
-        ],
-        "number_comics_of_index": [
-            1
-        ]
-    },
     "rememb": {
         "comics_index": [
             7
-        ],
-        "number_comics_of_index": [
-            1
-        ]
-    },
-    "rescu": {
-        "comics_index": [
-            59
-        ],
-        "number_comics_of_index": [
-            1
-        ]
-    },
-    "resembl": {
-        "comics_index": [
-            37
         ],
         "number_comics_of_index": [
             1
@@ -8433,14 +5163,6 @@
             1
         ]
     },
-    "respect": {
-        "comics_index": [
-            55
-        ],
-        "number_comics_of_index": [
-            1
-        ]
-    },
     "restaur": {
         "comics_index": [
             30
@@ -8449,25 +5171,9 @@
             1
         ]
     },
-    "retard": {
-        "comics_index": [
-            36
-        ],
-        "number_comics_of_index": [
-            1
-        ]
-    },
     "reveal": {
         "comics_index": [
             13
-        ],
-        "number_comics_of_index": [
-            1
-        ]
-    },
-    "reveng": {
-        "comics_index": [
-            41
         ],
         "number_comics_of_index": [
             1
@@ -8508,20 +5214,12 @@
     "right": {
         "comics_index": [
             16,
-            18,
-            24
+            24,
+            18
         ],
         "number_comics_of_index": [
             1,
             1,
-            1
-        ]
-    },
-    "rightangl": {
-        "comics_index": [
-            68
-        ],
-        "number_comics_of_index": [
             1
         ]
     },
@@ -8536,14 +5234,6 @@
     "rightguy": {
         "comics_index": [
             20
-        ],
-        "number_comics_of_index": [
-            1
-        ]
-    },
-    "righton": {
-        "comics_index": [
-            37
         ],
         "number_comics_of_index": [
             1
@@ -8573,29 +5263,13 @@
             1
         ]
     },
-    "ripper": {
-        "comics_index": [
-            68
-        ],
-        "number_comics_of_index": [
-            1
-        ]
-    },
     "river": {
         "comics_index": [
-            4,
-            9
+            9,
+            4
         ],
         "number_comics_of_index": [
             1,
-            1
-        ]
-    },
-    "robert": {
-        "comics_index": [
-            56
-        ],
-        "number_comics_of_index": [
             1
         ]
     },
@@ -8607,37 +5281,11 @@
             1
         ]
     },
-    "root": {
-        "comics_index": [
-            55
-        ],
-        "number_comics_of_index": [
-            1
-        ]
-    },
-    "rootman": {
-        "comics_index": [
-            68
-        ],
-        "number_comics_of_index": [
-            1
-        ]
-    },
     "rough": {
         "comics_index": [
             24
         ],
         "number_comics_of_index": [
-            1
-        ]
-    },
-    "round": {
-        "comics_index": [
-            43,
-            68
-        ],
-        "number_comics_of_index": [
-            1,
             1
         ]
     },
@@ -8657,14 +5305,6 @@
             1
         ]
     },
-    "rpg": {
-        "comics_index": [
-            50
-        ],
-        "number_comics_of_index": [
-            1
-        ]
-    },
     "rule": {
         "comics_index": [
             29
@@ -8673,33 +5313,11 @@
             1
         ]
     },
-    "run": {
-        "comics_index": [
-            39,
-            46,
-            62
-        ],
-        "number_comics_of_index": [
-            1,
-            1,
-            1
-        ]
-    },
-    "ruse": {
-        "comics_index": [
-            60
-        ],
-        "number_comics_of_index": [
-            1
-        ]
-    },
     "s": {
         "comics_index": [
-            68,
             24
         ],
         "number_comics_of_index": [
-            1,
             1
         ]
     },
@@ -8711,41 +5329,13 @@
             1
         ]
     },
-    "saguaro": {
-        "comics_index": [
-            35
-        ],
-        "number_comics_of_index": [
-            1
-        ]
-    },
-    "said": {
-        "comics_index": [
-            57
-        ],
-        "number_comics_of_index": [
-            1
-        ]
-    },
-    "sail": {
-        "comics_index": [
-            39
-        ],
-        "number_comics_of_index": [
-            1
-        ]
-    },
     "same": {
         "comics_index": [
             24,
-            21,
             32,
-            52,
-            45
+            21
         ],
         "number_comics_of_index": [
-            1,
-            1,
             1,
             1,
             1
@@ -8759,29 +5349,13 @@
             1
         ]
     },
-    "save": {
-        "comics_index": [
-            42
-        ],
-        "number_comics_of_index": [
-            1
-        ]
-    },
     "say": {
         "comics_index": [
-            16,
-            56,
-            44,
             12,
-            49,
-            29,
-            67
+            16,
+            29
         ],
         "number_comics_of_index": [
-            1,
-            1,
-            1,
-            1,
             1,
             1,
             1
@@ -8797,25 +5371,7 @@
     },
     "scene": {
         "comics_index": [
-            59,
             13
-        ],
-        "number_comics_of_index": [
-            1,
-            1
-        ]
-    },
-    "school": {
-        "comics_index": [
-            59
-        ],
-        "number_comics_of_index": [
-            1
-        ]
-    },
-    "schooler": {
-        "comics_index": [
-            67
         ],
         "number_comics_of_index": [
             1
@@ -8829,27 +5385,9 @@
             1
         ]
     },
-    "schrdinger": {
-        "comics_index": [
-            45
-        ],
-        "number_comics_of_index": [
-            1
-        ]
-    },
     "scienc": {
         "comics_index": [
-            54,
             21
-        ],
-        "number_comics_of_index": [
-            1,
-            1
-        ]
-    },
-    "scientist": {
-        "comics_index": [
-            36
         ],
         "number_comics_of_index": [
             1
@@ -8858,26 +5396,6 @@
     "scorch": {
         "comics_index": [
             5
-        ],
-        "number_comics_of_index": [
-            1
-        ]
-    },
-    "scott": {
-        "comics_index": [
-            57,
-            59,
-            58
-        ],
-        "number_comics_of_index": [
-            1,
-            1,
-            1
-        ]
-    },
-    "scrappl": {
-        "comics_index": [
-            38
         ],
         "number_comics_of_index": [
             1
@@ -8899,29 +5417,9 @@
             1
         ]
     },
-    "second": {
-        "comics_index": [
-            57,
-            68
-        ],
-        "number_comics_of_index": [
-            1,
-            1
-        ]
-    },
     "secret": {
         "comics_index": [
-            29,
-            52
-        ],
-        "number_comics_of_index": [
-            1,
-            1
-        ]
-    },
-    "secretslon": {
-        "comics_index": [
-            46
+            29
         ],
         "number_comics_of_index": [
             1
@@ -8929,14 +5427,12 @@
     },
     "see": {
         "comics_index": [
-            5,
             23,
-            38,
+            5,
             24,
             32
         ],
         "number_comics_of_index": [
-            1,
             1,
             1,
             1,
@@ -8945,22 +5441,18 @@
     },
     "seem": {
         "comics_index": [
-            68,
             24
         ],
         "number_comics_of_index": [
-            1,
             1
         ]
     },
     "seen": {
         "comics_index": [
-            43,
             24,
             29
         ],
         "number_comics_of_index": [
-            1,
             1,
             1
         ]
@@ -8997,14 +5489,6 @@
             1
         ]
     },
-    "seiken": {
-        "comics_index": [
-            50
-        ],
-        "number_comics_of_index": [
-            1
-        ]
-    },
     "select": {
         "comics_index": [
             24
@@ -9033,12 +5517,10 @@
     },
     "serious": {
         "comics_index": [
-            65,
-            20,
-            26
+            26,
+            20
         ],
         "number_comics_of_index": [
-            1,
             1,
             1
         ]
@@ -9054,14 +5536,6 @@
     "shade": {
         "comics_index": [
             24
-        ],
-        "number_comics_of_index": [
-            1
-        ]
-    },
-    "shadowi": {
-        "comics_index": [
-            60
         ],
         "number_comics_of_index": [
             1
@@ -9091,14 +5565,6 @@
             1
         ]
     },
-    "share": {
-        "comics_index": [
-            46
-        ],
-        "number_comics_of_index": [
-            1
-        ]
-    },
     "sharp": {
         "comics_index": [
             26
@@ -9107,69 +5573,9 @@
             1
         ]
     },
-    "sheep": {
-        "comics_index": [
-            35
-        ],
-        "number_comics_of_index": [
-            1
-        ]
-    },
-    "shes": {
-        "comics_index": [
-            65,
-            49
-        ],
-        "number_comics_of_index": [
-            1,
-            1
-        ]
-    },
-    "shinsfigur": {
-        "comics_index": [
-            68
-        ],
-        "number_comics_of_index": [
-            1
-        ]
-    },
-    "ship": {
-        "comics_index": [
-            39
-        ],
-        "number_comics_of_index": [
-            1
-        ]
-    },
     "shirt": {
         "comics_index": [
-            23,
-            67
-        ],
-        "number_comics_of_index": [
-            1,
-            1
-        ]
-    },
-    "shitdaylightsavingsmen": {
-        "comics_index": [
-            68
-        ],
-        "number_comics_of_index": [
-            1
-        ]
-    },
-    "shitshitshitshitshitmen": {
-        "comics_index": [
-            68
-        ],
-        "number_comics_of_index": [
-            1
-        ]
-    },
-    "shitshitshitshitshtwo": {
-        "comics_index": [
-            68
+            23
         ],
         "number_comics_of_index": [
             1
@@ -9186,22 +5592,6 @@
     "shock": {
         "comics_index": [
             16
-        ],
-        "number_comics_of_index": [
-            1
-        ]
-    },
-    "shoe": {
-        "comics_index": [
-            36
-        ],
-        "number_comics_of_index": [
-            1
-        ]
-    },
-    "shoot": {
-        "comics_index": [
-            53
         ],
         "number_comics_of_index": [
             1
@@ -9234,49 +5624,33 @@
     "should": {
         "comics_index": [
             15,
-            56,
+            21,
             18,
-            17,
-            21
+            17
         ],
         "number_comics_of_index": [
             1,
             1,
-            1,
-            1,
-            1
-        ]
-    },
-    "shoulder": {
-        "comics_index": [
-            67,
-            47
-        ],
-        "number_comics_of_index": [
             1,
             1
         ]
     },
     "shown": {
         "comics_index": [
-            68,
             25
         ],
         "number_comics_of_index": [
-            1,
             1
         ]
     },
     "side": {
         "comics_index": [
-            7,
-            2,
-            55,
             9,
-            24
+            24,
+            7,
+            2
         ],
         "number_comics_of_index": [
-            1,
             1,
             1,
             1,
@@ -9286,14 +5660,6 @@
     "sidether": {
         "comics_index": [
             24
-        ],
-        "number_comics_of_index": [
-            1
-        ]
-    },
-    "sidew": {
-        "comics_index": [
-            51
         ],
         "number_comics_of_index": [
             1
@@ -9312,11 +5678,9 @@
     "sign": {
         "comics_index": [
             28,
-            68,
             30
         ],
         "number_comics_of_index": [
-            1,
             1,
             1
         ]
@@ -9329,46 +5693,12 @@
             1
         ]
     },
-    "simplifykarnaugh": {
-        "comics_index": [
-            62
-        ],
-        "number_comics_of_index": [
-            1
-        ]
-    },
-    "sing": {
-        "comics_index": [
-            56
-        ],
-        "number_comics_of_index": [
-            1
-        ]
-    },
-    "singl": {
-        "comics_index": [
-            59
-        ],
-        "number_comics_of_index": [
-            1
-        ]
-    },
-    "sisteri": {
-        "comics_index": [
-            49
-        ],
-        "number_comics_of_index": [
-            1
-        ]
-    },
     "sit": {
         "comics_index": [
-            1,
-            38,
-            11
+            11,
+            1
         ],
         "number_comics_of_index": [
-            1,
             1,
             1
         ]
@@ -9381,33 +5711,9 @@
             1
         ]
     },
-    "situat": {
-        "comics_index": [
-            36
-        ],
-        "number_comics_of_index": [
-            1
-        ]
-    },
-    "six": {
-        "comics_index": [
-            43
-        ],
-        "number_comics_of_index": [
-            1
-        ]
-    },
     "sixleg": {
         "comics_index": [
             8
-        ],
-        "number_comics_of_index": [
-            1
-        ]
-    },
-    "sixti": {
-        "comics_index": [
-            60
         ],
         "number_comics_of_index": [
             1
@@ -9423,10 +5729,10 @@
     },
     "sketch": {
         "comics_index": [
-            4,
-            2,
             34,
-            3
+            3,
+            4,
+            2
         ],
         "number_comics_of_index": [
             1,
@@ -9437,11 +5743,9 @@
     },
     "sky": {
         "comics_index": [
-            48,
             32
         ],
         "number_comics_of_index": [
-            1,
             1
         ]
     },
@@ -9471,39 +5775,15 @@
     },
     "sleep": {
         "comics_index": [
-            7,
-            65
+            7
         ],
         "number_comics_of_index": [
-            1,
             1
         ]
     },
     "small": {
         "comics_index": [
-            68,
-            24,
-            48,
-            52
-        ],
-        "number_comics_of_index": [
-            1,
-            1,
-            1,
-            1
-        ]
-    },
-    "smallest": {
-        "comics_index": [
-            68
-        ],
-        "number_comics_of_index": [
-            1
-        ]
-    },
-    "smith": {
-        "comics_index": [
-            56
+            24
         ],
         "number_comics_of_index": [
             1
@@ -9533,38 +5813,6 @@
             1
         ]
     },
-    "sneak": {
-        "comics_index": [
-            53
-        ],
-        "number_comics_of_index": [
-            1
-        ]
-    },
-    "snes": {
-        "comics_index": [
-            50
-        ],
-        "number_comics_of_index": [
-            1
-        ]
-    },
-    "snoop": {
-        "comics_index": [
-            41
-        ],
-        "number_comics_of_index": [
-            1
-        ]
-    },
-    "snow": {
-        "comics_index": [
-            48
-        ],
-        "number_comics_of_index": [
-            1
-        ]
-    },
     "snowhatless": {
         "comics_index": [
             24
@@ -9575,18 +5823,13 @@
     },
     "so": {
         "comics_index": [
-            16,
-            56,
-            65,
-            23,
-            59,
-            24,
             19,
-            62,
-            21,
+            23,
+            16,
+            24,
             32,
-            29,
-            53
+            21,
+            29
         ],
         "number_comics_of_index": [
             1,
@@ -9595,27 +5838,6 @@
             1,
             1,
             1,
-            1,
-            1,
-            1,
-            1,
-            1,
-            1
-        ]
-    },
-    "soa": {
-        "comics_index": [
-            68
-        ],
-        "number_comics_of_index": [
-            1
-        ]
-    },
-    "social": {
-        "comics_index": [
-            67
-        ],
-        "number_comics_of_index": [
             1
         ]
     },
@@ -9632,46 +5854,6 @@
     "sometim": {
         "comics_index": [
             14
-        ],
-        "number_comics_of_index": [
-            1
-        ]
-    },
-    "somewhat": {
-        "comics_index": [
-            65
-        ],
-        "number_comics_of_index": [
-            1
-        ]
-    },
-    "somuch": {
-        "comics_index": [
-            62
-        ],
-        "number_comics_of_index": [
-            1
-        ]
-    },
-    "son": {
-        "comics_index": [
-            38
-        ],
-        "number_comics_of_index": [
-            1
-        ]
-    },
-    "sonman": {
-        "comics_index": [
-            57
-        ],
-        "number_comics_of_index": [
-            1
-        ]
-    },
-    "sooner": {
-        "comics_index": [
-            39
         ],
         "number_comics_of_index": [
             1
@@ -9719,17 +5901,7 @@
     },
     "spider": {
         "comics_index": [
-            43,
             8
-        ],
-        "number_comics_of_index": [
-            1,
-            1
-        ]
-    },
-    "spiderwarn": {
-        "comics_index": [
-            68
         ],
         "number_comics_of_index": [
             1
@@ -9753,11 +5925,9 @@
     },
     "squar": {
         "comics_index": [
-            68,
             24
         ],
         "number_comics_of_index": [
-            1,
             1
         ]
     },
@@ -9769,50 +5939,17 @@
             1
         ]
     },
-    "squigg": {
-        "comics_index": [
-            62
-        ],
-        "number_comics_of_index": [
-            1
-        ]
-    },
-    "stacey": {
-        "comics_index": [
-            61
-        ],
-        "number_comics_of_index": [
-            1
-        ]
-    },
-    "stack": {
-        "comics_index": [
-            47
-        ],
-        "number_comics_of_index": [
-            1
-        ]
-    },
     "stand": {
         "comics_index": [
-            15,
-            57,
-            44,
-            18,
-            65,
-            38,
-            9,
-            24,
-            48,
-            13,
-            21,
-            40,
-            45,
-            47,
-            8,
             33,
+            9,
+            13,
+            24,
+            15,
+            21,
             30,
-            64
+            8,
+            18
         ],
         "number_comics_of_index": [
             1,
@@ -9823,73 +5960,22 @@
             1,
             1,
             1,
-            1,
-            1,
-            1,
-            1,
-            1,
-            1,
-            1,
-            1,
-            1,
-            1
-        ]
-    },
-    "standman": {
-        "comics_index": [
-            58
-        ],
-        "number_comics_of_index": [
-            1
-        ]
-    },
-    "standoff": {
-        "comics_index": [
-            39
-        ],
-        "number_comics_of_index": [
-            1
-        ]
-    },
-    "stare": {
-        "comics_index": [
-            46
-        ],
-        "number_comics_of_index": [
             1
         ]
     },
     "start": {
         "comics_index": [
-            57,
-            24,
-            19
+            19,
+            24
         ],
         "number_comics_of_index": [
             1,
-            1,
-            1
-        ]
-    },
-    "startl": {
-        "comics_index": [
-            53
-        ],
-        "number_comics_of_index": [
             1
         ]
     },
     "statement": {
         "comics_index": [
             6
-        ],
-        "number_comics_of_index": [
-            1
-        ]
-    },
-    "steal": {
-        "comics_index": [
-            60
         ],
         "number_comics_of_index": [
             1
@@ -9905,16 +5991,12 @@
     },
     "stick": {
         "comics_index": [
-            12,
             9,
+            12,
             14,
-            17,
-            48,
-            47
+            17
         ],
         "number_comics_of_index": [
-            1,
-            1,
             1,
             1,
             1,
@@ -9923,25 +6005,15 @@
     },
     "still": {
         "comics_index": [
-            61,
-            16,
+            19,
             12,
-            24,
-            19
+            16,
+            24
         ],
         "number_comics_of_index": [
             1,
             1,
             1,
-            1,
-            1
-        ]
-    },
-    "stop": {
-        "comics_index": [
-            47
-        ],
-        "number_comics_of_index": [
             1
         ]
     },
@@ -9971,22 +6043,6 @@
             1
         ]
     },
-    "streak": {
-        "comics_index": [
-            48
-        ],
-        "number_comics_of_index": [
-            1
-        ]
-    },
-    "stretchi": {
-        "comics_index": [
-            68
-        ],
-        "number_comics_of_index": [
-            1
-        ]
-    },
     "stri": {
         "comics_index": [
             24
@@ -10005,17 +6061,7 @@
     },
     "strip": {
         "comics_index": [
-            20,
-            50
-        ],
-        "number_comics_of_index": [
-            1,
-            1
-        ]
-    },
-    "stroke": {
-        "comics_index": [
-            60
+            20
         ],
         "number_comics_of_index": [
             1
@@ -10029,41 +6075,9 @@
             1
         ]
     },
-    "stuffcutdown": {
-        "comics_index": [
-            41
-        ],
-        "number_comics_of_index": [
-            1
-        ]
-    },
-    "stump": {
-        "comics_index": [
-            41
-        ],
-        "number_comics_of_index": [
-            1
-        ]
-    },
-    "stupid": {
-        "comics_index": [
-            52
-        ],
-        "number_comics_of_index": [
-            1
-        ]
-    },
     "stupidget": {
         "comics_index": [
             23
-        ],
-        "number_comics_of_index": [
-            1
-        ]
-    },
-    "success": {
-        "comics_index": [
-            68
         ],
         "number_comics_of_index": [
             1
@@ -10087,29 +6101,13 @@
     },
     "sun": {
         "comics_index": [
-            4,
             6,
+            4,
             31
         ],
         "number_comics_of_index": [
             1,
             1,
-            1
-        ]
-    },
-    "super": {
-        "comics_index": [
-            60
-        ],
-        "number_comics_of_index": [
-            1
-        ]
-    },
-    "superior": {
-        "comics_index": [
-            60
-        ],
-        "number_comics_of_index": [
             1
         ]
     },
@@ -10123,8 +6121,8 @@
     },
     "sure": {
         "comics_index": [
-            17,
-            24
+            24,
+            17
         ],
         "number_comics_of_index": [
             1,
@@ -10142,30 +6140,6 @@
     "sweep": {
         "comics_index": [
             21
-        ],
-        "number_comics_of_index": [
-            1
-        ]
-    },
-    "sweet": {
-        "comics_index": [
-            37
-        ],
-        "number_comics_of_index": [
-            1
-        ]
-    },
-    "swim": {
-        "comics_index": [
-            59
-        ],
-        "number_comics_of_index": [
-            1
-        ]
-    },
-    "swordman": {
-        "comics_index": [
-            68
         ],
         "number_comics_of_index": [
             1
@@ -10205,12 +6179,10 @@
     },
     "take": {
         "comics_index": [
-            18,
             24,
-            41
+            18
         ],
         "number_comics_of_index": [
-            1,
             1,
             1
         ]
@@ -10225,37 +6197,15 @@
     },
     "talk": {
         "comics_index": [
-            15,
-            68,
+            26,
             24,
-            32,
-            37,
-            41,
-            26
+            15,
+            32
         ],
         "number_comics_of_index": [
             1,
             1,
             1,
-            1,
-            1,
-            1,
-            1
-        ]
-    },
-    "talkingblond": {
-        "comics_index": [
-            59
-        ],
-        "number_comics_of_index": [
-            1
-        ]
-    },
-    "talkinghat": {
-        "comics_index": [
-            64
-        ],
-        "number_comics_of_index": [
             1
         ]
     },
@@ -10277,91 +6227,33 @@
     },
     "tape": {
         "comics_index": [
-            24,
-            49
+            24
         ],
         "number_comics_of_index": [
-            1,
-            1
-        ]
-    },
-    "tast": {
-        "comics_index": [
-            38
-        ],
-        "number_comics_of_index": [
-            1
-        ]
-    },
-    "tell": {
-        "comics_index": [
-            49,
-            62,
-            45
-        ],
-        "number_comics_of_index": [
-            1,
-            1,
             1
         ]
     },
     "text": {
         "comics_index": [
-            5,
-            15,
-            56,
-            42,
-            43,
-            54,
-            18,
-            28,
-            63,
-            65,
-            68,
-            12,
-            20,
-            38,
-            55,
-            17,
-            59,
-            24,
-            31,
+            33,
             19,
-            35,
-            49,
+            12,
             13,
+            5,
+            24,
+            20,
+            25,
+            15,
             32,
+            28,
+            30,
+            31,
             22,
             29,
-            37,
-            51,
-            67,
-            47,
-            25,
-            33,
-            60,
-            30,
-            50
+            18,
+            17
         ],
         "number_comics_of_index": [
-            1,
-            1,
-            1,
-            1,
-            1,
-            1,
-            1,
-            1,
-            1,
-            1,
-            1,
-            1,
-            1,
-            1,
-            1,
-            1,
-            1,
-            1,
             1,
             1,
             1,
@@ -10389,22 +6281,6 @@
             1
         ]
     },
-    "tgif": {
-        "comics_index": [
-            65
-        ],
-        "number_comics_of_index": [
-            1
-        ]
-    },
-    "th": {
-        "comics_index": [
-            68
-        ],
-        "number_comics_of_index": [
-            1
-        ]
-    },
     "than": {
         "comics_index": [
             12,
@@ -10415,21 +6291,11 @@
             1
         ]
     },
-    "thank": {
-        "comics_index": [
-            67
-        ],
-        "number_comics_of_index": [
-            1
-        ]
-    },
     "that": {
         "comics_index": [
-            13,
-            37
+            13
         ],
         "number_comics_of_index": [
-            1,
             1
         ]
     },
@@ -10443,19 +6309,7 @@
     },
     "their": {
         "comics_index": [
-            43,
-            68,
             23
-        ],
-        "number_comics_of_index": [
-            1,
-            1,
-            1
-        ]
-    },
-    "themal": {
-        "comics_index": [
-            52
         ],
         "number_comics_of_index": [
             1
@@ -10469,23 +6323,11 @@
             1
         ]
     },
-    "themsom": {
-        "comics_index": [
-            52
-        ],
-        "number_comics_of_index": [
-            1
-        ]
-    },
     "then": {
         "comics_index": [
-            16,
-            57,
-            53
+            16
         ],
         "number_comics_of_index": [
-            1,
-            1,
             1
         ]
     },
@@ -10499,18 +6341,13 @@
     },
     "there": {
         "comics_index": [
+            9,
+            16,
+            24,
             4,
             15,
-            16,
-            57,
-            68,
-            38,
-            9,
-            24,
-            29,
-            45,
             30,
-            64
+            29
         ],
         "number_comics_of_index": [
             1,
@@ -10519,41 +6356,12 @@
             1,
             1,
             1,
-            1,
-            1,
-            1,
-            1,
-            1,
-            1
-        ]
-    },
-    "therehat": {
-        "comics_index": [
-            64
-        ],
-        "number_comics_of_index": [
-            1
-        ]
-    },
-    "therethey": {
-        "comics_index": [
-            64
-        ],
-        "number_comics_of_index": [
             1
         ]
     },
     "thesi": {
         "comics_index": [
             24
-        ],
-        "number_comics_of_index": [
-            1
-        ]
-    },
-    "theta": {
-        "comics_index": [
-            68
         ],
         "number_comics_of_index": [
             1
@@ -10569,36 +6377,12 @@
             1
         ]
     },
-    "theyv": {
-        "comics_index": [
-            52
-        ],
-        "number_comics_of_index": [
-            1
-        ]
-    },
-    "thick": {
-        "comics_index": [
-            48
-        ],
-        "number_comics_of_index": [
-            1
-        ]
-    },
     "think": {
         "comics_index": [
-            61,
-            44,
-            20,
-            35,
             33,
-            41
+            20
         ],
         "number_comics_of_index": [
-            1,
-            1,
-            1,
-            1,
             1,
             1
         ]
@@ -10630,74 +6414,28 @@
     "thought": {
         "comics_index": [
             15,
-            57,
             2,
             29
         ],
         "number_comics_of_index": [
             1,
             1,
-            1,
-            1
-        ]
-    },
-    "thousand": {
-        "comics_index": [
-            52
-        ],
-        "number_comics_of_index": [
-            1
-        ]
-    },
-    "threaten": {
-        "comics_index": [
-            42
-        ],
-        "number_comics_of_index": [
             1
         ]
     },
     "three": {
         "comics_index": [
-            68,
             24,
             30
         ],
         "number_comics_of_index": [
-            1,
             1,
             1
         ]
     },
     "time": {
         "comics_index": [
-            44,
             13
-        ],
-        "number_comics_of_index": [
-            1,
-            1
-        ]
-    },
-    "timea": {
-        "comics_index": [
-            68
-        ],
-        "number_comics_of_index": [
-            1
-        ]
-    },
-    "timealt": {
-        "comics_index": [
-            39
-        ],
-        "number_comics_of_index": [
-            1
-        ]
-    },
-    "timeuntil": {
-        "comics_index": [
-            45
         ],
         "number_comics_of_index": [
             1
@@ -10729,37 +6467,17 @@
     },
     "titl": {
         "comics_index": [
-            18,
             28,
-            47
+            18
         ],
         "number_comics_of_index": [
-            1,
             1,
             1
         ]
     },
     "today": {
         "comics_index": [
-            23,
-            50
-        ],
-        "number_comics_of_index": [
-            1,
-            1
-        ]
-    },
-    "togetherfirst": {
-        "comics_index": [
-            65
-        ],
-        "number_comics_of_index": [
-            1
-        ]
-    },
-    "togetheri": {
-        "comics_index": [
-            62
+            23
         ],
         "number_comics_of_index": [
             1
@@ -10767,8 +6485,8 @@
     },
     "too": {
         "comics_index": [
-            16,
             6,
+            16,
             24,
             31
         ],
@@ -10789,11 +6507,9 @@
     },
     "top": {
         "comics_index": [
-            15,
-            47
+            15
         ],
         "number_comics_of_index": [
-            1,
             1
         ]
     },
@@ -10805,21 +6521,11 @@
             1
         ]
     },
-    "tower": {
-        "comics_index": [
-            59
-        ],
-        "number_comics_of_index": [
-            1
-        ]
-    },
     "transform": {
         "comics_index": [
-            55,
             26
         ],
         "number_comics_of_index": [
-            1,
             1
         ]
     },
@@ -10833,17 +6539,7 @@
     },
     "tree": {
         "comics_index": [
-            2,
-            41
-        ],
-        "number_comics_of_index": [
-            1,
-            1
-        ]
-    },
-    "treei": {
-        "comics_index": [
-            41
+            2
         ],
         "number_comics_of_index": [
             1
@@ -10859,17 +6555,7 @@
     },
     "tri": {
         "comics_index": [
-            56,
             19
-        ],
-        "number_comics_of_index": [
-            1,
-            1
-        ]
-    },
-    "triangl": {
-        "comics_index": [
-            68
         ],
         "number_comics_of_index": [
             1
@@ -10878,14 +6564,6 @@
     "true": {
         "comics_index": [
             19
-        ],
-        "number_comics_of_index": [
-            1
-        ]
-    },
-    "trust": {
-        "comics_index": [
-            61
         ],
         "number_comics_of_index": [
             1
@@ -10907,62 +6585,34 @@
             1
         ]
     },
-    "tuesdayman": {
-        "comics_index": [
-            68
-        ],
-        "number_comics_of_index": [
-            1
-        ]
-    },
     "turn": {
         "comics_index": [
-            24,
-            51
+            24
         ],
         "number_comics_of_index": [
-            1,
             1
         ]
     },
     "two": {
         "comics_index": [
+            13,
             16,
             2,
-            18,
-            65,
-            68,
-            59,
-            48,
-            13,
             21,
-            52
+            18
         ],
         "number_comics_of_index": [
             1,
             1,
             1,
             1,
-            1,
-            1,
-            1,
-            1,
-            1,
-            1
-        ]
-    },
-    "tycho": {
-        "comics_index": [
-            50
-        ],
-        "number_comics_of_index": [
             1
         ]
     },
     "uh": {
         "comics_index": [
-            20,
-            26
+            26,
+            20
         ],
         "number_comics_of_index": [
             1,
@@ -10980,14 +6630,6 @@
     "uncircl": {
         "comics_index": [
             24
-        ],
-        "number_comics_of_index": [
-            1
-        ]
-    },
-    "underneathcapt": {
-        "comics_index": [
-            56
         ],
         "number_comics_of_index": [
             1
@@ -11017,46 +6659,6 @@
             1
         ]
     },
-    "unimaginablemagnific": {
-        "comics_index": [
-            52
-        ],
-        "number_comics_of_index": [
-            1
-        ]
-    },
-    "unless": {
-        "comics_index": [
-            63
-        ],
-        "number_comics_of_index": [
-            1
-        ]
-    },
-    "unrel": {
-        "comics_index": [
-            68
-        ],
-        "number_comics_of_index": [
-            1
-        ]
-    },
-    "unusu": {
-        "comics_index": [
-            56
-        ],
-        "number_comics_of_index": [
-            1
-        ]
-    },
-    "upoh": {
-        "comics_index": [
-            49
-        ],
-        "number_comics_of_index": [
-            1
-        ]
-    },
     "urban": {
         "comics_index": [
             19
@@ -11067,27 +6669,7 @@
     },
     "use": {
         "comics_index": [
-            61,
-            20,
-            38
-        ],
-        "number_comics_of_index": [
-            1,
-            1,
-            1
-        ]
-    },
-    "useless": {
-        "comics_index": [
-            55
-        ],
-        "number_comics_of_index": [
-            1
-        ]
-    },
-    "valentin": {
-        "comics_index": [
-            63
+            20
         ],
         "number_comics_of_index": [
             1
@@ -11109,22 +6691,6 @@
             1
         ]
     },
-    "veri": {
-        "comics_index": [
-            51
-        ],
-        "number_comics_of_index": [
-            1
-        ]
-    },
-    "verilya": {
-        "comics_index": [
-            68
-        ],
-        "number_comics_of_index": [
-            1
-        ]
-    },
     "version": {
         "comics_index": [
             24
@@ -11133,32 +6699,20 @@
             1
         ]
     },
-    "viceversa": {
-        "comics_index": [
-            35
-        ],
-        "number_comics_of_index": [
-            1
-        ]
-    },
     "video": {
         "comics_index": [
-            20,
-            38
+            20
         ],
         "number_comics_of_index": [
-            1,
             1
         ]
     },
     "view": {
         "comics_index": [
             7,
-            59,
             31
         ],
         "number_comics_of_index": [
-            1,
             1,
             1
         ]
@@ -11181,14 +6735,6 @@
             1
         ]
     },
-    "volkswagen": {
-        "comics_index": [
-            37
-        ],
-        "number_comics_of_index": [
-            1
-        ]
-    },
     "vortex": {
         "comics_index": [
             22
@@ -11205,65 +6751,13 @@
             1
         ]
     },
-    "wait": {
-        "comics_index": [
-            57
-        ],
-        "number_comics_of_index": [
-            1
-        ]
-    },
-    "waitress": {
-        "comics_index": [
-            65
-        ],
-        "number_comics_of_index": [
-            1
-        ]
-    },
-    "walk": {
-        "comics_index": [
-            61,
-            65,
-            68,
-            59
-        ],
-        "number_comics_of_index": [
-            1,
-            1,
-            1,
-            1
-        ]
-    },
-    "wanna": {
-        "comics_index": [
-            68,
-            59
-        ],
-        "number_comics_of_index": [
-            1,
-            1
-        ]
-    },
     "want": {
         "comics_index": [
-            61,
-            63,
-            23,
-            20,
-            59,
-            46,
             19,
-            49,
-            41
+            23,
+            20
         ],
         "number_comics_of_index": [
-            1,
-            1,
-            1,
-            1,
-            1,
-            1,
             1,
             1,
             1
@@ -11271,8 +6765,8 @@
     },
     "warn": {
         "comics_index": [
-            15,
-            24
+            24,
+            15
         ],
         "number_comics_of_index": [
             1,
@@ -11282,24 +6776,10 @@
     "was": {
         "comics_index": [
             16,
-            57,
-            43,
-            65,
             24,
-            29,
-            51,
-            53,
-            45,
-            60
+            29
         ],
         "number_comics_of_index": [
-            1,
-            1,
-            1,
-            1,
-            1,
-            1,
-            1,
             1,
             1,
             1
@@ -11321,22 +6801,6 @@
             1
         ]
     },
-    "watch": {
-        "comics_index": [
-            60
-        ],
-        "number_comics_of_index": [
-            1
-        ]
-    },
-    "watchingth": {
-        "comics_index": [
-            60
-        ],
-        "number_comics_of_index": [
-            1
-        ]
-    },
     "water": {
         "comics_index": [
             22
@@ -11345,37 +6809,9 @@
             1
         ]
     },
-    "waterboy": {
-        "comics_index": [
-            39
-        ],
-        "number_comics_of_index": [
-            1
-        ]
-    },
-    "way": {
-        "comics_index": [
-            45
-        ],
-        "number_comics_of_index": [
-            1
-        ]
-    },
     "wear": {
         "comics_index": [
-            9,
-            51,
-            67
-        ],
-        "number_comics_of_index": [
-            1,
-            1,
-            1
-        ]
-    },
-    "weather": {
-        "comics_index": [
-            59
+            9
         ],
         "number_comics_of_index": [
             1
@@ -11383,123 +6819,61 @@
     },
     "well": {
         "comics_index": [
-            49,
-            32,
-            41
+            32
         ],
         "number_comics_of_index": [
-            1,
-            1,
             1
         ]
     },
     "went": {
         "comics_index": [
-            16,
-            57
+            16
         ],
         "number_comics_of_index": [
-            1,
             1
         ]
     },
     "were": {
         "comics_index": [
-            57,
-            65,
-            24,
             19,
+            24,
             30
         ],
         "number_comics_of_index": [
             1,
             1,
-            1,
-            1,
-            1
-        ]
-    },
-    "what": {
-        "comics_index": [
-            67
-        ],
-        "number_comics_of_index": [
-            1
-        ]
-    },
-    "whatev": {
-        "comics_index": [
-            65
-        ],
-        "number_comics_of_index": [
-            1
-        ]
-    },
-    "whatthey": {
-        "comics_index": [
-            64
-        ],
-        "number_comics_of_index": [
             1
         ]
     },
     "when": {
         "comics_index": [
-            56,
             6,
-            28,
-            59
+            28
         ],
         "number_comics_of_index": [
             1,
-            1,
-            1,
-            1
-        ]
-    },
-    "whenev": {
-        "comics_index": [
-            37
-        ],
-        "number_comics_of_index": [
             1
         ]
     },
     "where": {
         "comics_index": [
             16,
-            1,
-            49
+            1
         ],
         "number_comics_of_index": [
-            1,
             1,
             1
         ]
     },
     "whi": {
         "comics_index": [
-            57,
             12,
             20,
-            59,
-            58,
             29
         ],
         "number_comics_of_index": [
             1,
             1,
-            1,
-            1,
-            1,
-            1
-        ]
-    },
-    "while": {
-        "comics_index": [
-            61
-        ],
-        "number_comics_of_index": [
             1
         ]
     },
@@ -11521,27 +6895,15 @@
     },
     "white": {
         "comics_index": [
-            17,
-            48
+            17
         ],
         "number_comics_of_index": [
-            1,
             1
         ]
     },
     "whole": {
         "comics_index": [
-            22,
-            52
-        ],
-        "number_comics_of_index": [
-            1,
-            1
-        ]
-    },
-    "whybrunett": {
-        "comics_index": [
-            59
+            22
         ],
         "number_comics_of_index": [
             1
@@ -11549,19 +6911,7 @@
     },
     "will": {
         "comics_index": [
-            23,
-            39,
-            45
-        ],
-        "number_comics_of_index": [
-            1,
-            1,
-            1
-        ]
-    },
-    "winc": {
-        "comics_index": [
-            44
+            23
         ],
         "number_comics_of_index": [
             1
@@ -11587,16 +6937,10 @@
     },
     "wish": {
         "comics_index": [
-            63,
-            24,
             19,
-            58,
-            62
+            24
         ],
         "number_comics_of_index": [
-            1,
-            1,
-            1,
             1,
             1
         ]
@@ -11611,39 +6955,27 @@
     },
     "woman": {
         "comics_index": [
-            61,
-            57,
-            44,
-            24,
-            58
+            24
         ],
         "number_comics_of_index": [
-            1,
-            1,
-            1,
-            1,
             1
         ]
     },
     "wonder": {
         "comics_index": [
-            1,
             32,
-            52
+            1
         ],
         "number_comics_of_index": [
-            1,
             1,
             1
         ]
     },
     "word": {
         "comics_index": [
-            24,
-            37
+            24
         ],
         "number_comics_of_index": [
-            1,
             1
         ]
     },
@@ -11652,26 +6984,6 @@
             16
         ],
         "number_comics_of_index": [
-            1
-        ]
-    },
-    "wordsfor": {
-        "comics_index": [
-            62
-        ],
-        "number_comics_of_index": [
-            1
-        ]
-    },
-    "work": {
-        "comics_index": [
-            54,
-            55,
-            59
-        ],
-        "number_comics_of_index": [
-            1,
-            1,
             1
         ]
     },
@@ -11686,37 +6998,17 @@
     "world": {
         "comics_index": [
             23,
-            32,
-            52,
-            40
+            32
         ],
         "number_comics_of_index": [
             1,
-            1,
-            1,
-            1
-        ]
-    },
-    "worldi": {
-        "comics_index": [
-            52
-        ],
-        "number_comics_of_index": [
-            1
-        ]
-    },
-    "worldsnot": {
-        "comics_index": [
-            52
-        ],
-        "number_comics_of_index": [
             1
         ]
     },
     "would": {
         "comics_index": [
-            20,
-            24
+            24,
+            20
         ],
         "number_comics_of_index": [
             1,
@@ -11739,95 +7031,25 @@
             1
         ]
     },
-    "x": {
-        "comics_index": [
-            54,
-            55
-        ],
-        "number_comics_of_index": [
-            1,
-            1
-        ]
-    },
-    "xkcd": {
-        "comics_index": [
-            56
-        ],
-        "number_comics_of_index": [
-            1
-        ]
-    },
-    "y": {
-        "comics_index": [
-            54
-        ],
-        "number_comics_of_index": [
-            1
-        ]
-    },
     "yeah": {
         "comics_index": [
             16,
-            20,
+            26,
             24,
-            32,
-            26
+            20,
+            32
         ],
         "number_comics_of_index": [
             1,
             1,
             1,
             1,
-            1
-        ]
-    },
-    "yeaha": {
-        "comics_index": [
-            44
-        ],
-        "number_comics_of_index": [
-            1
-        ]
-    },
-    "yeahcut": {
-        "comics_index": [
-            59
-        ],
-        "number_comics_of_index": [
-            1
-        ]
-    },
-    "yeahtitl": {
-        "comics_index": [
-            59
-        ],
-        "number_comics_of_index": [
             1
         ]
     },
     "year": {
         "comics_index": [
-            56,
-            43,
             6
-        ],
-        "number_comics_of_index": [
-            1,
-            1,
-            1
-        ]
-    },
-    "yellow": {
-        "comics_index": [
-            35
-        ],
-        "number_comics_of_index": [
-            1
-        ]
-    },
-    "yesman": {
-        "comics_index": [
-            57
         ],
         "number_comics_of_index": [
             1
@@ -11836,22 +7058,6 @@
     "youalt": {
         "comics_index": [
             29
-        ],
-        "number_comics_of_index": [
-            1
-        ]
-    },
-    "youcrisscross": {
-        "comics_index": [
-            62
-        ],
-        "number_comics_of_index": [
-            1
-        ]
-    },
-    "youman": {
-        "comics_index": [
-            44
         ],
         "number_comics_of_index": [
             1
@@ -11867,61 +7073,13 @@
     },
     "your": {
         "comics_index": [
-            57,
-            18,
-            63,
-            65,
-            68,
             23,
             20,
-            49,
-            67,
-            50
+            18
         ],
         "number_comics_of_index": [
             1,
             1,
-            1,
-            1,
-            1,
-            1,
-            1,
-            1,
-            1,
-            1
-        ]
-    },
-    "yourstitl": {
-        "comics_index": [
-            67
-        ],
-        "number_comics_of_index": [
-            1
-        ]
-    },
-    "youv": {
-        "comics_index": [
-            65,
-            50
-        ],
-        "number_comics_of_index": [
-            1,
-            1
-        ]
-    },
-    "youwoman": {
-        "comics_index": [
-            44
-        ],
-        "number_comics_of_index": [
-            1
-        ]
-    },
-    "zap": {
-        "comics_index": [
-            35
-        ],
-        "number_comics_of_index": [
             1
         ]
     },

@@ -22,11 +22,11 @@ import (
 
 func main() {
 	n := 1408
-	var i, u bool
+	var i bool
 	var s, c string
 	flag.StringVar(&c, "c", "", "Use -c")
 	flag.BoolVar(&i, "i", false, "Use -i")
-	flag.BoolVar(&u, "u", false, "update db and index")
+	// flag.BoolVar(&u, "u", false, "update db and index")
 	flag.StringVar(&s, "s", "", "string")
 	flag.Parse()
 	if err := initConfig(c); err != nil {
@@ -77,7 +77,6 @@ func main() {
 
 	<-ctx.Done()
 	time.Sleep(5 * time.Second)
-
 	logrus.Print("RNEB Shutting Down")
 
 	if err := srv.ShutDown(ctx); err != nil {

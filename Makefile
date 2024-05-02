@@ -3,8 +3,8 @@ all:
 	go build -c -i xkcd cmd/xkcd/main.go
 build: 
 	go build -c -i xkcd cmd/xkcd/main.go
-runn:
-	go run cmd/xkcd/main.go -c "." -u
+run:
+	go run cmd/xkcd/main.go -c "."
 run1:
 	go run cmd/xkcd/main.go -c "." -i -s "follower brings bunch of questions"
 run2:

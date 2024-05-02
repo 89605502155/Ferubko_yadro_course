@@ -8,7 +8,8 @@ import (
 func (h *Handler) Auth(resp http.ResponseWriter, req *http.Request) {
 	fmt.Println("Auth", req.Method)
 	// resp.WriteHeader(http.StatusOK)
-	// resp.Write([]byte("You are user\n"))
+	resp.Write([]byte("You are user\n"))
+	resp.Header().Set("Token", "<PASSWORD>")
 	// resp.Header().Set("Content-Type", "application/json")
 }
 
