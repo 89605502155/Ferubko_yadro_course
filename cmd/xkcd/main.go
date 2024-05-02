@@ -23,10 +23,9 @@ import (
 func main() {
 	n := 1408
 	var c string
+	var p string
 	flag.StringVar(&c, "c", "", "Use -c")
-	// flag.BoolVar(&i, "i", false, "Use -i")
-	// flag.BoolVar(&u, "u", false, "update db and index")
-	// flag.StringVar(&s, "s", "", "string")
+	flag.StringVar(&p, "p", "", "Use -p")
 	flag.Parse()
 	if err := initConfig(c); err != nil {
 		fmt.Println(c)
@@ -46,21 +45,26 @@ func main() {
 	handler := handler.NewHandler(service)
 	srv := new(server.Server)
 	go func() {
-		fmt.Println("Rockrya")
-		targetTime := time.Date(2024, time.May, 2, 2, 18, 0, 0, time.UTC)
-
-		// Получаем текущее время
-		currentTime := time.Now()
-		duration := targetTime.Sub(currentTime)
-		fmt.Println(duration)
-		timer := time.NewTimer(duration)
-		<-timer.C
-		fmt.Println("Valonia")
-		service.Update()
-		fmt.Println("Update")
+		for {
+			fmt.Println("Rockrya")
+			currentTime := time.Now()
+			targetTime := time.Date(currentTime.Year(), currentTime.Month(),
+				currentTime.Day()+1, 2, 18, 0, 0, time.UTC)
+			duration := targetTime.Sub(currentTime)
+			fmt.Println(duration)
+			timer := time.NewTimer(duration)
+			<-timer.C
+			fmt.Println("Valonia")
+			service.Update()
+			fmt.Println("Update")
+		}
 	}()
+
+	if p == "" {
+		p = viper.GetString("port")
+	}
 	go func() {
-		if err := srv.Run(viper.GetString("port"), handler.InitRoutes()); err != nil {
+		if err := srv.Run(p, handler.InitRoutes()); err != nil {
 			logrus.Fatalf("you have error %s", err.Error())
 		}
 	}()
