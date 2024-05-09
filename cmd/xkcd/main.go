@@ -46,7 +46,7 @@ func main() {
 	srv := new(server.Server)
 	go func() {
 		for {
-			fmt.Println("Rockrya")
+			// fmt.Println("Rockrya")
 			currentTime := time.Now()
 			targetTime := time.Date(currentTime.Year(), currentTime.Month(),
 				currentTime.Day()+1, 2, 18, 0, 0, time.UTC)
