@@ -54,7 +54,7 @@ func main() {
 			fmt.Println(duration)
 			timer := time.NewTimer(duration)
 			<-timer.C
-			fmt.Println("Valonia")
+			// fmt.Println("Valonia")
 			service.Update()
 			fmt.Println("Update")
 		}
