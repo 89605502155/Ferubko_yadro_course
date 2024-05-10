@@ -58,7 +58,7 @@ func main() {
 			timer := time.NewTimer(duration)
 			<-timer.C
 			service.Update()
-			logrus.Debug("Update")
+			logrus.Debug("Update ")
 		}
 	}()
 
