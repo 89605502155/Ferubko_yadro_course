@@ -25,8 +25,6 @@ func (ind *IndexBaseFinde) read() map[string]IndexStatistics {
 		logrus.Fatalf("Ошибка чтения файла: %v", err)
 	}
 	data := make(map[string]IndexStatistics)
-	// fmt.Println(string(fileContent))
-	// Парсим JSON
 	err = json.Unmarshal(fileContent, &data)
 	if err != nil {
 		logrus.Fatalf("Ошибка при разборе JSON: %v", err)
@@ -65,7 +63,6 @@ func (ind *IndexBaseFinde) Find(input *map[string]bool, limit int) []int {
 		if i > 0 {
 			if copySlice[i-1] > copySlice[i] {
 				index = slices.Index(length, copySlice[i])
-				// k, _ := strconv.Atoi(comics[index])
 				res = append(res, comics[index])
 			} else if copySlice[i] == copySlice[i-1] {
 				for j := index; j < len(comics); j++ {
@@ -74,16 +71,12 @@ func (ind *IndexBaseFinde) Find(input *map[string]bool, limit int) []int {
 						break
 					}
 				}
-				// index = slices.Index(d.NumberComicsOfIndex, copySlice[i])
-				// k, _ := strconv.Atoi(keySlice[index])
 				res = append(res, comics[index])
 			}
 		} else if i == 0 {
 			index = slices.Index(length, copySlice[i])
-			// k, _ := strconv.Atoi(keySlice[index])
 			res = append(res, comics[index])
 		}
 	}
-	// fmt.Println(copySlice[:31])
 	return res
 }

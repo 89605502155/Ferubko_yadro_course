@@ -5,6 +5,8 @@ import (
 	"fmt"
 	"sync"
 
+	"github.com/sirupsen/logrus"
+
 	"xkcd/pkg/xkcd"
 )
 
@@ -21,9 +23,9 @@ func WorkerPool(cl *xkcd.Client, numIter int, numWorkers int, data *map[string]x
 			defer wg.Done()
 			for key := range keyChan {
 				res, _, err := cl.ClientInterface.GetComics(key)
-				fmt.Println(i, key, err)
+				logrus.Println(i, key, err)
 				if err != nil {
-					fmt.Println(err)
+					logrus.Println(err)
 					continue
 
 				}
@@ -36,9 +38,9 @@ func WorkerPool(cl *xkcd.Client, numIter int, numWorkers int, data *map[string]x
 	for key := 1; key < numIter; key++ {
 		select {
 		case <-ctx.Done():
-			fmt.Println("Pressish-Eilay")
+			logrus.Println("Pressish-Eilay")
 			stop()
-			fmt.Println("Bagram")
+			logrus.Println("Bagram")
 			key = numIter
 		default:
 			if _, ok := (*data)[fmt.Sprintf("%d", key)]; ok {

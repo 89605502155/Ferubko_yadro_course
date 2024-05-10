@@ -2,7 +2,6 @@ package database
 
 import (
 	"encoding/json"
-	"fmt"
 	"os"
 	"slices"
 	"sort"
@@ -25,16 +24,13 @@ func NewDatabaseFinder(name string) *DatabaseFind {
 }
 
 func (d *DatabaseFind) read() map[string]xkcd.ComicsInfo {
-	fmt.Println("Чтение файла")
+	logrus.Println("Чтение файла")
 	fileContent, err := os.ReadFile(d.Name)
 	if err != nil {
 		logrus.Fatalf("Ошибка чтения файла: %v", err)
 	}
 
-	// Определяем map для разбора JSON
 	data := make(map[string]xkcd.ComicsInfo)
-	// fmt.Println(string(fileContent))
-	// Парсим JSON
 	err = json.Unmarshal(fileContent, &data)
 	if err != nil {
 		logrus.Fatalf("Ошибка декодинга: %v", err)
@@ -53,7 +49,7 @@ type FinderResponse struct {
 
 func (d *DatabaseFind) Find(input *map[string]bool, limit int) []int {
 	data := d.read()
-	fmt.Println("read file")
+	logrus.Println("read file")
 	length := make([]int, 0)
 	keySlice := make([]string, 0)
 	var wg sync.WaitGroup
@@ -66,14 +62,13 @@ func (d *DatabaseFind) Find(input *map[string]bool, limit int) []int {
 		go func() {
 			defer wg.Done()
 			for comics := range comicsChan {
-				fmt.Println(i, comics.Key)
+				logrus.Println(i, comics.Key)
 				s := 0
 				for _, v := range comics.ComicsInfo.Keywords {
 					if (*input)[v] {
 						s++
 					}
 				}
-				// time.Sleep(time.Second)
 				responseChan <- FinderResponse{
 					Key:    comics.Key,
 					Number: s,
@@ -108,7 +103,6 @@ func (d *DatabaseFind) Find(input *map[string]bool, limit int) []int {
 
 	res := make([]int, 0)
 	var index int
-	// fmt.Println(copySlice)
 	for i := 0; i < limit && i < len(copySlice); i++ {
 		if i > 0 {
 			if copySlice[i-1] > copySlice[i] {
@@ -122,7 +116,6 @@ func (d *DatabaseFind) Find(input *map[string]bool, limit int) []int {
 						break
 					}
 				}
-				// index = slices.Index(d.NumberComicsOfIndex, copySlice[i])
 				k, _ := strconv.Atoi(keySlice[index])
 				res = append(res, k)
 			}
@@ -132,6 +125,5 @@ func (d *DatabaseFind) Find(input *map[string]bool, limit int) []int {
 			res = append(res, k)
 		}
 	}
-	// fmt.Println(copySlice[:31])
 	return res
 }

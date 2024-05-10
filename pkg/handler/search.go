@@ -2,8 +2,9 @@ package handler
 
 import (
 	"encoding/json"
-	"fmt"
 	"net/http"
+
+	"github.com/sirupsen/logrus"
 )
 
 func (h *Handler) Search(resp http.ResponseWriter, req *http.Request) {
@@ -26,6 +27,6 @@ func (h *Handler) Search(resp http.ResponseWriter, req *http.Request) {
 	jn, _ := json.Marshal(res)
 	resp.Write(jn)
 
-	fmt.Println(t1, t2)
+	logrus.Println(t1, t2)
 	resp.Header().Set("Content-Type", "application/json")
 }

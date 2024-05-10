@@ -5,6 +5,8 @@ import (
 	"fmt"
 	"net/http"
 
+	"github.com/sirupsen/logrus"
+
 	"xkcd/pkg/words"
 )
 
@@ -44,10 +46,6 @@ func NewHttpClient(baseURL string, w *words.Words) *HttpClient {
 func (c *HttpClient) GetLatestComicsNumber() (int, error) {
 	url := fmt.Sprintf("%s/info.0.json", c.baseURL)
 
-	// a:=http.Client{
-	// 	Timeout: 10*time.Second,
-	// }
-
 	resp, err := http.Get(url)
 	if err != nil {
 		return 0, err
@@ -83,7 +81,7 @@ func (c *HttpClient) GetComics(comicID int) (map[int]ComicsInfo, int, error) {
 	// var data map[string]interface{}
 	err = json.NewDecoder(resp.Body).Decode(&comics)
 	if err != nil {
-		fmt.Println("Ошибка при декодировании JSON:", err)
+		logrus.Println("Ошибка при декодировании JSON:", err)
 		return nil, 0, nil
 	}
 	var comicsInfo ComicsInfo

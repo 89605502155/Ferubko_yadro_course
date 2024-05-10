@@ -24,16 +24,16 @@ func (d *DatabaseStruct) ReadDatabase() *map[string]xkcd.ComicsInfo {
 	fileContent, err := os.ReadFile(d.Name)
 	if err != nil {
 		d.CreateEmptyDatabase()
-		logrus.Fatalf("Ошибка чтения файла: %v", err)
+		logrus.Debugf("Ошибка чтения файла: %v", err)
 	}
 
 	// Определяем map для разбора JSON
 	data := make(map[string]xkcd.ComicsInfo)
-	fmt.Println(string(fileContent))
+	logrus.Debug(string(fileContent))
 	// Парсим JSON
 	err = json.Unmarshal(fileContent, &data)
 	if err != nil {
-		logrus.Fatalf("Ошибка при разборе JSON: %v", err)
+		logrus.Debugf("Ошибка при разборе JSON: %v", err)
 	}
 	return &data
 }
@@ -52,7 +52,7 @@ func (d *DatabaseStruct) WriteAllOnDatabase(data *map[string]xkcd.ComicsInfo, pr
 		return
 	}
 	if printOnConsole {
-		fmt.Println(string(jsonData))
+		logrus.Println(string(jsonData))
 	}
 
 	file, err := os.OpenFile(d.Name, os.O_WRONLY|os.O_CREATE, 0644)
@@ -62,10 +62,8 @@ func (d *DatabaseStruct) WriteAllOnDatabase(data *map[string]xkcd.ComicsInfo, pr
 	}
 	defer file.Close()
 
-	// Записываем строку JSON в файл
 	writer := io.Writer(file)
 
-	// Записываем строку JSON в файл
 	_, err = fmt.Fprint(writer, string(jsonData))
 	if err != nil {
 		logrus.Fatalf("you have error %s", err.Error())

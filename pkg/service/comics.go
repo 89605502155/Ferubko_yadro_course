@@ -3,8 +3,8 @@ package service
 import (
 	"context"
 	"errors"
-	"fmt"
 
+	"github.com/sirupsen/logrus"
 	"github.com/spf13/viper"
 
 	"xkcd/pkg/database"
@@ -39,15 +39,14 @@ func (s *ComicsService) Update() error {
 
 	worker.WorkerPool(s.cl, s.n, viper.GetInt("parallel"), data, s.ctx, s.stop)
 	defer func(db *database.JsonDatabase, index *indexbase.JsonIndex) {
-		fmt.Println("Gangut")
+		logrus.Println("Gangut")
 		db.Database.CreateEmptyDatabase()
 		db.Database.WriteAllOnDatabase(data, false)
 		indexes := index.IndexBase.ReadBase()
 
 		index.IndexBase.BuildIndexFromDB(data, indexes)
-		// fmt.Println(indexes)
 		index.IndexBase.SaveIndexToFile(indexes)
-		fmt.Println("Davu")
+		logrus.Println("Davu")
 	}(s.db, s.index)
 	if s.n == -123 {
 		return errors.New("123")

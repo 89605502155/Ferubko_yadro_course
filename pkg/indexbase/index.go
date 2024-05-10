@@ -34,8 +34,7 @@ func (ind *IndexBaseStruct) ReadBase() *map[string]IndexStatistics {
 		logrus.Fatalf("Ошибка чтения файла: %v", err)
 	}
 	data := make(map[string]IndexStatistics)
-	fmt.Println(string(fileContent))
-	// Парсим JSON
+	logrus.Println(string(fileContent))
 	err = json.Unmarshal(fileContent, &data)
 	if err != nil {
 		logrus.Fatalf("Ошибка при разборе JSON: %v", err)

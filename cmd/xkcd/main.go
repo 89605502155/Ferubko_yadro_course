@@ -3,7 +3,6 @@ package main
 import (
 	"context"
 	"flag"
-	"fmt"
 	"os"
 	"os/signal"
 	"time"
@@ -28,8 +27,11 @@ func main() {
 	flag.StringVar(&p, "p", "", "Use -p")
 	flag.Parse()
 	if err := initConfig(c); err != nil {
-		fmt.Println(c)
+		logrus.Debug(c)
 		logrus.Fatalf("you have error %s", err.Error())
+	}
+	if p == "" {
+		p = viper.GetString("port")
 	}
 	db := database.NewJsonDatabase(viper.GetString("db_file"))
 
@@ -39,30 +41,27 @@ func main() {
 	index := indexbase.NewJsonIndex(viper.GetString("index_file"))
 
 	ctx, stop := signal.NotifyContext(context.Background(), os.Interrupt)
+	srv := new(server.Server)
+
 	service := service.NewService(db, index, n, cl, ctx, stop, words, viper.GetInt("serch_limit"))
 	defer stop()
 
 	handler := handler.NewHandler(service)
-	srv := new(server.Server)
+
 	go func() {
 		for {
-			// fmt.Println("Rockrya")
 			currentTime := time.Now()
 			targetTime := time.Date(currentTime.Year(), currentTime.Month(),
 				currentTime.Day()+1, 2, 18, 0, 0, time.UTC)
 			duration := targetTime.Sub(currentTime)
-			fmt.Println(duration)
+			logrus.Print(duration)
 			timer := time.NewTimer(duration)
 			<-timer.C
-			// fmt.Println("Valonia")
 			service.Update()
-			fmt.Println("Update")
+			logrus.Debug("Update")
 		}
 	}()
 
-	if p == "" {
-		p = viper.GetString("port")
-	}
 	go func() {
 		if err := srv.Run(p, handler.InitRoutes()); err != nil {
 			logrus.Fatalf("you have error %s", err.Error())
