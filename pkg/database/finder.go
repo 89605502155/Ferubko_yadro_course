@@ -2,6 +2,7 @@ package database
 
 import (
 	"encoding/json"
+	"fmt"
 	"os"
 	"slices"
 	"sort"
@@ -49,7 +50,7 @@ type FinderResponse struct {
 
 func (d *DatabaseFind) Find(input *map[string]bool, limit int) []int {
 	data := d.read()
-	logrus.Println("read file")
+	fmt.Println("read file")
 	length := make([]int, 0)
 	keySlice := make([]string, 0)
 	var wg sync.WaitGroup
@@ -62,13 +63,14 @@ func (d *DatabaseFind) Find(input *map[string]bool, limit int) []int {
 		go func() {
 			defer wg.Done()
 			for comics := range comicsChan {
-				logrus.Println(i, comics.Key)
+				fmt.Println(i, comics.Key)
 				s := 0
 				for _, v := range comics.ComicsInfo.Keywords {
 					if (*input)[v] {
 						s++
 					}
 				}
+				// time.Sleep(time.Second)
 				responseChan <- FinderResponse{
 					Key:    comics.Key,
 					Number: s,
@@ -96,7 +98,10 @@ func (d *DatabaseFind) Find(input *map[string]bool, limit int) []int {
 			keySlice = append(keySlice, response.Key)
 		}
 	}
+	return sortTwoSlices(length, keySlice, limit)
+}
 
+func sortTwoSlices(length []int, keySlice []string, limit int) []int {
 	copySlice := make([]int, len(length))
 	copy(copySlice, length)
 	sort.Sort(sort.Reverse(sort.IntSlice(copySlice)))
