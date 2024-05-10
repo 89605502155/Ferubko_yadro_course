@@ -97,6 +97,10 @@ func (d *DatabaseFind) Find(input *map[string]bool, limit int) []int {
 		}
 	}
 
+	return sortTwoSlice(length, keySlice, limit)
+}
+
+func sortTwoSlice(length []int, keySlice []string, limit int) []int {
 	copySlice := make([]int, len(length))
 	copy(copySlice, length)
 	sort.Sort(sort.Reverse(sort.IntSlice(copySlice)))
