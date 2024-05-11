@@ -14,10 +14,14 @@ const (
 )
 
 type Config struct {
-	DBName      string `sql:"-"  exclude:"true"`
-	Mode        string `sql:"mode"`
-	JournalMode string `sql:"journal_mode"`
-	Cache       string `sql:"cache"`
+	DBName          string `sql:"-"  exclude:"true"`
+	Mode            string `sql:"mode"`
+	JournalMode     string `sql:"journal_mode"`
+	Cache           string `sql:"cache"`
+	User            string `sql:"_auth_user"`
+	Password        string `sql:"_auth_pass"`
+	CryptoAlgorithm string `sql:"_auth_crypt"`
+	CriptoSalt      string `sql:"_auth_salt"`
 }
 
 func NewSQLiteDB(cfg Config) (*sqlx.DB, error) {
@@ -35,7 +39,7 @@ func NewSQLiteDB(cfg Config) (*sqlx.DB, error) {
 		if value.String() != "" && value.String() != " " {
 			fieldString := fmt.Sprintf("%s=%s", sqlTag, value.String())
 			if i == 0 {
-				paramString += "?"
+				paramString += "?_auth&"
 				paramString += fieldString
 			} else {
 				paramString += "&"
