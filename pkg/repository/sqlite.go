@@ -8,6 +8,11 @@ import (
 	"github.com/sirupsen/logrus"
 )
 
+const (
+	comicsTable  = "comics"
+	indexesTable = "indexes"
+)
+
 type Config struct {
 	DBName      string `sql:"-"  exclude:"true"`
 	Mode        string `sql:"mode"`
@@ -39,7 +44,7 @@ func NewSQLiteDB(cfg Config) (*sqlx.DB, error) {
 		}
 	}
 
-	db, err := sqlx.Open("sqlite3", paramString)
+	db, err := sqlx.Open("sqlite3", paramString) //example.db?journal_mode=wal&cache=shared&mode=rwc
 	if err != nil {
 		logrus.Fatal(err)
 	}
