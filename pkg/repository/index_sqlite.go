@@ -42,3 +42,20 @@ func (i *IndexSQLite) Generate(indexBase map[string]indexbase.IndexStatistics) e
 	logrus.Info("Inserted")
 	return tx.Commit()
 }
+
+func MapToString(m map[string]bool) string {
+	s := ""
+	for key := range m {
+		s += fmt.Sprintf("'%s',", key)
+	}
+	return s[:len(s)-1]
+}
+
+func (i *IndexSQLite) Get(word map[string]bool, limit int) ([]int, error) {
+	str := MapToString(word)
+	var result []int
+	queryString := fmt.Sprintf("SELECT comics_index as c FROM %s WHERE word IN (%s) GROUP BY c ORDER BY sum(number_comics_of_index) DESC  LIMIT %d", indexesTable, str, limit)
+	err := i.db.Select(&result, queryString)
+	return result, err
+
+}

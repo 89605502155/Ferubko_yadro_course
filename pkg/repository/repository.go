@@ -9,10 +9,12 @@ import (
 
 type Comics interface {
 	Generate(data map[string]xkcd.ComicsInfo) error
+	Get(word map[string]bool, limit int) ([]int, error)
 	Create(comics string, obj xkcd.ComicsInfo) error
 }
 type Index interface {
 	Generate(indexBase map[string]indexbase.IndexStatistics) error
+	Get(word map[string]bool, limit int) ([]int, error)
 }
 type Repository struct {
 	Comics
