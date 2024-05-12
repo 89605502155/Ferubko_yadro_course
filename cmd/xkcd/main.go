@@ -79,7 +79,6 @@ func main() {
 	if err := srv.ShutDown(ctx); err != nil {
 		logrus.Errorf("error occured on server shutting down: %s", err.Error())
 	}
-
 }
 
 func initConfig(c string) error {
