@@ -12,9 +12,7 @@ import (
 	"github.com/spf13/viper"
 
 	server "xkcd"
-	"xkcd/pkg/database"
 	"xkcd/pkg/handler"
-	"xkcd/pkg/indexbase"
 	"xkcd/pkg/repository"
 	"xkcd/pkg/service"
 	"xkcd/pkg/words"
@@ -35,12 +33,8 @@ func main() {
 	if p == "" {
 		p = viper.GetString("port")
 	}
-	db := database.NewJsonDatabase(viper.GetString("db_file"))
 	sqlite, err := repository.NewSQLiteDB(repository.Config{
 		DBName: "./xkcd.db",
-		// Mode:        "rwc",
-		// JournalMode: "wal",
-		// Cache:       "shared",
 	})
 	if err != nil {
 		logrus.Fatalf("you have error %s", err.Error())
@@ -48,12 +42,11 @@ func main() {
 	words := words.NewWordsStremming()
 
 	cl := xkcd.NewClient(viper.GetString("source_url"), words)
-	index := indexbase.NewJsonIndex(viper.GetString("index_file"))
 
 	ctx, stop := signal.NotifyContext(context.Background(), os.Interrupt)
 	srv := new(server.Server)
 	repo := repository.NewRepository(sqlite)
-	service := service.NewService(db, index, n, cl, ctx, stop, repo, words, viper.GetInt("serch_limit"))
+	service := service.NewService(n, cl, ctx, stop, repo, words, viper.GetInt("serch_limit"))
 	defer stop()
 
 	handler := handler.NewHandler(service)
