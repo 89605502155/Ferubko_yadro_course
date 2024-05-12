@@ -1,0 +1,6 @@
+development:
+  dialect: sqlite3
+  datasource: xkcd.db
+  dir: migration
+  username: admin
+  password: qwerty
