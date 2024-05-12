@@ -3,7 +3,6 @@ package repository
 import (
 	"fmt"
 	"reflect"
-	"time"
 
 	"github.com/jmoiron/sqlx"
 	"github.com/sirupsen/logrus"
@@ -16,9 +15,6 @@ const (
 
 type Config struct {
 	DBName string `sql:"-"  exclude:"true"`
-	// Mode        string `sql:"mode"`
-	// JournalMode string `sql:"journal_mode"`
-	// Cache       string `sql:"cache"`
 }
 
 func NewSQLiteDB(cfg Config) (*sqlx.DB, error) {
@@ -50,18 +46,6 @@ func NewSQLiteDB(cfg Config) (*sqlx.DB, error) {
 	if err != nil {
 		return nil, err
 	}
-	logrus.Info("db created")
-
-	var tables []string
-	err = db.Select(&tables, "SELECT name FROM sqlite_master WHERE type='table';")
-	if err != nil {
-		fmt.Println("Error querying database:", err)
-		return nil, err
-	}
-
-	for _, tableName := range tables {
-		fmt.Println("Table:", tableName)
-	}
-	time.Sleep(10 * time.Second)
+	logrus.Info("db start")
 	return db, nil
 }
