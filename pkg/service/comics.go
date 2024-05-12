@@ -9,6 +9,7 @@ import (
 
 	"xkcd/pkg/database"
 	"xkcd/pkg/indexbase"
+	"xkcd/pkg/repository"
 	"xkcd/pkg/worker"
 	"xkcd/pkg/xkcd"
 )
@@ -20,10 +21,12 @@ type ComicsService struct {
 	cl    *xkcd.Client
 	ctx   context.Context
 	stop  context.CancelFunc
+	repo  *repository.Repository
 }
 
 func NewComicsService(db *database.JsonDatabase, index *indexbase.JsonIndex, n int,
-	cl *xkcd.Client, ctx context.Context, stop context.CancelFunc) *ComicsService {
+	cl *xkcd.Client, ctx context.Context, stop context.CancelFunc,
+	repo *repository.Repository) *ComicsService {
 	return &ComicsService{
 		db:    db,
 		index: index,
@@ -31,6 +34,7 @@ func NewComicsService(db *database.JsonDatabase, index *indexbase.JsonIndex, n i
 		cl:    cl,
 		ctx:   ctx,
 		stop:  stop,
+		repo:  repo,
 	}
 }
 
@@ -38,7 +42,8 @@ func (s *ComicsService) Update() error {
 	data := s.db.Database.ReadDatabase()
 
 	worker.WorkerPool(s.cl, s.n, viper.GetInt("parallel"), data, s.ctx, s.stop)
-	defer func(db *database.JsonDatabase, index *indexbase.JsonIndex) {
+	defer func(db *database.JsonDatabase, index *indexbase.JsonIndex,
+		repo *repository.Repository) {
 		logrus.Println("Gangut")
 		db.Database.CreateEmptyDatabase()
 		db.Database.WriteAllOnDatabase(data, false)
@@ -47,7 +52,9 @@ func (s *ComicsService) Update() error {
 		index.IndexBase.BuildIndexFromDB(data, indexes)
 		index.IndexBase.SaveIndexToFile(indexes)
 		logrus.Println("Davu")
-	}(s.db, s.index)
+		repo.Comics.Generate(*data)
+		repo.Index.Generate(*indexes)
+	}(s.db, s.index, s.repo)
 	if s.n == -123 {
 		return errors.New("123")
 	}

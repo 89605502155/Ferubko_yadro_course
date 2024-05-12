@@ -7,14 +7,15 @@ import (
 	"os/signal"
 	"time"
 
+	_ "github.com/mattn/go-sqlite3"
 	"github.com/sirupsen/logrus"
 	"github.com/spf13/viper"
-	_ "github.com/mattn/go-sqlite3"
 
 	server "xkcd"
 	"xkcd/pkg/database"
 	"xkcd/pkg/handler"
 	"xkcd/pkg/indexbase"
+	"xkcd/pkg/repository"
 	"xkcd/pkg/service"
 	"xkcd/pkg/words"
 	"xkcd/pkg/xkcd"
@@ -35,7 +36,15 @@ func main() {
 		p = viper.GetString("port")
 	}
 	db := database.NewJsonDatabase(viper.GetString("db_file"))
-
+	sqlite, err := repository.NewSQLiteDB(repository.Config{
+		DBName: "./xkcd.db",
+		// Mode:        "rwc",
+		// JournalMode: "wal",
+		// Cache:       "shared",
+	})
+	if err != nil {
+		logrus.Fatalf("you have error %s", err.Error())
+	}
 	words := words.NewWordsStremming()
 
 	cl := xkcd.NewClient(viper.GetString("source_url"), words)
@@ -43,8 +52,8 @@ func main() {
 
 	ctx, stop := signal.NotifyContext(context.Background(), os.Interrupt)
 	srv := new(server.Server)
-
-	service := service.NewService(db, index, n, cl, ctx, stop, words, viper.GetInt("serch_limit"))
+	repo := repository.NewRepository(sqlite)
+	service := service.NewService(db, index, n, cl, ctx, stop, repo, words, viper.GetInt("serch_limit"))
 	defer stop()
 
 	handler := handler.NewHandler(service)

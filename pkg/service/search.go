@@ -7,6 +7,7 @@ import (
 
 	"xkcd/pkg/database"
 	"xkcd/pkg/indexbase"
+	"xkcd/pkg/repository"
 	"xkcd/pkg/words"
 )
 
@@ -15,15 +16,17 @@ type SearchService struct {
 	db          *database.JsonDatabase
 	serch_limit int
 	index       *indexbase.JsonIndex
+	repo        *repository.Repository
 }
 
 func NewSearchService(words *words.Words, db *database.JsonDatabase, serch_limit int,
-	index *indexbase.JsonIndex) *SearchService {
+	index *indexbase.JsonIndex, repo *repository.Repository) *SearchService {
 	return &SearchService{
 		words:       words,
 		db:          db,
 		serch_limit: serch_limit,
 		index:       index,
+		repo:        repo,
 	}
 }
 

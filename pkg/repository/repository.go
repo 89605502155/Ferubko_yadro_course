@@ -3,6 +3,7 @@ package repository
 import (
 	"github.com/jmoiron/sqlx"
 
+	"xkcd/pkg/indexbase"
 	"xkcd/pkg/xkcd"
 )
 
@@ -11,7 +12,7 @@ type Comics interface {
 	Create(comics string, obj xkcd.ComicsInfo) error
 }
 type Index interface {
-	Create() error
+	Generate(indexBase map[string]indexbase.IndexStatistics) error
 }
 type Repository struct {
 	Comics

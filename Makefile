@@ -14,6 +14,6 @@ runf:
 	go run cmd/xkcd/main.go -c "." -i -s "$(DEFOULT_STRING)"
 
 n_migration:
-	MIGRATE_FILE=migrate.toml migrate create -dir ./migrations -ext sql $(NAME_MIGRATION)
+	sql-migrate new sql $(NAME_MIGRATION)
 mm:
-	migrate -path migrations -database "sqlite3://./xkcd.db?_auth&_auth_user=admin&_auth_pass=qwerty&_auth_crypt=sha256&_auth_salt=yadro&journal_mode=wal&cache=shared&mode=rwc" up
+	sql-migrate new sql up

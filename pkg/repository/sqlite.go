@@ -3,6 +3,7 @@ package repository
 import (
 	"fmt"
 	"reflect"
+	"time"
 
 	"github.com/jmoiron/sqlx"
 	"github.com/sirupsen/logrus"
@@ -14,16 +15,16 @@ const (
 )
 
 type Config struct {
-	DBName      string `sql:"-"  exclude:"true"`
-	Mode        string `sql:"mode"`
-	JournalMode string `sql:"journal_mode"`
-	Cache       string `sql:"cache"`
+	DBName string `sql:"-"  exclude:"true"`
+	// Mode        string `sql:"mode"`
+	// JournalMode string `sql:"journal_mode"`
+	// Cache       string `sql:"cache"`
 }
 
 func NewSQLiteDB(cfg Config) (*sqlx.DB, error) {
 	t := reflect.TypeOf(cfg)
 	v := reflect.ValueOf(cfg)
-	paramString := fmt.Sprintf("%s", cfg.DBName)
+	paramString := cfg.DBName
 	for i := 0; i < t.NumField(); i++ {
 		field := t.Field(i)
 		value := v.Field(i)
@@ -32,7 +33,8 @@ func NewSQLiteDB(cfg Config) (*sqlx.DB, error) {
 		if excludeTag == "true" {
 			continue
 		}
-		if value.String() != "" && value.String() != " " {
+		// Проверяем, что значение поля является строкой перед вызовом String()
+		if value.Kind() == reflect.String && value.String() != "" && value.String() != " " {
 			fieldString := fmt.Sprintf("%s=%s", sqlTag, value.String())
 			if i == 0 {
 				paramString += "?"
@@ -44,12 +46,22 @@ func NewSQLiteDB(cfg Config) (*sqlx.DB, error) {
 		}
 	}
 
-	db, err := sqlx.Open("sqlite3", paramString) //example.db?journal_mode=wal&cache=shared&mode=rwc
+	db, err := sqlx.Open("sqlite3", paramString)
 	if err != nil {
-		logrus.Fatal(err)
+		return nil, err
+	}
+	logrus.Info("db created")
+
+	var tables []string
+	err = db.Select(&tables, "SELECT name FROM sqlite_master WHERE type='table';")
+	if err != nil {
+		fmt.Println("Error querying database:", err)
+		return nil, err
 	}
 
-	defer db.Close()
+	for _, tableName := range tables {
+		fmt.Println("Table:", tableName)
+	}
+	time.Sleep(10 * time.Second)
 	return db, nil
-
 }
