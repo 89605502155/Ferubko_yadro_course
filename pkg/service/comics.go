@@ -9,7 +9,6 @@ import (
 	"github.com/sirupsen/logrus"
 	"github.com/spf13/viper"
 
-	"xkcd/pkg/indexbase"
 	"xkcd/pkg/repository"
 	"xkcd/pkg/worker"
 	"xkcd/pkg/xkcd"
@@ -44,7 +43,14 @@ func (s *ComicsService) Update() error {
 		indexes, _ := s.repo.Index.GetAll()
 		s.BuildIndexFromDB(&data, &indexes)
 		logrus.Println("Davu")
-		logrus.Println(data)
+		err := repo.Index.Clear()
+		if err != nil {
+			logrus.Printf("Error %s\n", err)
+		}
+		err = repo.Comics.Clear()
+		if err != nil {
+			logrus.Printf("Error %s\n", err)
+		}
 		repo.Comics.Generate(data)
 		repo.Index.Generate(indexes)
 	}(s.repo)
@@ -55,11 +61,11 @@ func (s *ComicsService) Update() error {
 }
 
 func (s *ComicsService) BuildIndexFromDB(db *map[string]xkcd.ComicsInfo,
-	indexBase *map[string]indexbase.IndexStatistics) {
+	indexBase *map[string]repository.IndexStatistics) {
 	for index, comic := range *db {
 		for _, words := range comic.Keywords {
 			if _, ok := (*indexBase)[words]; !ok {
-				slic := indexbase.IndexStatistics{}
+				slic := repository.IndexStatistics{}
 				slic.NumberComicsOfIndex = make([]int, 0)
 				slic.ComicsIndex = make([]int, 0)
 				(*indexBase)[words] = slic

@@ -5,8 +5,6 @@ import (
 
 	"github.com/jmoiron/sqlx"
 	"github.com/sirupsen/logrus"
-
-	"xkcd/pkg/indexbase"
 )
 
 type IndexSQLite struct {
@@ -17,7 +15,12 @@ func NewIndexSQLite(db *sqlx.DB) *IndexSQLite {
 	return &IndexSQLite{db: db}
 }
 
-func (i *IndexSQLite) Generate(indexBase map[string]indexbase.IndexStatistics) error {
+type IndexStatistics struct {
+	ComicsIndex         []int `json:"comics_index"`
+	NumberComicsOfIndex []int `json:"number_comics_of_index"`
+}
+
+func (i *IndexSQLite) Generate(indexBase map[string]IndexStatistics) error {
 	tx, err := i.db.Begin()
 	if err != nil {
 		tx.Rollback()
@@ -32,7 +35,6 @@ func (i *IndexSQLite) Generate(indexBase map[string]indexbase.IndexStatistics) e
 				value.NumberComicsOfIndex[i])
 		}
 	}
-	logrus.Info(values, len(values))
 	if len(values) > 0 {
 		values = values[:len(values)-1]
 	}
@@ -43,6 +45,20 @@ func (i *IndexSQLite) Generate(indexBase map[string]indexbase.IndexStatistics) e
 		logrus.Fatal(err)
 	}
 	logrus.Info("Inserted")
+	return tx.Commit()
+}
+
+func (i *IndexSQLite) Clear() error {
+	tx, err := i.db.Begin()
+	if err != nil {
+		tx.Rollback()
+		return err
+	}
+	_, err = i.db.Exec("DELETE FROM %s", indexesTable)
+	if err != nil {
+		tx.Rollback()
+		return err
+	}
 	return tx.Commit()
 }
 
@@ -68,17 +84,17 @@ type indexTable struct {
 	numberComicsOfIndex int    `db:"number_comics_of_index" binding:"required"`
 }
 
-func (i *IndexSQLite) GetAll() (map[string]indexbase.IndexStatistics, error) {
-	resoult := map[string]indexbase.IndexStatistics{}
+func (i *IndexSQLite) GetAll() (map[string]IndexStatistics, error) {
+	resoult := map[string]IndexStatistics{}
 	var res []indexTable
 	var words []string
 	queryString := fmt.Sprintf("SELECT word as w FROM %s ORDER BY w", indexesTable)
 	err := i.db.Select(&words, queryString)
 	if err != nil {
-		return map[string]indexbase.IndexStatistics{}, err
+		return map[string]IndexStatistics{}, err
 	}
 	for _, key := range words {
-		resoult[key] = indexbase.IndexStatistics{
+		resoult[key] = IndexStatistics{
 			ComicsIndex:         make([]int, 0),
 			NumberComicsOfIndex: make([]int, 0),
 		}
@@ -86,7 +102,7 @@ func (i *IndexSQLite) GetAll() (map[string]indexbase.IndexStatistics, error) {
 	queryString2 := fmt.Sprintf("SELECT word as w, comics_index, number_comics_of_index FROM %s ORDER BY w", indexesTable)
 	err = i.db.Select(&res, queryString2)
 	if err != nil {
-		return map[string]indexbase.IndexStatistics{}, err
+		return map[string]IndexStatistics{}, err
 	}
 	for i := 0; i < len(res); i++ {
 		pro := resoult[res[i].word]

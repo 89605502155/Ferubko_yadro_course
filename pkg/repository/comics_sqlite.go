@@ -44,8 +44,21 @@ func (c *ComicsSQLite) Generate(data map[string]xkcd.ComicsInfo) error {
 	return tx.Commit()
 }
 
+func (c *ComicsSQLite) Clear() error {
+	tx, err := c.db.Begin()
+	if err != nil {
+		tx.Rollback()
+		return err
+	}
+	_, err = c.db.Exec("DELETE FROM %s", comicsTable)
+	if err != nil {
+		tx.Rollback()
+		return err
+	}
+	return tx.Commit()
+}
+
 func (c *ComicsSQLite) Get(word map[string]bool, limit int) ([]int, error) {
-	// SELECT comics_id as c FROM comics WHERE keywords in ('follow','bring','bunch','question') GROUP BY c order by count(keywords) desc LIMIT 10;
 	str := MapToString(word)
 	var result []int
 	queryString := fmt.Sprintf("SELECT comics_id as c FROM %s WHERE keywords IN (%s) GROUP BY c ORDER BY count(keywords) DESC  LIMIT %d", comicsTable, str, limit)

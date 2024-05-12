@@ -29,7 +29,6 @@ func NewSQLiteDB(cfg Config) (*sqlx.DB, error) {
 		if excludeTag == "true" {
 			continue
 		}
-		// Проверяем, что значение поля является строкой перед вызовом String()
 		if value.Kind() == reflect.String && value.String() != "" && value.String() != " " {
 			fieldString := fmt.Sprintf("%s=%s", sqlTag, value.String())
 			if i == 0 {
