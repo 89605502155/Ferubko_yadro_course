@@ -17,6 +17,15 @@ func NewComicsSQLite(db *sqlx.DB) *ComicsSQLite {
 	return &ComicsSQLite{db: db}
 }
 
+type IndividualComics struct {
+	Key        string
+	ComicsInfo xkcd.ComicsInfo
+}
+type FinderResponse struct {
+	Key    string
+	Number int
+}
+
 func (c *ComicsSQLite) Generate(data map[string]xkcd.ComicsInfo) error {
 	tx, err := c.db.Begin()
 	if err != nil {
