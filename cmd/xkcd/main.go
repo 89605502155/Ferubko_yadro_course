@@ -3,18 +3,17 @@ package main
 import (
 	"context"
 	"flag"
-	"fmt"
 	"os"
 	"os/signal"
 	"time"
 
+	_ "github.com/mattn/go-sqlite3"
 	"github.com/sirupsen/logrus"
 	"github.com/spf13/viper"
 
 	server "xkcd"
-	"xkcd/pkg/database"
 	"xkcd/pkg/handler"
-	"xkcd/pkg/indexbase"
+	"xkcd/pkg/repository"
 	"xkcd/pkg/service"
 	"xkcd/pkg/words"
 	"xkcd/pkg/xkcd"
@@ -28,41 +27,44 @@ func main() {
 	flag.StringVar(&p, "p", "", "Use -p")
 	flag.Parse()
 	if err := initConfig(c); err != nil {
-		fmt.Println(c)
+		logrus.Debug(c)
 		logrus.Fatalf("you have error %s", err.Error())
 	}
-	db := database.NewJsonDatabase(viper.GetString("db_file"))
-
+	if p == "" {
+		p = viper.GetString("port")
+	}
+	sqlite, err := repository.NewSQLiteDB(repository.Config{
+		DBName: "./xkcd.db",
+	})
+	if err != nil {
+		logrus.Fatalf("you have error %s", err.Error())
+	}
 	words := words.NewWordsStremming()
 
 	cl := xkcd.NewClient(viper.GetString("source_url"), words)
-	index := indexbase.NewJsonIndex(viper.GetString("index_file"))
 
 	ctx, stop := signal.NotifyContext(context.Background(), os.Interrupt)
-	service := service.NewService(db, index, n, cl, ctx, stop, words, viper.GetInt("serch_limit"))
+	srv := new(server.Server)
+	repo := repository.NewRepository(sqlite)
+	service := service.NewService(n, cl, ctx, stop, repo, words, viper.GetInt("serch_limit"))
 	defer stop()
 
 	handler := handler.NewHandler(service)
-	srv := new(server.Server)
+
 	go func() {
 		for {
-			fmt.Println("Rockrya")
 			currentTime := time.Now()
 			targetTime := time.Date(currentTime.Year(), currentTime.Month(),
 				currentTime.Day()+1, 2, 18, 0, 0, time.UTC)
 			duration := targetTime.Sub(currentTime)
-			fmt.Println(duration)
+			logrus.Print(duration)
 			timer := time.NewTimer(duration)
 			<-timer.C
-			// fmt.Println("Valonia")
 			service.Update()
-			fmt.Println("Update")
+			logrus.Debug("Update")
 		}
 	}()
 
-	if p == "" {
-		p = viper.GetString("port")
-	}
 	go func() {
 		if err := srv.Run(p, handler.InitRoutes()); err != nil {
 			logrus.Fatalf("you have error %s", err.Error())
@@ -77,7 +79,6 @@ func main() {
 	if err := srv.ShutDown(ctx); err != nil {
 		logrus.Errorf("error occured on server shutting down: %s", err.Error())
 	}
-
 }
 
 func initConfig(c string) error {

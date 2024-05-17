@@ -1,30 +1,26 @@
 package service
 
 import (
-	"fmt"
 	"time"
 
 	"github.com/sirupsen/logrus"
 
-	"xkcd/pkg/database"
-	"xkcd/pkg/indexbase"
+	"xkcd/pkg/repository"
 	"xkcd/pkg/words"
 )
 
 type SearchService struct {
 	words       *words.Words
-	db          *database.JsonDatabase
 	serch_limit int
-	index       *indexbase.JsonIndex
+	repo        *repository.Repository
 }
 
-func NewSearchService(words *words.Words, db *database.JsonDatabase, serch_limit int,
-	index *indexbase.JsonIndex) *SearchService {
+func NewSearchService(words *words.Words, serch_limit int,
+	repo *repository.Repository) *SearchService {
 	return &SearchService{
 		words:       words,
-		db:          db,
 		serch_limit: serch_limit,
-		index:       index,
+		repo:        repo,
 	}
 }
 
@@ -34,14 +30,17 @@ func (s *SearchService) SearchInDB(input string) ([]int, time.Duration, error) {
 		logrus.Fatalf("you have error %s", err.Error())
 		return nil, 0, err
 	}
-	// fmt.Println("Robert")
-	fmt.Println("input string ", inputData)
+	logrus.Println("input string ", inputData)
+
 	a1 := time.Now()
-	firstFind := s.db.FindInDB.Find(inputData, s.serch_limit)
+	fourthFind, err := s.repo.Comics.Get(*inputData, s.serch_limit)
+	if err != nil {
+		return nil, 0, err
+	}
 	a2 := time.Now()
 	aDelta := a2.Sub(a1)
-	fmt.Println("first find ", firstFind, aDelta)
-	return firstFind, aDelta, nil
+	logrus.Println("fourth find ", fourthFind, aDelta)
+	return fourthFind, aDelta, nil
 }
 
 func (s *SearchService) SearchInIndex(input string) ([]int, time.Duration, error) {
@@ -51,9 +50,12 @@ func (s *SearchService) SearchInIndex(input string) ([]int, time.Duration, error
 		return nil, 0, err
 	}
 	b1 := time.Now()
-	secondFind := s.index.IndexFind.Find(inputData, s.serch_limit)
+	thirdFind, err := s.repo.Index.Get(*inputData, s.serch_limit)
+	if err != nil {
+		return nil, 0, err
+	}
 	b2 := time.Now()
 	bDelta := b2.Sub(b1)
-	fmt.Println("second find ", secondFind)
-	return secondFind, bDelta, nil
+	logrus.Println("third find ", thirdFind)
+	return thirdFind, bDelta, nil
 }

@@ -4,8 +4,7 @@ import (
 	"context"
 	"time"
 
-	"xkcd/pkg/database"
-	"xkcd/pkg/indexbase"
+	"xkcd/pkg/repository"
 	"xkcd/pkg/words"
 	"xkcd/pkg/xkcd"
 )
@@ -23,11 +22,11 @@ type Service struct {
 	Search
 }
 
-func NewService(db *database.JsonDatabase, index *indexbase.JsonIndex, n int,
-	cl *xkcd.Client, ctx context.Context, stop context.CancelFunc,
+func NewService(n int, cl *xkcd.Client, ctx context.Context,
+	stop context.CancelFunc, repo *repository.Repository,
 	words *words.Words, serch_limit int) *Service {
 	return &Service{
-		Comics: NewComicsService(db, index, n, cl, ctx, stop),
-		Search: NewSearchService(words, db, serch_limit, index),
+		Comics: NewComicsService(n, cl, ctx, stop, repo),
+		Search: NewSearchService(words, serch_limit, repo),
 	}
 }
