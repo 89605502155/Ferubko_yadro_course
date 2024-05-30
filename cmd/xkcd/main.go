@@ -13,6 +13,7 @@ import (
 
 	server "xkcd"
 	"xkcd/pkg/handler"
+	"xkcd/pkg/rate_limiter"
 	"xkcd/pkg/repository"
 	"xkcd/pkg/service"
 	"xkcd/pkg/words"
@@ -49,7 +50,9 @@ func main() {
 	service := service.NewService(n, cl, ctx, stop, repo, words, viper.GetInt("serch_limit"))
 	defer stop()
 
-	handler := handler.NewHandler(service)
+	rate_limiter := rate_limiter.NewSlidingLogLimiter(10, 1)
+
+	handler := handler.NewHandler(service, rate_limiter)
 
 	go func() {
 		for {

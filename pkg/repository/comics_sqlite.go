@@ -57,11 +57,13 @@ func (c *ComicsSQLite) Clear() error {
 	tx, err := c.db.Begin()
 	if err != nil {
 		tx.Rollback()
+		logrus.Fatal(err, "comics_sqlite, f")
 		return err
 	}
-	_, err = c.db.Exec("DELETE FROM %s", comicsTable)
+	_, err = c.db.Exec(fmt.Sprintf("DELETE FROM %s", comicsTable))
 	if err != nil {
 		tx.Rollback()
+		logrus.Fatal(err, "comics_sqlite, s")
 		return err
 	}
 	return tx.Commit()
