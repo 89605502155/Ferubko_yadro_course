@@ -9,6 +9,7 @@ import (
 	"github.com/sirupsen/logrus"
 	"golang.org/x/crypto/bcrypt"
 
+	server "xkcd"
 	"xkcd/pkg/repository"
 )
 
@@ -63,4 +64,8 @@ func (s *AuthService) ParseToken(accessToken string) (int, string, error) {
 		return 0, "", errors.New("token claims are not of type tokenClaims")
 	}
 	return claims.UserId, claims.Status, nil
+}
+
+func (s *AuthService) CreateUser(user server.User) error {
+	return s.repo.CreateUser(user)
 }
