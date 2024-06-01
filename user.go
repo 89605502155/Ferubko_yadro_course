@@ -30,3 +30,15 @@ func (u *User) Validate() error {
 	}
 	return nil
 }
+
+type UserEntity struct {
+	Username string `json:"username" binding:"required"`
+	Password string `json:"password" db:"password_hash"`
+}
+
+func (u *UserEntity) Validate() error {
+	if u.Username == "" || u.Password == "" {
+		return errors.New("you give nill username or password ")
+	}
+	return nil
+}

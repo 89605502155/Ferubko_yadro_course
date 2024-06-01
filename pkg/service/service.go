@@ -18,8 +18,9 @@ type Search interface {
 	SearchInIndex(input string) ([]int, time.Duration, error)
 }
 type Auth interface {
-	GenerateToken(username, password string, tokenTTL time.Duration) (string, error)
-	ParseToken(accessToken string) (string, string, error)
+	GenerateToken(userInput server.UserEntity, accessTime time.Duration, refreshTime time.Duration) (string, string, error)
+	ParseToken(str string) (string, string, error)
+	ParseRefreshToken(str string, accessTime time.Duration) (string, string, string, error)
 	CreateUser(user server.User) error
 }
 

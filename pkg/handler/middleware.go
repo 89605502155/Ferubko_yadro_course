@@ -1,6 +1,7 @@
 package handler
 
 import (
+	"encoding/json"
 	"net/http"
 	"strings"
 
@@ -19,6 +20,18 @@ func RateCheker(f http.HandlerFunc, h *Handler, hard int, dominantus bool) http.
 	}
 }
 
+func (h *Handler) validToken(str string) (string, string, string, error) {
+	userName, userStatus, err := h.services.Auth.ParseToken(str)
+	logrus.Println("validToken ", err)
+	if err != nil {
+		logrus.Println("valid Token Refresh Token")
+		userName, userStatus, access, err2 := h.services.Auth.ParseRefreshToken(str,
+			accessTimeConst,
+		)
+		return userName, userStatus, access, err2
+	}
+	return userName, userStatus, str, err
+}
 func Auth(f http.HandlerFunc, h *Handler, allowedSlice []string) http.HandlerFunc {
 	return func(w http.ResponseWriter, r *http.Request) {
 		authHeader := r.Header.Get("Authorization")
@@ -31,10 +44,26 @@ func Auth(f http.HandlerFunc, h *Handler, allowedSlice []string) http.HandlerFun
 			http.Error(w, "Invalid auth header", http.StatusUnauthorized)
 			return
 		}
-		userName, userStatus, err := h.services.Auth.ParseToken(headerParts[1])
+		userName, userStatus, tok, err := h.validToken(headerParts[1])
 		if err != nil {
 			http.Error(w, err.Error(), http.StatusUnauthorized)
 			return
+		}
+		logrus.Println(tok)
+		logrus.Println(headerParts[1])
+		if tok != headerParts[1] {
+			tokens := TokenResponse{
+				AccessToken:  tok,
+				RefreshToken: headerParts[1],
+			}
+			w.Header().Set("Content-Type", "application/json")
+			err = json.NewEncoder(w).Encode(tokens)
+			if err != nil {
+				http.Error(w, err.Error(), http.StatusInternalServerError)
+				return
+			}
+			w.WriteHeader(http.StatusOK)
+			logrus.Println("use refresh token")
 		}
 		notAllow := true
 		for _, i := range allowedSlice {
