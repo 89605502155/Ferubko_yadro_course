@@ -19,7 +19,7 @@ type Search interface {
 }
 type Auth interface {
 	GenerateToken(username, password string, tokenTTL time.Duration) (string, error)
-	ParseToken(accessToken string) (string, error)
+	ParseToken(accessToken string) (string, string, error)
 	CreateUser(user server.User) error
 }
 

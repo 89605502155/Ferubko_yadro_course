@@ -9,7 +9,7 @@ import (
 	server "xkcd"
 )
 
-func (h *Handler) Auth(resp http.ResponseWriter, req *http.Request) {
+func (h *Handler) SignIn(resp http.ResponseWriter, req *http.Request) {
 	logrus.Println("Auth", req.Method)
 	resp.Write([]byte("You are user\n"))
 	resp.Header().Set("Token", "<PASSWORD>")
@@ -27,6 +27,11 @@ func (h *Handler) CreateUser(resp http.ResponseWriter, req *http.Request) {
 	err := decoder.Decode(&data)
 	if err != nil {
 		http.Error(resp, "Bad Request", http.StatusBadRequest)
+		return
+	}
+	err = data.Validate()
+	if err != nil {
+		http.Error(resp, "Unknow status", http.StatusBadRequest)
 		return
 	}
 	err = h.services.Auth.CreateUser(data)
