@@ -22,6 +22,7 @@ func NewHandler(services *service.Service, rate_limiter *rate_limiter.SlidindLog
 func (h *Handler) InitRoutes() http.Handler {
 	mux := http.NewServeMux()
 	mux.HandleFunc("POST /", h.Auth)
+	mux.HandleFunc("POST /create", h.CreateUser)
 	mux.HandleFunc("POST /update/", RateCheker(h.Update, h, hard, dominantus))
 	mux.HandleFunc("GET /pics", RateCheker(h.Search, h, hardSearch, !dominantus))
 	return mux

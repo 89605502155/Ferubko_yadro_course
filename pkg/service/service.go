@@ -17,9 +17,9 @@ type Search interface {
 	SearchInDB(input string) ([]int, time.Duration, error)
 	SearchInIndex(input string) ([]int, time.Duration, error)
 }
-type Auth interface{
+type Auth interface {
 	GenerateToken(username, password string, tokenTTL time.Duration) (string, error)
-	ParseToken(accessToken string) (int, string, error)
+	ParseToken(accessToken string) (string, error)
 	CreateUser(user server.User) error
 }
 
@@ -35,6 +35,6 @@ func NewService(n int, cl *xkcd.Client, ctx context.Context,
 	return &Service{
 		Comics: NewComicsService(n, cl, ctx, stop, repo),
 		Search: NewSearchService(words, serch_limit, repo),
-		Auth: NewAuthService(repo),
+		Auth:   NewAuthService(repo),
 	}
 }

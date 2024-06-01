@@ -1,8 +1,7 @@
 
 -- +migrate Up
 CREATE TABLE users(
-    id INTEGER PRIMARY KEY,
-    username VARCHAR(20) unique NOT NULL,
+    username VARCHAR(30) PRIMARY KEY,
     password_hash VARCHAR(255) NOT NULL
 );
 

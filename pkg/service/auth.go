@@ -3,6 +3,7 @@ package service
 import (
 	"errors"
 	"os"
+	"strconv"
 	"time"
 
 	"github.com/dgrijalva/jwt-go"
@@ -18,7 +19,6 @@ type AuthService struct {
 }
 type tokenClaims struct {
 	jwt.StandardClaims
-	UserId int    `json:"user_id"`
 	Status string `json:"status" binding:"required"`
 }
 
@@ -41,13 +41,12 @@ func (s *AuthService) GenerateToken(username, password string, tokenTTL time.Dur
 			ExpiresAt: time.Now().Add(tokenTTL).Unix(),
 			IssuedAt:  time.Now().Unix(),
 		},
-		user.Id,
 		user.Status,
 	})
 	return token.SignedString([]byte(os.Getenv("JWT_SALT")))
 }
 
-func (s *AuthService) ParseToken(accessToken string) (int, string, error) {
+func (s *AuthService) ParseToken(accessToken string) (string, error) {
 	token, err := jwt.ParseWithClaims(accessToken, &tokenClaims{}, func(token *jwt.Token) (interface{}, error) {
 		if _, ok := token.Method.(*jwt.SigningMethodHMAC); !ok {
 			return nil, errors.New("invalid signing method")
@@ -56,16 +55,20 @@ func (s *AuthService) ParseToken(accessToken string) (int, string, error) {
 	})
 	if err != nil {
 		logrus.Println(err, " Parse token first if")
-		return 0, "", err
+		return "", err
 	}
 	claims, ok := token.Claims.(*tokenClaims)
 	if !ok {
 
-		return 0, "", errors.New("token claims are not of type tokenClaims")
+		return "", errors.New("token claims are not of type tokenClaims")
 	}
-	return claims.UserId, claims.Status, nil
+	return claims.Status, nil
 }
 
 func (s *AuthService) CreateUser(user server.User) error {
+	pass := user.Password
+	coast, _ := strconv.Atoi(os.Getenv("BCRYPT_COAST"))
+	newPassword, _ := bcrypt.GenerateFromPassword([]byte(pass), coast)
+	user.Password = string(newPassword)
 	return s.repo.CreateUser(user)
 }

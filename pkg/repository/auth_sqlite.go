@@ -24,7 +24,7 @@ func (r *UserSQLite) GetUser(username string) (server.User, error) {
 }
 
 func (r *UserSQLite) CreateUser(user server.User) error {
-	query := fmt.Sprintf("INSERT INTO %s (username, password_hash,status) VALUES  ($1,  $2,  $3)", usersTable)
+	query := fmt.Sprintf("INSERT INTO %s (username, password_hash,status,status) VALUES  ($1,  $2,  $3)", usersTable)
 	_, err := r.db.Exec(query, user.Username, user.Password, user.Status)
 	return err
 }
