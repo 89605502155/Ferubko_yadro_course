@@ -32,7 +32,7 @@ func (h *Handler) validToken(str string) (string, string, string, error) {
 	}
 	return userName, userStatus, str, err
 }
-func Auth(f http.HandlerFunc, h *Handler, allowedSlice []string) http.HandlerFunc {
+func Auth(f http.HandlerFunc, h *Handler, allowedSlice []string, hardTask int) http.HandlerFunc {
 	return func(w http.ResponseWriter, r *http.Request) {
 		authHeader := r.Header.Get("Authorization")
 		if authHeader == "" {
@@ -77,7 +77,14 @@ func Auth(f http.HandlerFunc, h *Handler, allowedSlice []string) http.HandlerFun
 				http.StatusForbidden)
 			return
 		}
-		f(w, r)
+		logic := h.personal_limiter.Allow(userName, hardTask)
+		if logic {
+			f(w, r)
+		} else {
+			http.Error(w, "Personal limiter.",
+				http.StatusForbidden)
+			return
+		}
 		logrus.Println(userName, r.URL.Path)
 	}
 }

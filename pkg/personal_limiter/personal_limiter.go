@@ -1,46 +1,63 @@
 package personal_limiter
 
 import (
+	"context"
 	"sync"
 	"time"
 
-	"xkcd/pkg/rate_limiter"
+	"github.com/sirupsen/logrus"
 )
 
 type PersonalLimiter struct {
 	limit   int
 	inteval time.Duration
-	list    map[string][]rate_limiter.SlidingLog
+	list    map[string][]int
 	mutex   sync.Mutex
 }
 
-func NewPersonalLimiter(limit int, interval time.Duration) *PersonalLimiter {
-	return &PersonalLimiter{
+func NewPersonalLimiter(ctx context.Context, limit int, interval time.Duration) *PersonalLimiter {
+	struct_ := &PersonalLimiter{
 		limit:   limit,
 		inteval: interval,
-		list:    make(map[string][]rate_limiter.SlidingLog, 0),
+		list:    make(map[string][]int, 0),
 	}
+	go struct_.statrPerionForRefresh(ctx, interval)
+	return struct_
 }
 
-func (p *PersonalLimiter) Allow(userName string, hard int) {
+func (p *PersonalLimiter) statrPerionForRefresh(ctx context.Context, duration time.Duration) {
+	timer := time.NewTimer(duration)
+	defer timer.Stop()
+	for {
+		select {
+		case <-ctx.Done():
+			return
+		case <-timer.C:
+			p.mutex.Lock()
+			p.list = make(map[string][]int, 0)
+			p.mutex.Unlock()
+		}
+	}
+
+}
+
+func (p *PersonalLimiter) Allow(userName string, hard int) bool {
 	p.mutex.Lock()
 	defer p.mutex.Unlock()
-
-	lastPeriod := time.Now().Add(-p.inteval)
-	// var logs []rate_limiter.SlidingLog
-	// var ok bool
-	if _, ok := p.list[userName]; !ok {
-		p.list[userName] = make([]rate_limiter.SlidingLog, 0)
+	logrus.Println(p.limit, p.list[userName], hard)
+	sl := p.list[userName]
+	s := 0
+	for j := 0; j < len(sl); j++ {
+		s += (sl[j] + 1)
 	}
-	logs := p.list[userName]
-
-	for len(logs) != 0 && p.list[userName][0].logs.Add(time.Duration(p.list[userName][0].hard)*time.Second).Before(lastPeriod) {
-		l.logs = l.logs[1:]
+	if s <= p.limit-hard-1 {
+		s += hard
+		s += 1
+		sl = append(sl, hard)
+		p.list[userName] = sl
+		return true
+	} else {
+		p.list[userName] = sl
+		return false
 	}
-
-	newRequest := SlidingLog{
-		logs: time.Now(),
-		hard: hard,
-	}
-
 }
