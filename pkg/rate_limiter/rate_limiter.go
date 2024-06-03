@@ -40,13 +40,17 @@ func (l *SlidindLogLimiter) Allow(hard int, dominantus bool) bool {
 		hard: hard,
 	}
 	l.logs = append(l.logs, newRequest)
+	s := 0
+	for i := range l.logs {
+		s += (l.logs[i].hard + 1)
+	}
 	if dominantus {
-		return true
-	} else {
-		s := 0
-		for i := range l.logs {
-			s += (l.logs[i].hard + 1)
+		if s <= l.limit*2 {
+			return true
+		} else {
+			return false
 		}
+	} else {
 		return s <= l.limit
 	}
 
