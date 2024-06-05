@@ -4,8 +4,6 @@ import (
 	"context"
 	"sync"
 	"time"
-
-	"github.com/sirupsen/logrus"
 )
 
 type PersonalLimiter struct {
@@ -44,7 +42,7 @@ func (p *PersonalLimiter) statrPerionForRefresh(ctx context.Context, duration ti
 func (p *PersonalLimiter) Allow(userName string, hard int) bool {
 	p.mutex.Lock()
 	defer p.mutex.Unlock()
-	logrus.Println(p.limit, p.list[userName], hard)
+	// logrus.Println(p.limit, p.list[userName], hard)
 	sl := p.list[userName]
 	s := 0
 	for j := 0; j < len(sl); j++ {
