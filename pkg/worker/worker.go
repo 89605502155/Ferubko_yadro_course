@@ -19,7 +19,7 @@ func WorkerPool(cl *xkcd.Client, numIter int, numWorkers int, data *map[string]x
 
 	for i := 0; i < numWorkers; i++ {
 		wg.Add(1)
-		go func() {
+		go func(i int) {
 			defer wg.Done()
 			for key := range keyChan {
 				res, _, err := cl.ClientInterface.GetComics(key)
@@ -33,7 +33,7 @@ func WorkerPool(cl *xkcd.Client, numIter int, numWorkers int, data *map[string]x
 				(*data)[fmt.Sprintf("%d", key)] = res[key]
 				mu.Unlock()
 			}
-		}()
+		}(i)
 	}
 	for key := 1; key < numIter; key++ {
 		select {

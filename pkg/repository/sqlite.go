@@ -11,6 +11,7 @@ import (
 const (
 	comicsTable  = "comics"
 	indexesTable = "indexes"
+	usersTable   = "users"
 )
 
 type Config struct {

@@ -52,11 +52,13 @@ func (i *IndexSQLite) Clear() error {
 	tx, err := i.db.Begin()
 	if err != nil {
 		tx.Rollback()
+		logrus.Fatal(err, "index_sqlite, f")
 		return err
 	}
-	_, err = i.db.Exec("DELETE FROM %s", indexesTable)
+	_, err = i.db.Exec(fmt.Sprintf("DELETE FROM %s", indexesTable))
 	if err != nil {
 		tx.Rollback()
+		logrus.Fatal(err, "index_sqlite, s")
 		return err
 	}
 	return tx.Commit()
