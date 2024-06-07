@@ -7,7 +7,6 @@ import (
 	"time"
 )
 
-
 func TestPersonalLimiter(t *testing.T) {
 	testTable := []struct {
 		ctx      context.Context
@@ -126,7 +125,6 @@ func TestPersonAllow(t *testing.T) {
 			[]bool{true, false, false, false, false, false, false, false, true, true, true, true},
 		},
 	}
-
 	for _, testCase := range testTable {
 		limitStruct := NewPersonalLimiter(testCase.ctx, testCase.limit, testCase.interval)
 		for i, data := range testCase.data {
