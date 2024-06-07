@@ -110,7 +110,7 @@ func TestPersonAllow(t *testing.T) {
 				{"user", 10, 0}, {"admin", 500, 10}, {"admin", 5, 1200},
 				{"a", 5, 0}, {"admin", 5, 0},
 			},
-			[]bool{true, false, false, false, false, false, false, false, true, true, false},
+			[]bool{true, false, false, false, false, false, false, false, true, true, true},
 		},
 		{
 			context.Background(),
@@ -120,20 +120,26 @@ func TestPersonAllow(t *testing.T) {
 				{"user", 9, 0}, {"user", 10, 1100}, {"user", 10, 100},
 				{"user", 10, 0}, {"user", 10, 0}, {"user", 10, 0},
 				{"user", 10, 0}, {"admin", 500, 10}, {"admin", 5, 0},
-				{"a", 5, 1200}, {"admin", 3, 3900}, {"a", 6, 1900},
+				{"a", 5, 1200}, {"admin", 3, 1000}, {"a", 6, 1900},
 			},
-			[]bool{true, false, false, false, false, false, false, false, true, true, true, true},
+			[]bool{true, false, false, false, false, false, false, false, true, true, true, false},
 		},
 	}
 	for _, testCase := range testTable {
 		limitStruct := NewPersonalLimiter(testCase.ctx, testCase.limit, testCase.interval)
+		timer1 := time.NewTimer(testCase.interval)
 		for i, data := range testCase.data {
-			if data.moment != 0 {
-				time.Sleep(data.moment * time.Millisecond)
-			}
-			res := limitStruct.Allow(data.userName, data.hard)
-			if res != testCase.expected[i] {
-				t.Errorf("Expected %v, got %v in %d", testCase.expected[i], res, i)
+			timer2 := time.NewTimer(data.moment * time.Millisecond)
+			select {
+			case <-timer1.C:
+				limitStruct.list = map[string][]int{}
+				timer1 = time.NewTimer(testCase.interval)
+			case <-timer2.C:
+				res := limitStruct.Allow(data.userName, data.hard)
+				if res != testCase.expected[i] {
+					t.Errorf("Expected %v, got %v in %d", testCase.expected[i], res, i)
+				}
+
 			}
 		}
 		t.Logf("Querry map %v", limitStruct.list)

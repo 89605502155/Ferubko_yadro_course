@@ -31,7 +31,7 @@ func (l *SlidindLogLimiter) Allow(hard int, dominantus bool) bool {
 	defer l.mutex.Unlock()
 
 	lastPeriod := time.Now().Add(-l.inteval)
-	for len(l.logs) != 0 && l.logs[0].logs.Add(time.Duration(l.logs[0].hard)*time.Second).Before(lastPeriod) {
+	for len(l.logs) != 0 && l.logs[0].logs.Add(time.Duration(l.logs[0].hard)*time.Millisecond).Before(lastPeriod) {
 		l.logs = l.logs[1:]
 	}
 
