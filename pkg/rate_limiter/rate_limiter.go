@@ -26,7 +26,7 @@ func NewSlidingLogLimiter(limit int, inteval time.Duration) *SlidindLogLimiter {
 }
 
 func (l *SlidindLogLimiter) Allow(hard int, dominantus bool) bool {
-	// у запросов на поиск будет hard=0, а у запросов на обновление пусть будет 250, чтобы нельзя было запустить много обновлений.
+	// у запросов на поиск будет hard=0, а у запросов на обновление пусть будет 250 000, чтобы нельзя было запустить много обновлений.
 	l.mutex.Lock()
 	defer l.mutex.Unlock()
 
