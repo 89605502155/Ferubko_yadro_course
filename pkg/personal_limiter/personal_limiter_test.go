@@ -105,9 +105,9 @@ func TestPersonAllow(t *testing.T) {
 			10,
 			time.Second,
 			[]queries{
-				{"user", 9, 0}, {"user", 10, 1000000}, {"user", 10, 1e6},
+				{"user", 9, 0}, {"user", 10, 1000}, {"user", 10, 1000},
 				{"user", 10, 0}, {"user", 10, 0}, {"user", 10, 0},
-				{"user", 10, 0}, {"admin", 500, 10}, {"admin", 5, 1000000},
+				{"user", 10, 0}, {"admin", 500, 10}, {"admin", 5, 1200},
 				{"a", 5, 0}, {"admin", 5, 0},
 			},
 			[]bool{true, false, false, false, false, false, false, false, true, true, false},
@@ -117,12 +117,12 @@ func TestPersonAllow(t *testing.T) {
 			10,
 			time.Second,
 			[]queries{
-				{"user", 9, 0}, {"user", 10, 1000000}, {"user", 10, 100},
+				{"user", 9, 0}, {"user", 10, 1100}, {"user", 10, 100},
 				{"user", 10, 0}, {"user", 10, 0}, {"user", 10, 0},
-				{"user", 10, 0}, {"admin", 500, 10}, {"admin", 5, 1000000},
-				{"a", 5, 0}, {"admin", 5, 0},
+				{"user", 10, 0}, {"admin", 500, 10}, {"admin", 5, 0},
+				{"a", 5, 1200}, {"admin", 3, 3900}, {"a", 6, 1900},
 			},
-			[]bool{true, false, false, false, false, false, false, false, true, true, false},
+			[]bool{true, false, false, false, false, false, false, false, true, true, true, true},
 		},
 	}
 
@@ -130,7 +130,7 @@ func TestPersonAllow(t *testing.T) {
 		limitStruct := NewPersonalLimiter(testCase.ctx, testCase.limit, testCase.interval)
 		for i, data := range testCase.data {
 			if data.moment != 0 {
-				time.Sleep(data.moment * time.Microsecond)
+				time.Sleep(data.moment * time.Millisecond)
 			}
 			res := limitStruct.Allow(data.userName, data.hard)
 			if res != testCase.expected[i] {
