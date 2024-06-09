@@ -43,28 +43,6 @@ func NewHttpClient(baseURL string, w *words.Words) *HttpClient {
 
 }
 
-func (c *HttpClient) GetLatestComicsNumber() (int, error) {
-	url := fmt.Sprintf("%s/info.0.json", c.baseURL)
-
-	resp, err := http.Get(url)
-	if err != nil {
-		return 0, err
-	}
-	defer resp.Body.Close()
-
-	if resp.StatusCode != http.StatusOK {
-		return 0, fmt.Errorf("unexpected status code: %d", resp.StatusCode)
-	}
-
-	var comics Comics
-
-	if err := json.NewDecoder(resp.Body).Decode(&comics); err != nil {
-		return 0, err
-	}
-
-	return comics.Num, nil
-}
-
 func (c *HttpClient) GetComics(comicID int) (map[int]ComicsInfo, int, error) {
 	url := fmt.Sprintf("%s/%d/info.0.json", c.baseURL, comicID)
 

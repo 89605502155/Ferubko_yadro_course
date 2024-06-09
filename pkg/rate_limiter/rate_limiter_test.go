@@ -46,6 +46,7 @@ func TestAllow(t *testing.T) {
 	// b1 := make([]bool, 1_000_000)
 	b := make([]bool, 1_000_000)
 	b2 := make([]bool, 1_000_000)
+	// b1[0] = true
 
 	for i := 0; i <= 9; i++ {
 		b[i] = true
