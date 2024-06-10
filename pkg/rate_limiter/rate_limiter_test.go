@@ -16,16 +16,31 @@ func TestNewSlidingLogLimiter(t *testing.T) {
 			10,
 			time.Second,
 			&SlidindLogLimiter{
-				limit:   10,
-				inteval: time.Second,
-				logs:    make([]SlidingLog, 0),
+				limit:          10,
+				inteval:        time.Second,
+				logs:           make([]SlidingLog, 0),
+				timeDominantus: time.Now().Add(-timeBetween),
 			},
 		},
 	}
 	count := 0
 	for _, test := range testTable {
 		res := NewSlidingLogLimiter(test.limit, test.inteval)
-		if !reflect.DeepEqual(res, test.expected) {
+		rep := struct {
+			limit   int
+			inteval time.Duration
+			logs    []SlidingLog
+		}{
+			res.limit, res.inteval, res.logs,
+		}
+		tres := struct {
+			limit   int
+			inteval time.Duration
+			logs    []SlidingLog
+		}{
+			test.expected.limit, test.expected.inteval, test.expected.logs,
+		}
+		if !reflect.DeepEqual(rep, tres) {
 			t.Errorf("Expected %v, got %v", test.expected, res)
 		} else {
 			t.Logf("Expected  %v", test.expected)
@@ -43,19 +58,13 @@ type rateQuery struct {
 
 func TestAllow(t *testing.T) {
 	long := make([]rateQuery, 1_000_000)
-	// b1 := make([]bool, 1_000_000)
 	b := make([]bool, 1_000_000)
-	b2 := make([]bool, 1_000_000)
-	// b1[0] = true
 
 	for i := 0; i <= 9; i++ {
 		b[i] = true
 	}
 	for i := range long {
 		long[i].moment = 0
-	}
-	for i := range b2 {
-		b2[i] = true
 	}
 	testTable := []struct {
 		limit    int
@@ -70,10 +79,36 @@ func TestAllow(t *testing.T) {
 			b,
 		},
 		{
-			1e9,
-			time.Microsecond,
-			long,
-			b2,
+			5,
+			time.Second,
+			[]rateQuery{
+				{0, 0, false}, {500, 1, true}, {0, 0, false},
+			},
+			[]bool{true, true, false},
+		},
+		{
+			5,
+			time.Second,
+			[]rateQuery{
+				{0, 0, false}, {500_000, 1, true}, {0, 0, false},
+			},
+			[]bool{true, true, false},
+		},
+		{
+			5,
+			time.Second,
+			[]rateQuery{
+				{0, 0, false}, {500, 1, true}, {500, 0, true},
+			},
+			[]bool{true, true, false},
+		},
+		{
+			5,
+			time.Second,
+			[]rateQuery{
+				{0, 0, false}, {500, 1, true}, {500, 5_000_000, true},
+			},
+			[]bool{true, true, false},
 		},
 	}
 	for _, test := range testTable {

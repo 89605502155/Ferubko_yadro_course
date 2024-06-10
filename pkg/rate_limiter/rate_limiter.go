@@ -5,23 +5,33 @@ import (
 	"time"
 )
 
+const (
+	timeBetween = 5 * time.Minute
+)
+
 type SlidingLog struct {
 	logs time.Time
 	hard int
 }
 
 type SlidindLogLimiter struct {
-	limit   int
-	inteval time.Duration
-	logs    []SlidingLog
-	mutex   sync.Mutex
+	limit          int
+	inteval        time.Duration
+	logs           []SlidingLog
+	mutex          sync.Mutex
+	timeDominantus time.Time
 }
 
 func NewSlidingLogLimiter(limit int, inteval time.Duration) *SlidindLogLimiter {
+	// t, _ := strconv.Atoi(os.Getenv("TIME_BETWEEN"))
+	// t = 5
+	// timeBetwe := time.Duration(t) * time.Minute
+	// logrus.Info(t)
 	return &SlidindLogLimiter{
-		limit:   limit,
-		inteval: inteval,
-		logs:    make([]SlidingLog, 0),
+		limit:          limit,
+		inteval:        inteval,
+		logs:           make([]SlidingLog, 0),
+		timeDominantus: time.Now().Add(-timeBetween),
 	}
 }
 
@@ -45,11 +55,11 @@ func (l *SlidindLogLimiter) Allow(hard int, dominantus bool) bool {
 		s += (l.logs[i].hard + 1)
 	}
 	if dominantus {
-		if s <= l.limit*2 {
+		if time.Since(l.timeDominantus) >= timeBetween {
+			l.timeDominantus = time.Now()
 			return true
-		} else {
-			return false
 		}
+		return false
 	} else {
 		return s <= l.limit
 	}
