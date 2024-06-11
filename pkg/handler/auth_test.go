@@ -20,6 +20,7 @@ import (
 )
 
 func TestSignIn(t *testing.T) {
+
 	type mockBehavior func(s *mock_service.MockAuth, data server.UserEntity)
 	testTable := []struct {
 		name               string
@@ -41,7 +42,9 @@ func TestSignIn(t *testing.T) {
 				Password: "123",
 			},
 			mockBehavior: func(s *mock_service.MockAuth, data server.UserEntity) {
-				s.EXPECT().GenerateToken(data, time.Second, time.Hour).Return("accessToken", "refreshToken", nil)
+				if err := data.Validate(); err == nil {
+					s.EXPECT().GenerateToken(data, accessTimeConst, refreshTimeConst).Return("accessToken", "refreshToken", err)
+				}
 			},
 			personalLimit:      5,
 			personalInterval:   time.Second,
@@ -49,6 +52,25 @@ func TestSignIn(t *testing.T) {
 			rateInterval:       time.Second,
 			expectedStatusCode: 200,
 			expectedBody:       `{"accessToken":"accessToken","refreshToken":"refreshToken"}`,
+		},
+		{
+			name:      "no-password",
+			inputBody: `{"username": "andrey", "password": ""}`,
+			data: server.UserEntity{
+				Username: "andrey",
+				Password: "",
+			},
+			mockBehavior: func(s *mock_service.MockAuth, data server.UserEntity) {
+				if err := data.Validate(); err == nil {
+					s.EXPECT().GenerateToken(data, accessTimeConst, refreshTimeConst).Return("accessToken", "refreshToken", err)
+				}
+			},
+			personalLimit:      5,
+			personalInterval:   time.Second,
+			rateLimit:          500,
+			rateInterval:       time.Second,
+			expectedStatusCode: 400,
+			expectedBody:       "",
 		},
 	}
 	for _, test := range testTable {
