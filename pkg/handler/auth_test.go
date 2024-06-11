@@ -141,3 +141,19 @@ func TestSignIn(t *testing.T) {
 		})
 	}
 }
+
+func TestCreateUser(t *testing.T) {
+	type mockBehavior func(s *mock_service.MockAuth, data server.User)
+	testTable := []struct {
+		name               string
+		inputBody          string
+		data               server.UserEntity
+		mockBehavior       mockBehavior
+		personalLimit      int
+		personalInterval   time.Duration
+		rateLimit          int
+		rateInterval       time.Duration
+		expectedStatusCode int
+		expectedBody       string
+	}{}
+}
