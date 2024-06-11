@@ -10,6 +10,7 @@ import (
 	"xkcd/pkg/xkcd"
 )
 
+//go:generate mockgen -source=service.go -destination=mocks/mock.go
 type Comics interface {
 	Update() error
 }
