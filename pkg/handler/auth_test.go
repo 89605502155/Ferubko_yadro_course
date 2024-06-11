@@ -4,6 +4,7 @@ import (
 	"bytes"
 	"context"
 	"encoding/json"
+	"errors"
 	"net/http"
 	"net/http/httptest"
 	"testing"
@@ -72,6 +73,44 @@ func TestSignIn(t *testing.T) {
 			expectedStatusCode: 400,
 			expectedBody:       "",
 		},
+		{
+			name:      "no-name",
+			inputBody: `{"username": "", "password": "123"}`,
+			data: server.UserEntity{
+				Username: "",
+				Password: "123",
+			},
+			mockBehavior: func(s *mock_service.MockAuth, data server.UserEntity) {
+				if err := data.Validate(); err == nil {
+					s.EXPECT().GenerateToken(data, accessTimeConst, refreshTimeConst).Return("accessToken", "refreshToken", err)
+				}
+			},
+			personalLimit:      5,
+			personalInterval:   time.Second,
+			rateLimit:          500,
+			rateInterval:       time.Second,
+			expectedStatusCode: 400,
+			expectedBody:       "",
+		},
+		{
+			name:      "invalid password",
+			inputBody: `{"username": "andrey", "password": "wrongpassword"}`,
+			data: server.UserEntity{
+				Username: "andrey",
+				Password: "wrongpassword",
+			},
+			mockBehavior: func(s *mock_service.MockAuth, data server.UserEntity) {
+				if err := data.Validate(); err == nil {
+					s.EXPECT().GenerateToken(data, accessTimeConst, refreshTimeConst).Return("", "", errors.New("invalid password"))
+				}
+			},
+			personalLimit:      5,
+			personalInterval:   time.Second,
+			rateLimit:          500,
+			rateInterval:       time.Second,
+			expectedStatusCode: 401,
+			expectedBody:       "",
+		},
 	}
 	for _, test := range testTable {
 		t.Run(test.name, func(t *testing.T) {
@@ -91,8 +130,8 @@ func TestSignIn(t *testing.T) {
 			req := httptest.NewRequest("POST", "/sign-in", bytes.NewBufferString(test.inputBody))
 
 			mux.ServeHTTP(w, req)
-
 			assert.Equal(t, test.expectedStatusCode, w.Code)
+
 			var expectedBody, actualBody map[string]interface{}
 			_ = json.Unmarshal([]byte(test.expectedBody), &expectedBody)
 			_ = json.Unmarshal(w.Body.Bytes(), &actualBody)
