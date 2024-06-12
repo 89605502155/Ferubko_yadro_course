@@ -7,7 +7,7 @@ import (
 )
 
 const (
-	hard       = 250000
+	hard       = 250_000
 	dominantus = true
 )
 
