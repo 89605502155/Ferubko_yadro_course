@@ -3,7 +3,6 @@ package handler
 import (
 	"context"
 	"encoding/json"
-	"fmt"
 	"net/http"
 	"net/http/httptest"
 	"net/url"
@@ -52,7 +51,7 @@ func TestSearch(t *testing.T) {
 			rateLimit:          500,
 			rateInterval:       time.Second,
 			expectedStatusCode: 200,
-			expectedBody:       "{\"in db\":[],\"in index\":[]}",
+			expectedBody:       "{\"in db\":null,\"in index\":null}",
 		},
 	}
 	for _, test := range testTable {
@@ -61,8 +60,8 @@ func TestSearch(t *testing.T) {
 			defer c.Finish()
 
 			search := mock_service.NewMockSearch(c)
-			res1 := test.mockBehavior(search, test.inputBody)
-			fmt.Println(res1)
+			test.mockBehavior(search, test.inputBody)
+
 			s := &service.Service{Search: search}
 			p := personal_limiter.NewPersonalLimiter(context.Background(), test.personalLimit, test.personalInterval)
 			r := rate_limiter.NewSlidingLogLimiter(test.rateLimit, test.rateInterval)
@@ -76,7 +75,7 @@ func TestSearch(t *testing.T) {
 
 			mux.ServeHTTP(w, req)
 			assert.Equal(t, test.expectedStatusCode, w.Code)
-			assert.Equal(t, res1, w.Body.String())
+			assert.Equal(t, test.expectedBody, w.Body.String())
 		})
 	}
 }
