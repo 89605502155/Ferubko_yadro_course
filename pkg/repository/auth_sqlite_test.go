@@ -1,6 +1,7 @@
 package repository
 
 import (
+	"errors"
 	"fmt"
 	"reflect"
 	"testing"
@@ -120,4 +121,79 @@ func TestCreateUser(t *testing.T) {
 	r := NewUserSQLite(db)
 
 	type mockBechavior func(user server.User)
+	testTable := []struct {
+		name          string
+		user          server.User
+		mockBechavior mockBechavior
+		expectedError error
+	}{
+		{
+			name: "OK",
+			user: server.User{
+				Username: "andrey",
+				Password: "123",
+				Status:   "admin",
+			},
+			mockBechavior: func(user server.User) {
+				query := fmt.Sprintf("INSERT INTO %s ((.+)) VALUES  ((.+),  (.+),  (.+))", usersTable)
+
+				mock.ExpectExec(query).WithArgs(user.Username, user.Password, user.Status).WillReturnResult(
+					sqlxmock.NewResult(1, 1))
+
+			},
+			expectedError: nil,
+		},
+		{
+			name: "no Name",
+			user: server.User{
+				Username: "",
+				Password: "123",
+				Status:   "admin",
+			},
+			mockBechavior: func(user server.User) {
+				query := fmt.Sprintf("INSERT INTO %s ((.+)) VALUES  ((.+),  (.+),  (.+))", usersTable)
+				mock.ExpectExec(query).WithArgs(user.Username, user.Password, user.Status).WillReturnError(errors.New("no name"))
+			},
+			expectedError: errors.New("no name"),
+		},
+		{
+			name: "no Password",
+			user: server.User{
+				Username: "andrey",
+				Password: "",
+				Status:   "admin",
+			},
+			mockBechavior: func(user server.User) {
+				query := fmt.Sprintf("INSERT INTO %s ((.+)) VALUES  ((.+),  (.+),  (.+))", usersTable)
+				mock.ExpectExec(query).WithArgs(user.Username, user.Password, user.Status).WillReturnError(errors.New("no password"))
+			},
+			expectedError: errors.New("no password"),
+		},
+		{
+			name: "bad status",
+			user: server.User{
+				Username: "andrey",
+				Password: "123",
+				Status:   "admiral",
+			},
+			mockBechavior: func(user server.User) {
+				query := fmt.Sprintf("INSERT INTO %s ((.+)) VALUES  ((.+),  (.+),  (.+))", usersTable)
+				mock.ExpectExec(query).WithArgs(user.Username, user.Password, user.Status).WillReturnError(errors.New("bad status"))
+			},
+			expectedError: errors.New("bad status"),
+		},
+	}
+	for _, test := range testTable {
+		t.Run(test.name, func(t *testing.T) {
+			test.mockBechavior(test.user)
+			err := r.CreateUser(test.user)
+			if errors.Is(test.expectedError, err) && err != nil {
+				t.Log(errors.Is(test.expectedError, err), "\n")
+				t.Errorf("expected error %v, got %v", test.expectedError, err)
+			} else {
+				t.Log("Good")
+			}
+		})
+	}
+
 }
